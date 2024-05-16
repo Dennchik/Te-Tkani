@@ -1,0 +1,58 @@
+// todo -------------------------- Variables -----------------------------------
+@import 'core/variables';
+@import 'core/variables-icon';
+@import 'core/swiper-vars';
+//todo ---------------------------- Core ---------------------------------------
+@import 'core/mixins';
+@import 'core/extend';
+@import 'core/modifiers';
+@import 'core/reset';
+// @import 'core/ui';
+//todo ------------------------- Default fonts ---------------------------------
+// &display=swap&subset=cyrillic-ext
+@import url('https://fonts.googleapis.com/css?family=Inter:1300,regular,500,600,700,800,900&display=swap&subset=cyrillic-ext');
+
+// todo --------------------------- Fonts --------------------------------------
+@import 'core/fonts';
+//todo  ------------------------ Icon Fonts ------------------------------------
+@import 'core/iconfonts';
+// todo -------------------------- Plugins -------------------------------------
+@import 'assets/swiper';
+// todo -------------------------- Classes -------------------------------------
+// #region
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	margin: 0 auto;
+}
+
+[class*='_container'] {
+	max-width: $maxWidthContainer;
+	box-sizing: content-box;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+[class*='icon-'] {
+	cursor: pointer;
+	height: 100%;
+	@include flex-align-center-justify-center;
+}
+
+// todo --------------------------- Assets -------------------------------------
+@import 'assets/burger-button';
+// todo --------------------------- layout -------------------------------------
+@import 'layouts/bem-block';
+@import 'layouts/header';
+// @import 'layouts/footer';
+// todo --------------------------- Pages --------------------------------------
+@import 'pages/page.scss';
+// todo --------------------------- Modules ------------------------------------
+@import 'modules/preloader';
+// todo -------------------------- Sections ------------------------------------
+@import 'section/products-slide';
+@import 'section/portiere-fabrics';
+@import 'section/furniture-fabrics';
+@import 'section/costume-fabrics';
+@import 'section/delivery';

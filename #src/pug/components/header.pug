@@ -1,0 +1,75 @@
+header.header 
+	._header-wrapper 
+		._top-menu
+			._column.bp-2
+				.main-menu
+					ul._list
+						li
+							a(href="#")._link Главная
+						li 
+							a(href="#")._link О магазине
+						li 
+							a(href="#")._link Как купить
+						li 
+							a(href="#")._link Оплата
+						li 
+							a(href="#")._link Доставка
+						li 
+							a(href="#")._link Скидки
+			._column.bp-1
+			._column 
+				.service-menu
+					ul._list
+						li
+							a(href="#")._link
+								+iconfont('shopping-cart', '_icon')
+								span._text
+									| Моя корзина 
+								span._value-cart (0) 
+						li 
+							a(href="#")._link 
+								+iconfont('heart', '_icon')
+								span._text 
+									| Избранное 
+								span._value-favourites (0)
+						li 
+							a(href="#")._link Контакты  
+				include ../modules/burger-button
+					
+		._menu-middle
+			._column
+				.middle-menu
+					._body
+						.logo-container(data-move-el="[{'bp-max': 690, 'index': 1, 'target': '.bp-1'}]")
+							._brand
+								img(src="./img/icons/brand.png", alt="brand")
+							._image
+								img(src="./img/header/logo-header.png", alt="logo")
+						.search-container(data-move-el="[{'bp-max': 690, 'index': 1, 'target': '.bp-2'}]")
+							._form#form(action="/search" method="get")
+								input._search-input(type="text", placeholder="Поиск...", name="search" )
+								button._button(type="submit")
+									+iconfont('search', '_icon')
+			._column
+				.login-container
+					._body
+						._login-icon
+							a(href="/")._link
+								+iconfont('user-check', '_icon')
+								span Личный кабинет  Войти / Регистриция
+						._phone
+							a(href="tel:88000000000") 8-800-000-00-00
+		.menu-bottom._bottom-menu 
+				ul._list
+					li._link Ткани 
+						+iconfont("arow-left", '_icon')
+					li._link Швейная фурнитура 
+						+iconfont("arow-left", '_icon')
+					li._link Товары для рукоделия 
+						+iconfont("arow-left", '_icon')
+					li._link Пряжа 
+						+iconfont("arow-left", '_icon')
+					li._link Новинки 
+						+iconfont("arow-left", '_icon')
+					li._link Акции 
+						+iconfont("arow-left", '_icon')

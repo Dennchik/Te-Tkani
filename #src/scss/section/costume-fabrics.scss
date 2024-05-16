@@ -1,0 +1,105 @@
+.costume-fabrics {
+	gap: 4.249rem;
+	display: grid;
+	grid-template-columns: 32% 64%;
+
+	@include _screen-960 {
+		grid-template-columns: 32% 63%;
+	}
+	@include _690 {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	// .costume-fabrics__column
+	&__column {
+		&:nth-child(1) {
+			grid-row: 2 / -1;
+			flex: 0 1 345.51px;
+		}
+
+		&:nth-child(2) {
+			overflow: hidden;
+		}
+	}
+
+	// .costume-fabrics__image
+	&__image {
+		background: url('../img/main/costume-fabrics/costume-fab.png') center /
+			cover no-repeat;
+		width: 100%;
+		height: 100%;
+		@include _690 {
+			background: url('../img/main/costume-fabrics/costume-fab.png') center /
+				cover no-repeat;
+		}
+	}
+
+	// .costume-fabrics__content
+
+	&__content {
+	}
+
+	// .costume-fabrics__info
+
+	&__info {
+	}
+}
+
+.info-costume {
+	// .info-costume__header
+	&__header {
+		padding: 4rem 3.8rem 16rem;
+		box-sizing: border-box;
+		border: 1px solid rgb(0, 0, 0);
+		border-radius: 10px;
+	}
+
+	// .info-costume__title
+	&__title {
+		margin-bottom: 1.6rem;
+		color: $color;
+		font-size: 3rem;
+		font-weight: 500;
+		line-height: 120%; /* 36px/30 */
+		letter-spacing: 0%;
+		text-transform: uppercase;
+		h1 {
+			font-size: 3rem;
+		}
+	}
+
+	// .info-costume__text
+	&__text {
+		font-size: 1.5rem;
+		font-weight: 400;
+		line-height: 120%;
+		letter-spacing: 0%;
+	}
+
+	// .info-costume__items-footer
+	&__items-footer {
+		padding: 0 3.8rem;
+		display: flex;
+		justify-content: center;
+		gap: 4rem;
+		margin-top: -10.5rem;
+		overflow-x: auto;
+		@include _690 {
+			justify-content: flex-start;
+		}
+	}
+
+	// .info-costume__image
+	&__image {
+		img {
+			width: 100%;
+			// min-width: 180px;
+			max-width: 100%;
+			object-fit: contain;
+			@include _690 {
+				min-width: 12rem;
+			}
+		}
+	}
+}

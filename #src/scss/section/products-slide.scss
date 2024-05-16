@@ -1,0 +1,255 @@
+.new-products {
+	// .new-products__title
+	&__title {
+		padding: 0 0 6.2rem 0;
+		justify-content: space-between;
+		@include flex-align-center;
+
+		[class*='icon-'] {
+			font-size: 2.4rem;
+			color: $color;
+		}
+	}
+
+	// .new-products__text
+	&__text {
+		position: relative;
+		display: flex;
+		align-items: center;
+		color: rgb(0, 70, 70);
+		font-size: 3rem;
+		font-weight: 400;
+		letter-spacing: 0%;
+		text-align: left;
+		text-transform: uppercase;
+		line-height: 120%; /* 36px/30px */
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			background: url('../img/icons/brand.png') center / contain no-repeat;
+		}
+
+		&::before {
+			left: -13px;
+			transform: translateX(-100%);
+		}
+		&::after {
+			right: -13px;
+			transform: translateX(100%);
+		}
+	}
+
+	// .new-products__content
+	&__content {
+		overflow: hidden;
+		display: flex;
+		justify-content: space-between;
+		height: 100%;
+	}
+
+	// .new-products__slide
+	&__slide {
+		height: 100% !important;
+	}
+}
+
+.sale-products {
+	// .new-products__title
+	&__title {
+		padding: 0 0 6.2rem 0;
+		justify-content: space-between;
+		@include flex-align-center;
+
+		[class*='icon-'] {
+			font-size: 2.4rem;
+			color: $color;
+		}
+	}
+
+	// .new-products__text
+	&__text {
+		position: relative;
+		display: flex;
+		align-items: center;
+		color: rgb(0, 70, 70);
+		font-size: 3rem;
+		font-weight: 400;
+		letter-spacing: 0%;
+		text-align: left;
+		text-transform: uppercase;
+		line-height: 120%; /* 36px/30px */
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			background: url('../img/icons/brand.png') center / contain no-repeat;
+		}
+
+		&::before {
+			left: -13px;
+			transform: translateX(-100%);
+		}
+		&::after {
+			right: -13px;
+			transform: translateX(100%);
+		}
+	}
+
+	// .new-products__content
+	&__content {
+		overflow: hidden;
+		display: flex;
+		justify-content: space-between;
+		height: 100%;
+	}
+
+	// .new-products__slide
+	&__slide {
+		height: 100% !important;
+	}
+}
+
+.slide-container {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	// .slide-container__body
+	&__body {
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+	}
+
+	// .slide-container__content
+	&__content {
+		flex: 1 1 auto;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .slide-container__image
+	&__image {
+		position: relative;
+		img {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+
+	// .slide-container__inner
+	&__inner {
+		padding: 0 7px;
+		width: 100%;
+		position: absolute;
+		top: 11px;
+		// margin-left: 7px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .slide-container__lable
+	&__lable {
+		/* Rectangle 453 */
+		padding: 4px 15px;
+
+		border-radius: 5px;
+		background: rgb(255, 255, 255);
+		font-size: 9px;
+		font-weight: 300;
+		line-height: 11px;
+		letter-spacing: 0%;
+		text-transform: uppercase;
+		text-shadow: 0px 0px 1px #000;
+	}
+
+	// .slide-container__info-product
+	&__info-product {
+		flex: 1 1 auto;
+		height: 100%;
+		margin: 1.4rem 0;
+		padding: 0 7px;
+		font-size: 1.5rem;
+		line-height: 18px;
+		letter-spacing: 0%;
+
+		span {
+			text-shadow: 0 0 1px #000;
+		}
+	}
+
+	// .slide-container__name-product
+	&__name-product {
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+		font-weight: 500;
+		line-height: 120%;
+		letter-spacing: 0%;
+		text-shadow: 0 0 1px #000;
+	}
+
+	// .slide-container__price
+
+	&__price {
+		padding: 0 7px;
+		display: flex;
+		justify-content: space-between;
+		text-shadow: 0 0 1px #000;
+	}
+
+	// .slide-container__new-price
+
+	&__new-price {
+		color: rgb(0, 70, 70);
+		font-weight: 700;
+		line-height: 120%; /* 18px/15 */
+		letter-spacing: 0%;
+	}
+
+	// .slide-container__old-price
+	&__old-price {
+		color: rgb(148, 148, 148);
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: 120%; /* 18px/15 */
+		letter-spacing: 0%;
+		text-decoration-line: line-through;
+	}
+	// .slide-container__favourit
+	&__favourit {
+		.icon-heart-like {
+			color: #fff;
+		}
+	}
+
+	// .slide-container__button
+	&__button {
+		width: 100%;
+		margin-top: 1.4rem;
+
+		font-family: 'Arial', sans-serif;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 16px;
+		letter-spacing: 0%;
+		text-align: center;
+		border: 1px solid $color;
+		border-radius: 32px;
+		text-shadow: 0 0 1px #000;
+
+		a {
+			padding: 0.7rem 4.2rem;
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+// -----------------------------------------------------------------------------
