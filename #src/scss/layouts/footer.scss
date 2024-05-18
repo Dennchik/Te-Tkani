@@ -7,7 +7,7 @@
 		grid-template-columns: 1fr 1fr 1fr min-content;
 		@include _768 {
 			grid-template-columns: 1fr 1fr;
-			grid-template-rows: 50% 50%;
+			grid-template-rows: 1fr 1fr;
 			row-gap: 2rem;
 			column-gap: 0;
 		}
