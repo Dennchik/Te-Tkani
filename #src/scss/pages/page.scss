@@ -7,11 +7,12 @@
 
 	// .page__header
 	&__header {
+		margin-bottom: 2.4rem;
 	}
 
 	// .page__textile
 	&__textile {
-		margin: 2.4rem 0 1.6rem;
+		margin-bottom: 8.9rem;
 	}
 
 	// .page__image
@@ -70,6 +71,20 @@
 		width: 100%;
 		height: 100%;
 		background: url('../img/bg-footer.png') center / cover no-repeat;
-		margin-bottom: 1.7rem;
+		margin-bottom: 1rem;
+	}
+
+	// .page__buttom-menu
+	&__buttom-menu {
+		transition: bottom 0.5s ease 0.3s;
+		z-index: 9;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+
+		@include _min-690 {
+			display: none;
+		}
 	}
 }

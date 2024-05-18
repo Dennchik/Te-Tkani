@@ -27,19 +27,14 @@
   //* Better Font Rendering
 }
 
-.icon-search {
+.icon-mobile-profile {
   &:before {
-    content: $icon-search;
+    content: $icon-mobile-profile;
   }
 }
-.icon-heart-like {
+.icon-mobile-catalog {
   &:before {
-    content: $icon-heart-like;
-  }
-}
-.icon-user-check {
-  &:before {
-    content: $icon-user-check;
+    content: $icon-mobile-catalog;
   }
 }
 .icon-rub {
@@ -70,6 +65,26 @@
 .icon-telegram-fly {
   &:before {
     content: $icon-telegram-fly;
+  }
+}
+.icon-search-doc {
+  &:before {
+    content: $icon-search-doc;
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search;
+  }
+}
+.icon-heart-like {
+  &:before {
+    content: $icon-heart-like;
+  }
+}
+.icon-user-check {
+  &:before {
+    content: $icon-user-check;
   }
 }
 .icon-heart {

@@ -18,7 +18,6 @@
 
 	// .footer__column
 	&__column {
-		// border: 1px solid red;
 		ul {
 			color: $font-color-other;
 			font-size: 1.6rem;
@@ -98,8 +97,8 @@
 	&__brand {
 		height: 100%;
 		@include _768 {
-			width: 31px;
-			height: 31px;
+			width: 32px;
+			height: 32px;
 			border-radius: 50%;
 			margin-right: 1.5rem;
 		}
@@ -111,7 +110,7 @@
 	justify-content: flex-end;
 	@include flex-align-center;
 	@include _425 {
-		margin-left: calc(-45px + (1 - (-45)) * ((100vw - 320px) / (425 - 320)));
+		margin-left: calc(-53px + (1 - (-53)) * ((100vw - 320px) / (425 - 320)));
 	}
 
 	// .networks-icons__image
@@ -133,12 +132,19 @@
 		}
 
 		[class*='icon-'] {
-			width: 29px;
-			height: 29px;
+			width: 32px;
+			height: 32px;
 			border-radius: 50%;
 			font-size: 2.2rem;
-			color: #fff;
-			@include flex-align-center-justify-center;
+			color: $color;
+			background: $bg-color;
+			transition: all 0.4s ease-in-out;
+
+			&:hover {
+				transform: rotate(180deg);
+				scale: -1;
+				color: red;
+			}
 		}
 	}
 }

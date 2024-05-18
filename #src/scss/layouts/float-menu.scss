@@ -1,0 +1,51 @@
+.float-menu {
+	background: $bg-color;
+	// .float-menu__items
+
+	&__items {
+		padding: 0.7rem 4.9rem;
+		box-shadow: 0 0 10px #000;
+		[class*='icon-'] {
+			font-size: 24px;
+			width: 30px;
+			height: 30px;
+		}
+		justify-content: space-between;
+		@include flex-align-center;
+		@include _375 {
+			padding: 0.7rem 3rem;
+		}
+	}
+
+	// .float-menu__item
+
+	&__item {
+		flex-direction: column;
+		@include flex-align-center;
+		img {
+			display: block;
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	// .float-menu__link
+
+	&__link {
+		margin-top: 0.5rem;
+		@include _425 {
+			font-size: 11px;
+		}
+	}
+}
+
+.icon-mobile-catalog {
+}
+.undefined {
+}
+.icon-heart {
+}
+.icon-shopping-cart {
+}
+.icon-mobile-profile {
+}

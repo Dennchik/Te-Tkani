@@ -24,7 +24,8 @@
 			width: 30px;
 			height: 30px;
 			background: url('../img/icons/brand.png') center / contain no-repeat;
-			@include _425 {
+
+			@include _490 {
 				display: none;
 			}
 		}
@@ -58,6 +59,37 @@
 	._mobale-fz {
 		h1 {
 			font-size: 2rem !important;
+		}
+	}
+}
+// -----------------------------------------------------------------------------
+._clip-circle {
+	@include _min-920 {
+		position: relative;
+		z-index: 2;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			color: #fff;
+			background-color: $color;
+			clip-path: circle(var(--size) at var(--pos));
+			transition: all 0.5s ease-in-out;
+			z-index: 1;
+			border-radius: 32px;
+		}
+
+		&:hover {
+			a {
+				color: $bg-color;
+			}
+			&:before {
+				--size: 235px;
+			}
 		}
 	}
 }

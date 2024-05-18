@@ -3,19 +3,13 @@ header.header
 		._top-menu
 			._column.bp-2
 				.main-menu
-					ul._list
-						li
-							a(href="#")._link Главная
-						li 
-							a(href="#")._link О магазине
-						li 
-							a(href="#")._link Как купить
-						li 
-							a(href="#")._link Оплата
-						li 
-							a(href="#")._link Доставка
-						li 
-							a(href="#")._link Скидки
+					._list 
+						a(href="#")._link Главная 
+						a(href="#")._link О магазине 
+						a(href="#")._link Как купить 
+						a(href="#")._link Оплата 
+						a(href="#")._link Доставка 
+						a(href="#")._link Скидки
 			._column.bp-1
 			._column 
 				.service-menu
@@ -34,8 +28,7 @@ header.header
 								span._value-favourites (0)
 						li 
 							a(href="#")._link Контакты  
-				include ../modules/burger-button
-					
+				include ../modules/burger-button 
 		._menu-middle
 			._column
 				.middle-menu
@@ -44,7 +37,7 @@ header.header
 							._brand
 								img(src="./img/icons/brand.png", alt="brand")
 							._image
-								img(src="./img/header/logo-header.svg", alt="logo")
+								img(src="./img/header/logo-header.png", alt="logo")
 						.search-container(data-move-el="[{'bp-max': 690, 'index': 1, 'target': '.bp-2'}]")
 							._form#form(action="/search" method="get")
 								input._search-input(type="text", placeholder="Поиск...", name="search" )

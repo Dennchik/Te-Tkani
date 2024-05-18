@@ -33,7 +33,7 @@
 			height: 30px;
 			width: 30px;
 		}
-		@include _425 {
+		@include _490 {
 			display: none;
 		}
 	}
@@ -93,6 +93,7 @@
 		border-radius: 10px;
 		height: 100%;
 		padding: 3.1rem 5.1rem 3.1rem 3.1rem;
+
 		@include _425 {
 			padding: 3.1rem;
 		}

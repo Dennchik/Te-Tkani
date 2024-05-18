@@ -7,7 +7,7 @@
 	// .header__top-menu
 	&__top-menu {
 		border-bottom: 1px solid $color;
-		padding: 2rem 0 0.75rem;
+		padding: 0.75rem 0;
 		@include flex-align-center;
 		justify-content: space-between;
 		@include _690 {
@@ -47,7 +47,6 @@
 			display: none;
 		}
 		padding: 1.5rem;
-		margin-bottom: 2.4rem;
 		width: 100%;
 		gap: 1.5rem;
 		justify-content: space-between;
@@ -67,19 +66,31 @@
 	@include _690 {
 		display: none;
 	}
+
 	// .main-menu__list
 	&__list {
 		@include flex-align-center;
 
 		li:not(:first-child) {
-			margin-left: 2.6rem;
+			margin: 2.6rem;
 		}
 	}
 
 	// .main-menu__link
 	&__link {
+		font-size: 1.5rem;
+		font-weight: 500;
+		line-height: 120%; /* 18px/15px */
+		letter-spacing: 0%;
+		text-align: center;
+		padding: 0 1rem;
+
 		white-space: nowrap;
-		line-height: 100%;
+		line-height: 110%;
+		&:hover {
+			transition: all 0.5s ease-in-out;
+			color: $color;
+		}
 	}
 }
 
@@ -150,7 +161,7 @@
 		@include _min-690 {
 			padding: 0 1.8rem;
 			border-radius: 3.3rem;
-			margin: 0.8rem 0;
+			margin: 0.8rem 2rem;
 		}
 
 		.icon-search {
@@ -249,17 +260,21 @@
 		height: 5rem;
 		width: 5rem;
 	}
+
 	// .logo-container__image
 	&__image {
-		width: 15.8rem;
-		height: 5.4rem;
+		img {
+			width: 15rem;
+			height: 4rem;
+			object-fit: contain;
+		}
 	}
 }
 
 .middle-menu {
 	// .middle-menu__body
 	&__body {
-		padding: 0.8rem 0 0.8rem;
+		// padding: 0.8rem 0 0.8rem;
 		@include flex-justify-space-between;
 	}
 }
