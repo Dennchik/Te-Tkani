@@ -1,24 +1,35 @@
 .portiere-fabrics {
 	gap: 4.249rem;
-	display: grid;
-	grid-template-columns: 32% 64%;
+	display: flex;
 
-	@include _screen-960 {
-		grid-template-columns: 32% 63%;
-	}
 	@include _690 {
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr 1fr;
+		flex-direction: column-reverse;
 	}
 
 	// .portiere-fabrics__column
 	&__column {
 		&:nth-child(1) {
-			grid-row: 2 / -1;
-			flex: 0 1 345.51px;
+			@include _min-690 {
+				flex: 0 1 32%;
+			}
+
+			@include _690 {
+				height: calc(
+					398.55px + (723.22 - 398.55) * ((100vw - 320px) / (690 - 320))
+				);
+			}
+
+			@include _690 {
+				min-height: 100%;
+				padding: 0 3.8rem;
+			}
+			@include _425 {
+				padding: 0;
+			}
 		}
 
 		&:nth-child(2) {
+			flex: 0 1 64%;
 			overflow: hidden;
 		}
 	}
@@ -32,15 +43,8 @@
 		@include _690 {
 			background: url('../img/main/portiere-fabrics/interior.png') center /
 				cover no-repeat;
+			background-size: 100% 100%;
 		}
-	}
-
-	// .portiere-fabrics__content
-	&__content {
-	}
-
-	// .portiere-fabrics__info
-	&__info {
 	}
 }
 
@@ -64,6 +68,9 @@
 		text-transform: uppercase;
 		h1 {
 			font-size: 3rem;
+			@include _425 {
+				font-size: 2.3rem;
+			}
 		}
 	}
 

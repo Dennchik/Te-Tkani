@@ -14,7 +14,7 @@ block page-content
 	.page#page
 		._container
 			section._header
-				include ../components/header
+				include ../layouts/header
 			section._textile
 				._image
 					img(src="./img/main/textile.png", alt="картинка")
@@ -30,7 +30,11 @@ block page-content
 				include ../components/sale-products
 			section._delivery
 				include ../components/delivery
-			
-			._box 
+			section._about
+				include ../components/about-page
+			section._reviews
+				include ../components/reviews 
+			section._footer
+				include ../layouts/footer 
 			
 				

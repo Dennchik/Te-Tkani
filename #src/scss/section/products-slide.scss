@@ -1,7 +1,7 @@
 .new-products {
 	// .new-products__title
 	&__title {
-		padding: 0 0 6.2rem 0;
+		margin: 0 0 6.2rem 0;
 		justify-content: space-between;
 		@include flex-align-center;
 
@@ -60,45 +60,13 @@
 .sale-products {
 	// .new-products__title
 	&__title {
-		padding: 0 0 6.2rem 0;
+		margin: 0 0 6.2rem 0;
 		justify-content: space-between;
 		@include flex-align-center;
 
 		[class*='icon-'] {
 			font-size: 2.4rem;
 			color: $color;
-		}
-	}
-
-	// .new-products__text
-	&__text {
-		position: relative;
-		display: flex;
-		align-items: center;
-		color: rgb(0, 70, 70);
-		font-size: 3rem;
-		font-weight: 400;
-		letter-spacing: 0%;
-		text-align: left;
-		text-transform: uppercase;
-		line-height: 120%; /* 36px/30px */
-
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-			width: 30px;
-			height: 30px;
-			background: url('../img/icons/brand.png') center / contain no-repeat;
-		}
-
-		&::before {
-			left: -13px;
-			transform: translateX(-100%);
-		}
-		&::after {
-			right: -13px;
-			transform: translateX(100%);
 		}
 	}
 
@@ -163,11 +131,10 @@
 		border-radius: 5px;
 		background: rgb(255, 255, 255);
 		font-size: 9px;
-		font-weight: 300;
+		font-weight: 700;
 		line-height: 11px;
 		letter-spacing: 0%;
 		text-transform: uppercase;
-		text-shadow: 0px 0px 1px #000;
 	}
 
 	// .slide-container__info-product
@@ -179,10 +146,6 @@
 		font-size: 1.5rem;
 		line-height: 18px;
 		letter-spacing: 0%;
-
-		span {
-			text-shadow: 0 0 1px #000;
-		}
 	}
 
 	// .slide-container__name-product
@@ -192,20 +155,16 @@
 		font-weight: 500;
 		line-height: 120%;
 		letter-spacing: 0%;
-		text-shadow: 0 0 1px #000;
 	}
 
 	// .slide-container__price
-
 	&__price {
 		padding: 0 7px;
 		display: flex;
 		justify-content: space-between;
-		text-shadow: 0 0 1px #000;
 	}
 
 	// .slide-container__new-price
-
 	&__new-price {
 		color: rgb(0, 70, 70);
 		font-weight: 700;
@@ -236,13 +195,11 @@
 
 		font-family: 'Arial', sans-serif;
 		font-size: 14px;
-		font-weight: 400;
-		line-height: 16px;
-		letter-spacing: 0%;
+		font-weight: 600;
+		line-height: 120%;
 		text-align: center;
 		border: 1px solid $color;
 		border-radius: 32px;
-		text-shadow: 0 0 1px #000;
 
 		a {
 			padding: 0.7rem 4.2rem;

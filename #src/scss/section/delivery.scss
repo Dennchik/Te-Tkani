@@ -1,8 +1,4 @@
 .delivery {
-	// .delivery__body
-	&__body {
-	}
-
 	// .delivery__title
 	&__title {
 		margin-bottom: 6rem;
@@ -14,15 +10,14 @@
 			flex: 0 1 auto;
 			color: rgb(0, 70, 70);
 			font-size: 3rem;
-			font-weight: 400;
+			font-weight: 500;
 			letter-spacing: 0%;
 			text-transform: uppercase;
-			line-height: 120%; /* 36px/30px */
+			line-height: 100%; /* 36px/30px */
 			text-align: center;
-			text-shadow: 0 0 1px $color;
 
-			@include _690 {
-				font-size: 2rem;
+			@include _425 {
+				font-size: 2.3rem;
 			}
 		}
 	}
@@ -37,6 +32,9 @@
 		img {
 			height: 30px;
 			width: 30px;
+		}
+		@include _425 {
+			display: none;
 		}
 	}
 
@@ -62,9 +60,13 @@
 		img {
 			height: 100%;
 			width: 100%;
+			max-width: 100%;
 			object-fit: cover;
-			object-position: 100% 100%;
+			// object-position: 100% 100%;
 		}
+
+		border-radius: 10px;
+		overflow: hidden;
 	}
 
 	// .delivery__text
@@ -81,7 +83,6 @@
 			font-size: 1.5rem;
 			font-weight: 700;
 			line-height: 120%;
-			text-shadow: 0 0 1px #0000009d;
 		}
 	}
 
@@ -92,6 +93,9 @@
 		border-radius: 10px;
 		height: 100%;
 		padding: 3.1rem 5.1rem 3.1rem 3.1rem;
+		@include _425 {
+			padding: 3.1rem;
+		}
 	}
 
 	// .delivery__list
@@ -108,10 +112,18 @@
 
 	// .delivery__brand
 	&__brand {
-		position: absolute;
-		right: -20px;
-		top: -30px;
-		width: 134px;
-		height: 134px;
+		float: right;
+		width: 13.4rem;
+		height: 13.4rem;
+		margin-right: -4rem;
+		@include _425 {
+			width: 12.4rem;
+			height: 12.4rem;
+			display: none;
+		}
+		img {
+			max-width: 100%;
+			object-fit: cover;
+		}
 	}
 }

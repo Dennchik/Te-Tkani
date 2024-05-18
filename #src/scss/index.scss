@@ -31,7 +31,7 @@
 	max-width: $maxWidthContainer;
 	box-sizing: content-box;
 	margin: 0 auto;
-	padding: 0 15px;
+	padding: 0 10px;
 }
 
 [class*='icon-'] {
@@ -45,7 +45,7 @@
 // todo --------------------------- layout -------------------------------------
 @import 'layouts/bem-block';
 @import 'layouts/header';
-// @import 'layouts/footer';
+@import 'layouts/footer';
 // todo --------------------------- Pages --------------------------------------
 @import 'pages/page.scss';
 // todo --------------------------- Modules ------------------------------------
@@ -56,3 +56,5 @@
 @import 'section/furniture-fabrics';
 @import 'section/costume-fabrics';
 @import 'section/delivery';
+@import 'section/about-page';
+@import 'section/reviews';

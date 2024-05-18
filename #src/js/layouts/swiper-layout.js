@@ -1,5 +1,5 @@
 //todo --------------------------(Swiper layout)--------------------------------
-export default function swiperLayout() {
+export function swiperLayout() {
 	let slides = document.querySelectorAll('._swiper');
 	if (slides) {
 		for (let index = 0; index < slides.length; index++) {

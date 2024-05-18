@@ -1,5 +1,7 @@
 import loaded from './modules/preloader.js';
 loaded('.preloader');
+// import { wordWrap } from './modules/word-wrap.js';
+// wordWrap();
 
 // import dinamicAdaptive from './libraries/move-elements.js';
 // dinamicAdaptive();
@@ -7,6 +9,10 @@ loaded('.preloader');
 // import returnToSavedPosition from './modules/return-position.js';
 // returnToSavedPosition();
 //* ----------------------------------------------------------------------------
+
+
+
+// -----------------------------------------------------------------------------
 
 import { } from "./layouts/layouts.js";
 //* ----------------------------------------------------------------------------

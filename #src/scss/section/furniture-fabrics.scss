@@ -48,6 +48,9 @@
 			line-height: 120%;
 			letter-spacing: 0%;
 			text-transform: uppercase;
+			@include _425 {
+				font-size: 2.3rem;
+			}
 		}
 	}
 

@@ -1,4 +1,4 @@
-import swiperLayout from "../layouts/swiper-layout";
+import { swiperLayout } from "../layouts/swiper-layout";
 swiperLayout('._swiper');
 //* import Swiper bundle with all modules installed 
 import Swiper from 'swiper/bundle';
