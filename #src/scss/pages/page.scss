@@ -90,6 +90,7 @@
 
 	// .page__sidebar-search
 	&__sidebar-search {
+		display: none;
 		overflow: auto;
 		position: fixed;
 		z-index: 8;
@@ -99,11 +100,14 @@
 		transition: all 0.5s ease-in-out;
 		transform: translateX(-100%);
 		background: $bg-color;
-
-		&._opened-menu {
-			transform: translateX(0);
+		@include _screen-690 {
+			&._opened-menu {
+				transform: translateX(0);
+			}
 		}
+
 		@include _690 {
+			display: block;
 			padding: 0 10px 15px;
 		}
 	}
