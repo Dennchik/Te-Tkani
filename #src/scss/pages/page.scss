@@ -8,6 +8,24 @@
 	// .page__header
 	&__header {
 		margin-bottom: 2.4rem;
+		@include _screen-690 {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 9;
+			background: $bg-color;
+			width: 100%;
+			padding: 0 10px;
+		}
+	}
+	// .page__content
+	&__content {
+		@include _screen-690 {
+			position: relative;
+			top: 50px;
+			left: 0;
+			z-index: 7;
+		}
 	}
 
 	// .page__textile

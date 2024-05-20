@@ -16,17 +16,15 @@ html {
 }
 
 body {
-	// pointer-events: none;
-	user-select: none;
-	// overflow: hidden;
 	// overscroll-behavior: none;
 	font: {
 		size: 1.5rem;
 		weight: $font-weight-defoult;
 	}
-
-	&.no-scroll {
-		overflow: hidden;
+	@include _screen-690 {
+		&.no-scroll {
+			overflow: hidden;
+		}
 	}
 }
 
