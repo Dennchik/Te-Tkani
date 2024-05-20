@@ -9,9 +9,8 @@ loaded('.preloader');
 // import returnToSavedPosition from './modules/return-position.js';
 // returnToSavedPosition();
 //* ----------------------------------------------------------------------------
-import { heightOffSet, buttonSearch, burgerMenu, showEMenu } from "./layouts/layouts.js";
+import { buttonSearch, burgerMenu, showEMenu } from "./layouts/layouts.js";
 burgerMenu(); showEMenu(); buttonSearch();
-heightOffSet();
 //* ----------------------------------------------------------------------------
 
 

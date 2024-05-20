@@ -27,6 +27,36 @@
   //* Better Font Rendering
 }
 
+.icon-cross-middle {
+  &:before {
+    content: $icon-cross-middle;
+  }
+}
+.icon-cancel {
+  &:before {
+    content: $icon-cancel;
+  }
+}
+.icon-cancel-circle {
+  &:before {
+    content: $icon-cancel-circle;
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search;
+  }
+}
+.icon-heart-like {
+  &:before {
+    content: $icon-heart-like;
+  }
+}
+.icon-user-check {
+  &:before {
+    content: $icon-user-check;
+  }
+}
 .icon-mobile-profile {
   &:before {
     content: $icon-mobile-profile;
@@ -70,21 +100,6 @@
 .icon-search-doc {
   &:before {
     content: $icon-search-doc;
-  }
-}
-.icon-search {
-  &:before {
-    content: $icon-search;
-  }
-}
-.icon-heart-like {
-  &:before {
-    content: $icon-heart-like;
-  }
-}
-.icon-user-check {
-  &:before {
-    content: $icon-user-check;
   }
 }
 .icon-heart {

@@ -8,23 +8,19 @@ const $ = {
 	bottomMenu: document.querySelector('.page__buttom-menu')
 };
 // -----------------------------------------------------------------------------
-export function heightOffSet() {
-	const headerHeight = $.header.offsetHeight;
-	const bottomMenuHeight = $.bottomMenu.offsetHeight;
-	addEventListener('DOMContentLoaded', () => {
-		$.sidebarSearch.style.top = `${headerHeight}px`;
-		$.sidebarSearch.style.height = `calc(100% - (${bottomMenuHeight}px + ${headerHeight}px))`;
-	});
-}
+// export function heightOffSet() {
+// 	const headerHeight = $.header.offsetHeight;
+// 	const bottomMenuHeight = $.bottomMenu.offsetHeight;
+// 	addEventListener('DOMContentLoaded', () => {
+// 		$.sidebarSearch.style.top = `${headerHeight}px`;
+// 		$.sidebarSearch.style.height = `calc(100% - (${bottomMenuHeight}px + ${headerHeight}px))`;
+// 	});
+// }
 // -----------------------------------------------------------------------------
 export function buttonSearch() {
 	$.bttnSearch.addEventListener('click', () => {
-
-		// Устанавливаем высоту в top блока page__sidebar-search 
 		$.sidebarSearch.classList.toggle('_opened-menu');
-		document.body.classList.toggle('no-scroll');
-		// $.sidebarSearch.style.top = `${headerHeight}px`;
-		// $.sidebarSearch.style.height = `calc(100vh - (${bottomMenuHeight}px + ${headerHeight}px))`;
+		// document.body.classList.toggle('no-scroll');
 	});
 }
 // -----------------------------------------------------------------------------
@@ -64,25 +60,3 @@ export function showEMenu() {
 	};
 }
 // -----------------------------------------------------------------------------
-// export function burgerMenu() {
-// 	if (isMobile.any()) {
-// 		_loop($.bttns, 'burger-button', '_active');
-// 	}
-
-// 	function _loop(els, elClosest, md) {
-// 		for (let i = 0; i < els.length; i++) {
-// 			let item = els[i];
-// 			item.addEventListener('click', () => {
-// 				switch (true) {
-// 					case item.classList.contains(elClosest):
-// 						item.classList.toggle(md);
-// 						// $.openSide.classList.toggle('opened-menu');
-// 						break;
-// 					default:
-// 						item.closest(elClosest).classList.toggle(md);
-// 						break;
-// 				}
-// 			});
-// 		}
-// 	}
-// }

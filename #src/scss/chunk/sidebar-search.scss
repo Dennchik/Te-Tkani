@@ -70,8 +70,7 @@
 		&._open {
 			.menu-catalog__link {
 				.icon-arow-right {
-					transform: rotate(-90deg);
-					scale: -1;
+					transform: rotate(90deg);
 					color: red;
 				}
 			}

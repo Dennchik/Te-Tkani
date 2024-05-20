@@ -20,17 +20,21 @@
 	}
 	// .page__content
 	&__content {
+		position: relative;
 		@include _screen-690 {
-			position: relative;
 			top: 50px;
 			left: 0;
-			z-index: 7;
+			z-index: 1;
 		}
 	}
 
 	// .page__textile
 	&__textile {
 		margin-bottom: 8.9rem;
+		img {
+			width: 100%;
+			max-width: 100%;
+		}
 	}
 
 	// .page__image
@@ -94,7 +98,7 @@
 
 	// .page__buttom-menu
 	&__buttom-menu {
-		transition: bottom 0.5s ease 0.3s;
+		transition: all 0.5s ease 0.3s;
 		z-index: 9;
 		position: fixed;
 		bottom: 0;
@@ -109,7 +113,7 @@
 	// .page__sidebar-search
 	&__sidebar-search {
 		display: none;
-		overflow: auto;
+		overflow-x: hidden;
 		position: fixed;
 		z-index: 8;
 		left: 0;

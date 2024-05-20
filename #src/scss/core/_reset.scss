@@ -33,7 +33,7 @@ body {
 	margin: 0px;
 	border: none;
 	box-sizing: border-box;
-	scrollbar-width: none;
+	scrollbar-width: thin;
 }
 
 *,
@@ -83,10 +83,6 @@ input[type='submit'] {
 	cursor: pointer;
 }
 
-// input::-ms-clear {
-// 	display: none;
-// }
-
 input,
 textarea,
 button,
@@ -116,7 +112,7 @@ select {
 
 button::-moz-focus-inner {
 	padding: 0;
-	border: 0;
+	border: 0.5rem;
 }
 
 label {
@@ -152,7 +148,7 @@ h6 {
 ::selection {
 	color: $text-color-selection;
 	background-color: $text-selection;
-	// text-shadow: 0 1px 0 #000;
+	text-shadow: 0 1px 0 #000;
 }
 
 ::-moz-selection {
@@ -169,7 +165,7 @@ h6 {
 
 ::-webkit-scrollbar-track {
 	background: var(--scrollbar-thumb-bgcolor);
-	// background: transparent;
+	background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
