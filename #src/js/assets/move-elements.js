@@ -1,4 +1,4 @@
-export default function dinamicAdaptive() {
+export function dinamicAdaptive() {
   class ItcMoveEl {
     constructor() {
       this._els = document.querySelectorAll('[data-move-el]');

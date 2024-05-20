@@ -20,7 +20,6 @@
 				flex: 0 1 auto;
 			}
 			&:nth-child(2) {
-				// flex: 0 1 100%;
 				@include _min-690 {
 					display: none;
 				}
@@ -29,7 +28,7 @@
 	}
 
 	// .header__menu-middle
-	&__menu-middle {
+	&__middle-menu {
 		@include _690 {
 			display: none;
 		}
@@ -42,14 +41,12 @@
 	}
 
 	// .header__bottom-menu
-	&__bottom-menu {
+	&__menu-bottom {
 		@include _690 {
 			display: none;
 		}
 		padding: 1.5rem;
 		width: 100%;
-		gap: 1.5rem;
-		justify-content: space-between;
 		border-radius: 1rem;
 		color: $font-color-other;
 
@@ -60,6 +57,27 @@
 			rgb(3, 84, 66) 100%
 		);
 	}
+
+	// .header__button-search
+	&__button-search {
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		border: 1px solid $color;
+		._icon {
+			color: $color;
+		}
+		@include _min-690 {
+			display: none;
+		}
+	}
+
+	// .header__button-menu
+	&__button-menu {
+		@include _min-690 {
+			display: none;
+		}
+	}
 }
 
 .main-menu {
@@ -69,11 +87,10 @@
 
 	// .main-menu__list
 	&__list {
-		@include flex-align-center;
-
 		li:not(:first-child) {
 			margin: 2.6rem;
 		}
+		@include flex-align-center;
 	}
 
 	// .main-menu__link
@@ -91,6 +108,9 @@
 			transition: all 0.5s ease-in-out;
 			color: $color;
 		}
+		&:first-child {
+			padding-left: 0;
+		}
 	}
 }
 
@@ -104,6 +124,7 @@
 		padding-left: 2rem;
 		display: grid;
 		justify-content: space-between;
+		align-items: center;
 		grid-template-columns: max-content max-content minmax(
 				13.048rem,
 				max-content
@@ -146,48 +167,6 @@
 		@include _screen-960 {
 			display: none;
 		}
-	}
-}
-
-.search-container {
-	display: flex;
-	// .search-container__form
-	&__form {
-		position: relative;
-		border: 1px solid rgb(3, 84, 66);
-		display: flex;
-		align-items: center;
-		overflow: hidden;
-		@include _min-690 {
-			padding: 0 1.8rem;
-			border-radius: 3.3rem;
-			margin: 0.8rem 2rem;
-		}
-
-		.icon-search {
-			color: rgb(3, 84, 66);
-		}
-
-		@include _690 {
-			width: 32px;
-			height: 32px;
-			border-radius: 50%;
-		}
-	}
-
-	// .search-container__search-input
-	&__search-input {
-		@include _690 {
-			&::placeholder {
-				color: transparent;
-			}
-		}
-	}
-
-	// .search-container__button
-	&__button {
-		position: absolute;
-		right: 1rem;
 	}
 }
 
@@ -257,8 +236,9 @@
 
 	// .logo-container__brand
 	&__brand {
-		height: 5rem;
-		width: 5rem;
+		height: 4rem;
+		width: 4rem;
+		@include flex-align-center;
 	}
 
 	// .logo-container__image

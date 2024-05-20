@@ -1,17 +1,22 @@
 .float-menu 
 	ul._items
 		li._item 
-			img(src="./img/icons/brand.png", alt="bramd")
-			a(href="")._link Главная
+			a(href="")._link
+				img(src="./img/icons/brand.png", alt="bramd")
+				span Главная
 		li._item 
-			+iconfont('mobile-catalog')
-			a(href="")._link Каталог
+			a(href="")._link
+				+iconfont('mobile-catalog', 'link')
+				span Каталог
 		li._item 
-			+iconfont('heart')
-			a(href="")._link Избранное
+			a(href="")._link
+				+iconfont('heart', 'link') 
+				span Избранное
 		li._item 
-			+iconfont('shopping-cart')
-			a(href="")._link Корзина
+			a(href="")._link
+				+iconfont('shopping-cart', 'link') 
+				span Корзина
 		li._item 
-			+iconfont('mobile-profile')
-			a(href="")._link Профиль
+			a(href="")._link
+				+iconfont('mobile-profile', 'link') 
+				span Профиль

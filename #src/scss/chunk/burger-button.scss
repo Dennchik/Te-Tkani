@@ -1,12 +1,9 @@
-.burger-button {
+.button-menu {
 	position: sticky;
 	top: 0rem;
-	flex: 0;
 	left: 0;
 	transform: translateX(var(--mob-hidden-width));
-	@include _min-690 {
-		display: none;
-	}
+
 	&__items {
 		overflow: hidden;
 		height: 4rem;
@@ -19,7 +16,7 @@
 			width: 4rem;
 			height: 4rem;
 			stroke: $color;
-			stroke-width: 0.1em;
+			stroke-width: 2px;
 			stroke-linecap: round;
 			stroke-linejoin: round;
 			fill: none;

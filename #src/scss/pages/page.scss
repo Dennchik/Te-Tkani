@@ -87,4 +87,24 @@
 			display: none;
 		}
 	}
+
+	// .page__sidebar-search
+	&__sidebar-search {
+		overflow: auto;
+		position: fixed;
+		z-index: 8;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		transition: all 0.5s ease-in-out;
+		transform: translateX(-100%);
+		background: $bg-color;
+
+		&._opened-menu {
+			transform: translateX(0);
+		}
+		@include _690 {
+			padding: 0 10px 15px;
+		}
+	}
 }
