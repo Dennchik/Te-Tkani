@@ -60,11 +60,15 @@
 		object-fit: fill;
 	}
 }
-@include _690 {
-	._mobale-fz {
-		h1 {
-			font-size: 2rem !important;
-		}
+// -----------------------------------------------------------------------------
+._lnb {
+	&::before {
+		display: block;
+		content: attr(title);
+		font-weight: 700;
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
 	}
 }
 // -----------------------------------------------------------------------------

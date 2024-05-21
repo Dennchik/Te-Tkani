@@ -5,7 +5,8 @@ const $ = {
 	bttns: document.querySelectorAll('.burger-button'),
 	bttnSearch: document.querySelector('.header__button-search'),
 	sidebarSearch: document.querySelector('.page__sidebar-search'),
-	bottomMenu: document.querySelector('.page__buttom-menu')
+	bottomMenu: document.querySelector('.page__buttom-menu'),
+	cancelButton: document.querySelector('.sidebar-search__icon-cancel')
 };
 // -----------------------------------------------------------------------------
 // export function heightOffSet() {
@@ -17,10 +18,17 @@ const $ = {
 // 	});
 // }
 // -----------------------------------------------------------------------------
+export function cancelButton() {
+	$.cancelButton.addEventListener('click', () => {
+		$.sidebarSearch.classList.remove('_opened-menu');
+		document.body.classList.remove('no-scroll');
+	});
+
+}
 export function buttonSearch() {
 	$.bttnSearch.addEventListener('click', () => {
-		$.sidebarSearch.classList.toggle('_opened-menu');
-		// document.body.classList.toggle('no-scroll');
+		$.sidebarSearch.classList.add('_opened-menu');
+		document.body.classList.add('no-scroll');
 	});
 }
 // -----------------------------------------------------------------------------

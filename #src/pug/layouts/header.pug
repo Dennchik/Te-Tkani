@@ -5,31 +5,37 @@ header.header
 				button._button-search
 					+iconfont('search', '_icon')
 				.main-menu
-					._list 
-						a(href="#")._link Главная 
-						a(href="#")._link О магазине 
-						a(href="#")._link Как купить 
-						a(href="#")._link Оплата 
-						a(href="#")._link Доставка 
-						a(href="#")._link Скидки
+					ul._body
+						li 
+							a(href="#" title="Главная")._link._lnb Главная
+						li 
+							a(href="#" title="О магазине")._link._lnb О магазине
+						li 
+							a(href="#" title="Как купить")._link._lnb Как купить
+						li 
+							a(href="#" title="Оплата")._link._lnb Оплата
+						li 
+							a(href="#" title="Доставка")._link._lnb Доставка
+						li 
+							a(href="#" title="Скидки")._link._lnb Скидки
 			._column.bp-1
 			._column 
 				.service-menu
-					ul._list
-						li
-							a(href="#")._link
-								+iconfont('shopping-cart', '_icon')
-								span._text
-									| Моя корзина 
-								span._value-cart (0) 
-						li 
-							a(href="#")._link 
-								+iconfont('heart', '_icon')
-								span._text 
-									| Избранное 
-								span._value-favourites (0)
-						li 
-							a(href="#")._link Контакты 
+					._body
+						._column
+								a(href="#")._link
+									+iconfont('shopping-cart', '_icon')
+									span._text
+										| Моя корзина 
+									span._value-cart (0)  
+								a(href="#")._link 
+									+iconfont('heart', '_icon')
+									span._text 
+										| Избранное 
+									span._value-favourites (0) 
+						._column
+								a(href="#")._link 
+									span._text Контакты 
 				button._button-menu
 					include ../chunk/burger-button 
 		._middle-menu
@@ -45,10 +51,13 @@ header.header
 			._column
 				.login-container
 					._body
-						._login-icon
-							a(href="/")._link
-								+iconfont('user-check', '_icon')
-								span Личный кабинет  Войти / Регистриция
+						._login 
+							+iconfont('user-check', '_icon')
+							._list
+								a(href="/")._link Личный кабинет
+								a(href="/")._link Войти 
+								span /
+								a(href="/")._link Регистриция 
 						._phone
 							a(href="tel:88000000000") 8-800-000-00-00
 		.menu-bottom._menu-bottom

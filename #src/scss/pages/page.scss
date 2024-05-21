@@ -1,5 +1,4 @@
 .page {
-	overflow-x: hidden;
 	// .page__container
 	&__container {
 		background: #fbf9f4;
@@ -7,12 +6,12 @@
 
 	// .page__header
 	&__header {
+		z-index: 8;
 		margin-bottom: 2.4rem;
 		@include _screen-690 {
 			position: fixed;
 			top: 0;
 			left: 0;
-			z-index: 9;
 			background: $bg-color;
 			width: 100%;
 			padding: 0 10px;
@@ -115,7 +114,7 @@
 		display: none;
 		overflow-x: hidden;
 		position: fixed;
-		z-index: 8;
+		z-index: 9;
 		left: 0;
 		height: 100%;
 		width: 100%;
