@@ -10,12 +10,12 @@ export default () => {
 				message: error.message
 			}))
 		}))
+		.pipe($.gul.fileInclude())
 		.pipe($.gulpIf(app.isDev, $.gul.sourcemaps.init({
 			loadMaps: true
 		})))
 		.pipe($.gul.babel())
 		.pipe($.webPackStream(app.webpack))
-		.pipe($.gul.fileInclude())
 		.pipe($.gulpIf(app.isDev, $.gul.sourcemaps.write('.', {
 			includeContent: false,
 		})))

@@ -161,17 +161,19 @@
 	&__link {
 		height: 100%;
 		transition: all 0.3s ease;
-		// min-width: 170px;
+		@include flex-align-center;
+
 		[class*='icon-'] {
 			font-size: 2.7rem;
 		}
-		&:first-child {
-			margin-right: 1rem;
-		}
-		@include flex-align-center;
+
 		justify-content: flex-end;
 		@include _690 {
 			justify-content: flex-end;
+		}
+
+		&:nth-child(2) {
+			margin-left: 3.7rem;
 		}
 	}
 
@@ -262,6 +264,16 @@
 		white-space: nowrap;
 		justify-self: end;
 		align-self: center;
+
+		a {
+			line-height: 120%;
+			&:hover {
+				line-height: 110%;
+				font-weight: 700;
+				font-size: 1.455rem;
+				letter-spacing: -0.4px;
+			}
+		}
 	}
 }
 

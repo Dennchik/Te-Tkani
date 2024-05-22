@@ -54,9 +54,13 @@
 		&:nth-child(2) {
 			li {
 				line-height: 120%;
+				@include _425 {
+					line-height: 170%;
+				}
 			}
 		}
 		&:nth-child(3) {
+			line-height: 170%;
 			@include _768 {
 				grid-column: 1 / 2;
 				grid-row: 1 / 2;

@@ -109,7 +109,8 @@ export default {
 			},
 		},
 		entry: {
-			// about: './#src/js/about.js',
+			wNumb: './#src/js/assets/wNumb.js',
+			catalog: './#src/js/catalog.js',
 			index: './#src/js/index.js',
 			main: './#src/js/main.js'
 		},

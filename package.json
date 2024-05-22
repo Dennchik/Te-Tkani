@@ -106,6 +106,7 @@
 		"del": "^6.1.1",
 		"gsap": "^3.12.5",
 		"gulp-cli": "^3.0.0",
+		"nouislider": "^15.7.2",
 		"parallax-js": "^3.1.0",
 		"postcss": "^8.4.35",
 		"rellax": "^1.12.1",

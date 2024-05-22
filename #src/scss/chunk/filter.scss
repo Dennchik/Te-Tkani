@@ -1,0 +1,86 @@
+.section-filter {
+	// .section-filter__body
+
+	&__body {
+		position: relative;
+	}
+}
+
+.price-filter {
+	// .price-filter__slider
+
+	&__slider {
+		width: 95%;
+		transform: translateY(2px);
+		height: 3px;
+		margin-bottom: 18px;
+	}
+
+	// .price-filter__values
+
+	&__values {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0.3rem;
+	}
+}
+
+.values-price {
+	// .values-price-filter__min-price
+
+	&__min-price {
+	}
+
+	// .values-price-filter__curent-price
+
+	&__curent-price {
+		@include flex-align-center;
+		gap: 2.2rem;
+	}
+
+	// .values-price-filter__column
+
+	&__column {
+		&:nth-child(1) {
+			margin-right: 1rem;
+		}
+		&:nth-child(2) {
+		}
+		&:nth-child(3) {
+			margin-left: 1rem;
+		}
+	}
+	&__curent-price {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.curent-price {
+	display: flex;
+	align-items: center;
+
+	&__column {
+		border: 1px solid $color;
+		border-radius: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.2rem 0.5rem;
+	}
+	&__label {
+		font-size: 12px;
+		margin-right: 0.5rem;
+	}
+
+	&__input {
+		display: inline-block;
+		text-align: center;
+		width: 40px;
+		input {
+			font-size: 12px;
+			width: 40px;
+		}
+	}
+}

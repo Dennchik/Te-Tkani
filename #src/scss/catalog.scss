@@ -6,17 +6,13 @@
 @import 'core/mixins';
 @import 'core/extend';
 @import 'core/reset';
-// @import 'core/ui';
 //todo ------------------------- Default fonts ---------------------------------
 // &display=swap&subset=cyrillic-ext
 @import url('https://fonts.googleapis.com/css?family=Inter:1300,regular,500,600,700,800,900&display=swap&subset=cyrillic-ext');
-
 // todo --------------------------- Fonts --------------------------------------
 @import 'core/fonts';
 //todo  ------------------------ Icon Fonts ------------------------------------
 @import 'core/iconfonts';
-// todo -------------------------- Plugins -------------------------------------
-@import 'assets/swiper';
 // todo -------------------------- Classes -------------------------------------
 // #region
 .wrapper {
@@ -38,7 +34,6 @@
 	height: 100%;
 	@include flex-align-center-justify-center;
 }
-// todo --------------------------- Assets -------------------------------------
 // todo --------------------------- layout -------------------------------------
 @import 'layouts/bem-block';
 @import 'layouts/header';
@@ -51,13 +46,11 @@
 @import 'chunk/burger-button';
 @import 'chunk/sidebar-menu';
 @import 'chunk/sidebar-search';
+@import 'chunk/bread-crumbs';
+@import 'chunk/filter';
+@import 'assets/noui-slider';
+
 // todo -------------------------- Modules -------------------------------------
 @import 'modules/preloader';
 // todo -------------------------- Sections ------------------------------------
-@import 'section/section-products-slide';
-@import 'section/section-portiere-fabrics';
-@import 'section/section-furniture-fabrics';
-@import 'section/section-costume-fabrics';
-@import 'section/section-delivery';
-@import 'section/section-about';
-@import 'section/section-reviews';
+@import 'section/section-categories';
