@@ -290,9 +290,15 @@
 
 	// .menu-bottom__link
 	&__link {
-		margin-right: 1rem;
+		span {
+			white-space: nowrap;
+			margin-right: 1.2rem;
+		}
 		@include flex-align-center;
+
 		.icon-arow-left {
+			width: 2rem;
+			height: 2rem;
 			transform: rotate(-90deg);
 		}
 	}

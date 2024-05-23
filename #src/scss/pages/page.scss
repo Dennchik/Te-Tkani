@@ -8,7 +8,6 @@
 	&__header {
 		position: relative;
 		z-index: 7;
-		margin-bottom: 1.8rem;
 
 		@include _screen-690 {
 			position: fixed;
@@ -22,6 +21,7 @@
 
 	// .page__content
 	&__content {
+		padding-top: 1.8rem;
 		position: relative;
 		@include _screen-690 {
 			top: 50px;
@@ -112,8 +112,8 @@
 		}
 	}
 
-	// .page__sidebar-search
-	&__sidebar-search {
+	// .page__sidebar-catalog
+	&__sidebar-catalog {
 		display: none;
 		overflow-x: hidden;
 		position: fixed;

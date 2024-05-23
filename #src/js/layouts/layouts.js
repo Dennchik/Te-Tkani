@@ -5,7 +5,7 @@ const $ = {
 	header: document.querySelector('.page__header'),
 	bttns: document.querySelectorAll('.burger-button'),
 	bttnSearch: document.querySelector('.header__button-search'),
-	sidebarSearch: document.querySelector('.page__sidebar-search'),
+	sidebarCatalog: document.querySelector('.page__sidebar-catalog'),
 	bottomMenu: document.querySelector('.page__buttom-menu'),
 	cancelButton: document.querySelector('.sidebar-search__icon-cancel'),
 	menuParents: document.querySelectorAll('.menu-catalog__parent-menu'),
@@ -13,20 +13,22 @@ const $ = {
 	catalogCategories: document.querySelector('.catalog__categories')
 };
 //! --------------------------------- Main.js ----------------------------------
+//todo закрываем "Menu-Catalog" 
 export function cancelButton() {
 	$.cancelButton.addEventListener('click', () => {
-		$.sidebarSearch.classList.remove('_opened-menu');
+		$.sidebarCatalog.classList.remove('_opened-menu');
 		document.body.classList.remove('no-scroll');
 	});
 }
 
+//todo запрещаем скроллинг страницы при открытии "Menu-Catalog"
 export function buttonSearch() {
 	$.bttnSearch.addEventListener('click', () => {
-		$.sidebarSearch.classList.add('_opened-menu');
+		$.sidebarCatalog.classList.add('_opened-menu');
 		document.body.classList.add('no-scroll');
 	});
 }
-
+//todo Показываем/скрываем всплывающее меню при скроллинге страницы
 export function showEMenu() {
 	let prevScrollpos = window.scrollY;
 	window.onscroll = function () {
@@ -96,12 +98,13 @@ function _loop(els, elClosest, md) {
 // 	});
 // }
 //! ------------------------------- Catalog.js ---------------------------------
+//todo Плавное открытие/закрытие блока при нажатии на кнопку "Фильтр:"
 export function collapseCatalogFilter() {
 	// $.catalogCategories.forEach((el) => {
 	const trigger = $.catalogCategories.querySelector('._trigger');
 	console.log(trigger);
 	trigger.addEventListener('click', () => {
-		const opened_menu = $.menuList.querySelector('._open');
+		// const opened_menu = $.menuList.querySelector('._open');
 		_toggleMenu($.catalogCategories);
 		// if (opened_menu && opened_menu !== el) {
 		// 	_toggleMenu(opened_menu);

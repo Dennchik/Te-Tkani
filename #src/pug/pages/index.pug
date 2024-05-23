@@ -2,18 +2,18 @@ extends ../layouts/app_layout
 append link 
 	link(rel="stylesheet" type="text/css" href="@@webRoot/css/index.min.css")
 prepend script 
-	script(defer="defer" type="text/javascript" src="@@webRoot/js/index.min.js") 
-	//- script(defer="defer" type="text/javascript" src="@@webRoot/js/app/runtime.min.js")
-	//- script(defer="defer" type="text/javascript" src="@@webRoot/js/app/anime-vendors.min.js")
-	//- script(defer="defer" type="text/javascript" src="@@webRoot/js/app/react-vendors.min.js")
-	//- script(defer="defer" type="text/javascript" src="@@webRoot/js/app/swiper-bundle.min.js") 
+	script(defer="defer" type="text/javascript" src="@@webRoot/js/index.min.js")
 block title
 	- var text='Те Ткани "Обнинск"' 
 
 block page-content
 	.page#page
 		._container
-			aside._sidebar-search
+			aside._sidebar-catalog
+				.sidebar-search.bp-4
+					._top.bp-2
+						button(type="button")._icon-cancel
+							+iconfont('cancel-circle', 'icon')
 				include ../chunk/sidebar-catalog
 			section._header
 				include ../layouts/header
