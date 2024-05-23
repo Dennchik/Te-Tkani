@@ -1,4 +1,7 @@
 .sidebar-search {
+	@include _min-690 {
+		display: none;
+	}
 	&__top {
 		.search-container {
 			margin-right: 2.5rem;
@@ -55,12 +58,10 @@
 
 .menu-catalog {
 	// .menu-catalog__list
-
 	&__list {
 	}
 
 	// .menu-catalog__parent-menu
-
 	&__parent-menu {
 		&:last-child {
 			.menu-catalog__link {
@@ -71,6 +72,7 @@
 
 	// .menu-catalog__link
 	&__link {
+		cursor: pointer;
 		color: $color;
 		font-size: 15px;
 		font-weight: 700;

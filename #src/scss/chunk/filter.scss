@@ -7,18 +7,46 @@
 }
 
 .price-filter {
-	// .price-filter__slider
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 
+	// .price-filter__slider
 	&__slider {
-		width: 95%;
+		width: 97%;
 		transform: translateY(2px);
-		height: 3px;
-		margin-bottom: 18px;
+		margin-bottom: 10px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			display: block;
+			right: 0;
+			top: -1px;
+			width: 4px;
+			height: 4px;
+
+			background: $color;
+			border-radius: 50%;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			left: 0;
+			top: -1px;
+			width: 4px;
+			height: 4px;
+			background: $color;
+			border-radius: 50%;
+		}
 	}
 
 	// .price-filter__values
-
 	&__values {
+		width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -27,26 +55,18 @@
 }
 
 .values-price {
-	// .values-price-filter__min-price
-
-	&__min-price {
-	}
-
 	// .values-price-filter__curent-price
-
 	&__curent-price {
 		@include flex-align-center;
 		gap: 2.2rem;
 	}
 
 	// .values-price-filter__column
-
 	&__column {
 		&:nth-child(1) {
 			margin-right: 1rem;
 		}
-		&:nth-child(2) {
-		}
+
 		&:nth-child(3) {
 			margin-left: 1rem;
 		}

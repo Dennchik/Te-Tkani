@@ -55,12 +55,10 @@
 
 .menu-catalog {
 	// .menu-catalog__list
-
 	&__list {
 	}
 
 	// .menu-catalog__parent-menu
-
 	&__parent-menu {
 		&:last-child {
 			.menu-catalog__link {
@@ -71,11 +69,13 @@
 
 	// .menu-catalog__link
 	&__link {
+		cursor: pointer;
 		color: $color;
 		font-size: 15px;
 		font-weight: 700;
 		line-height: 200%;
 		border-bottom: 1px solid $color;
+		white-space: nowrap;
 		@include flex-align-center-justify-space-between;
 		.icon-arow-right {
 			transition: all 0.4s ease-in-out;

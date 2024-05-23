@@ -1,5 +1,5 @@
-.categories
-	._body 
+.catalog
+	._categories
 		._title Заголовок категории
 		form(action="#" metod="get").filter._filter-categories
 				._content
@@ -26,7 +26,7 @@
 								._select-type(data-select)  
 									.select._input
 										._box-button
-											input.select__button.input(type="button", name="form[]", value="Рисунок") 
+											input._button.input(type="button", name="form[]", value="Рисунок") 
 											+iconfont('arow-right', 'icon')
 										ul._list._collapse
 											li._list-item._selected(value="Рисунок-1") Рисунок-1
@@ -90,7 +90,7 @@
 								._select-type(data-select)  
 									.select._input
 										._box-button
-											input._button.input(type="button", name="form[]", value="Ширина-1") 
+											input._button.input(type="button", name="form[]", value="Ширина") 
 											+iconfont('arow-right', 'icon')
 										ul._list._collapse
 											li._list-item._selected(value="Ширина-1") Ширина-1
@@ -106,7 +106,7 @@
 								._select-type(data-select)  
 									.select._input
 										._box-button
-											input._button.input(type="button", name="form[]", value="Плотность-1") 
+											input._button.input(type="button", name="form[]", value="Плотность") 
 											+iconfont('arow-right', 'icon')
 										ul._list._collapse
 											li._list-item._selected(value="Плотность-1") Плотность-1
@@ -141,7 +141,7 @@
 								._select-type(data-select)  
 									.select._input
 										._box-button
-											input._button.input(type="button", name="form[]", value="Плотность-1") 
+											input._button.input(type="button", name="form[]", value="Производитель") 
 											+iconfont('arow-right', 'icon')
 										ul._list._collapse
 											li._list-item._selected(value="Производитель-1") Производитель-1
@@ -151,3 +151,33 @@
 											li._list-item(value="Производитель-5") Производитель-5
 											li._list-item(value="Производитель-6") Производитель-6
 											li._list-item(value="Производитель-7") Производитель-7
+	._content 
+		aside._sidebar-menu
+			include ../chunk/sidebar-categories
+		main.main-content._main-content
+			._column 
+				._image 
+					img(src="@@webRoot/img/catalog/K-5799.png", alt="картинка")
+					._label
+						a(href="#")._link
+							span однотонный
+			._column 
+				._image 
+					img(src="@@webRoot/img/catalog/K-5586.png", alt="картинка")
+					._label
+						a(href="#")._link
+							span рогожка
+			._column 
+				._image 
+					img(src="@@webRoot/img/catalog/K-5443.png", alt="картинка")
+					._label
+						a(href="#")._link
+							span жаккардовый
+			._column 
+				._image 
+					img(src="@@webRoot/img/catalog/K-5774.png", alt="картинка")
+					._label
+						a(href="#")._link
+							span печать с рисунком
+
+		

@@ -3,12 +3,13 @@
 	&__top-menu {
 		border-bottom: 1px solid $color;
 		padding: 0.75rem 0;
-		@include flex-align-center;
-		justify-content: space-between;
 		display: grid;
+		justify-content: space-between;
+		align-items: center;
 		grid-template-columns: 1fr 1fr;
 		@include _690 {
-			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-columns: min-content 1fr min-content;
+			justify-items: center;
 			padding: 8px 0 6px;
 		}
 
