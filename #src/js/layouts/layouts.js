@@ -9,7 +9,8 @@ const $ = {
 	bottomMenu: document.querySelector('.page__buttom-menu'),
 	cancelButton: document.querySelector('.sidebar-search__icon-cancel'),
 	menuParents: document.querySelectorAll('.menu-catalog__parent-menu'),
-	menuList: document.querySelector('.menu-catalog__list')
+	menuList: document.querySelector('.menu-catalog__list'),
+	catalogCategories: document.querySelector('.catalog__categories')
 };
 //! --------------------------------- Main.js ----------------------------------
 export function cancelButton() {
@@ -95,3 +96,27 @@ function _loop(els, elClosest, md) {
 // 	});
 // }
 //! ------------------------------- Catalog.js ---------------------------------
+export function collapseCatalogFilter() {
+	// $.catalogCategories.forEach((el) => {
+	const trigger = $.catalogCategories.querySelector('._trigger');
+	console.log(trigger);
+	trigger.addEventListener('click', () => {
+		const opened_menu = $.menuList.querySelector('._open');
+		_toggleMenu($.catalogCategories);
+		// if (opened_menu && opened_menu !== el) {
+		// 	_toggleMenu(opened_menu);
+		// }
+	});
+	// });
+	const _toggleMenu = (el) => {
+		const collapse = new ItcCollapse($.catalogCategories.querySelector('._collapse'));
+		if ($.catalogCategories.classList.contains('_open')) {
+			el.classList.remove('_open');
+			collapse.toggle();
+		} else {
+			el.classList.add('_open');
+			collapse.toggle();
+		}
+	};
+}
+// -----------------------------------------------------------------------------

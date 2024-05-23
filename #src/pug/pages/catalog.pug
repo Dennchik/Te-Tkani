@@ -1,8 +1,7 @@
 extends ../layouts/app_layout
 append link 
 	link(rel="stylesheet" type="text/css" href="@@webRoot/css/catalog.min.css")
-prepend script 
-	script(defer="defer" type="text/javascript" src="@@webRoot/js/wNumb.min.js") 
+prepend script
 	script(defer="defer" type="text/javascript" src="@@webRoot/js/catalog.min.js") 
 	block title
 	- var text='Каталог - Те Ткани "Обнинск"'
@@ -15,7 +14,6 @@ block page-content
 					._top.bp-2
 						button(type="button")._icon-cancel
 							+iconfont('cancel-circle', 'icon')
-					//- include ../chunk/sidebar-categories
 			section._header
 				include ../layouts/header
 			._content

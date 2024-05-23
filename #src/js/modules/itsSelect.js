@@ -119,7 +119,7 @@ export function select() {
 					});
 				}
 
-				// Определяем функцию selectValue вне всех других функций, чтобы она была доступна везде
+				//todo Определяем функцию selectValue вне всех других функций, чтобы она была доступна везде
 				function selectValue() {
 					let buttons = selectGroup.getElementsByClassName('select__button');
 					for (let i = 0; i < buttons.length; i++) {
