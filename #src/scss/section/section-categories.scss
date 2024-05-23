@@ -4,6 +4,7 @@
 		margin-bottom: 2rem;
 		&._open {
 			.catalog__filter-categories {
+				transition: all 0.4s ease;
 				opacity: 1;
 			}
 		}
@@ -49,11 +50,13 @@
 
 	// .catalog__filter-categories
 	&__filter-categories {
-		opacity: 0;
-		transition: all 0.3s ease-in-out;
+		transition: all 0.4s ease;
 		padding: 3rem 2.2rem;
 		border: 1px solid #000;
 		border-radius: 10px;
+		@include _690 {
+			opacity: 0;
+		}
 	}
 
 	// .catalog__content

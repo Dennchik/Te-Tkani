@@ -5,8 +5,10 @@
 .select > ._collapse:not(._show) {
 	display: none;
 }
-.catalog__categories > ._collapse:not(._show) {
-	display: none;
+@include _690 {
+	.catalog__categories > ._collapse:not(._show) {
+		display: none;
+	}
 }
 // -----------------------------------------------------------------------------
 .swiper-wrapper {
