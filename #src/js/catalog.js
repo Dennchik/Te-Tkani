@@ -392,8 +392,8 @@ noUiSlider.create(priceSlider, {
 	behaviour: 'drag',
 	connect: true,
 	tooltips: [
-		wNumb({ decimals: 0, thousand: ' ', suffix: ' (R)' }),
-		wNumb({ decimals: 0, thousand: ' ', suffix: ' (R)' })
+		wNumb({ decimals: 0, thousand: ' ', suffix: ' (RUB)' }),
+		wNumb({ decimals: 0, thousand: ' ', suffix: ' (RUB)' })
 	],
 	range: {
 		'min': [0],

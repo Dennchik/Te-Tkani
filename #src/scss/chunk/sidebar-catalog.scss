@@ -1,4 +1,5 @@
 .sidebar-search {
+	scrollbar-width: none;
 	@include _min-690 {
 		display: none;
 	}
@@ -18,7 +19,6 @@
 	}
 }
 .search-catalog {
-	overflow: scroll;
 	// .catalog__header
 	&__header {
 		margin-bottom: 15px;
@@ -73,6 +73,7 @@
 	// .menu-catalog__link
 	&__link {
 		cursor: pointer;
+		user-select: none;
 		color: $color;
 		font-size: 15px;
 		font-weight: 700;
@@ -132,6 +133,3 @@
 	}
 }
 // -----------------------------------------------------------------------------
-
-.icon-arow-right {
-}
