@@ -13,6 +13,8 @@
 @import 'core/fonts';
 //todo  ------------------------ Icon Fonts ------------------------------------
 @import 'core/iconfonts';
+// todo -------------------------- Plugins -------------------------------------
+@import 'assets/swiper';
 // todo -------------------------- Classes -------------------------------------
 // #region
 .wrapper {
@@ -54,3 +56,4 @@
 @import 'modules/preloader';
 // todo -------------------------- Sections ------------------------------------
 @import 'section/section-categories';
+@import 'section/section-products-slide';

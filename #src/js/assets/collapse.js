@@ -10,7 +10,6 @@ export default class ItcCollapse {
 		}
 		el.classList.remove('_collapse');
 		const height = el.offsetHeight;
-		console.log(height);
 		el.style.height = 0;
 		el.style.overflow = 'hidden';
 		el.style.transition = `height ${this._duration}ms ease`;

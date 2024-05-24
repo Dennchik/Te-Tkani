@@ -50,7 +50,7 @@
 	&__new-products {
 		padding: 4.3rem 0 8.9rem;
 		@include _690 {
-			padding-bottom: 4.7rem;
+			// padding-bottom: 4.7rem;
 		}
 	}
 
@@ -144,5 +144,8 @@
 	// .page__categories
 	&__categories {
 		padding: 0 0 8.9rem;
+		@include _690 {
+			padding: 0;
+		}
 	}
 }

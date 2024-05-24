@@ -2,11 +2,10 @@ import { swiperLayout } from "../layouts/swiper-layout";
 swiperLayout('._swiper');
 //* import Swiper bundle with all modules installed 
 import Swiper from 'swiper/bundle';
-export function newProductsSlide(
-	mainslide = '.new-products__content',
-	scrollbar = '',
-	nextEl = '.new-products__button-next',
-	prevEl = '.new-products__button-prev',
+export function saleProductsSlide(
+	mainslide = '.sale-products__content',
+	nextEl = '.sale-products__button-next',
+	prevEl = '.sale-products__button-prev',
 
 ) {
 	if (mainslide) {
@@ -46,10 +45,7 @@ export function newProductsSlide(
 				}
 			}
 		});
+
+
 	}
 }
-// -----------------------------------------------------------------------------
-
-
-
-

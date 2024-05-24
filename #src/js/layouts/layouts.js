@@ -9,8 +9,9 @@ const $ = {
 	bottomMenu: document.querySelector('.page__buttom-menu'),
 	cancelButton: document.querySelector('.sidebar-search__icon-cancel'),
 	menuParents: document.querySelectorAll('.menu-catalog__parent-menu'),
-	menuList: document.querySelector('.menu-catalog__list'),
-	catalogCategories: document.querySelector('.catalog__categories')
+	menuCatalog: document.querySelector('.menu-catalog'),
+	catalogCategories: document.querySelector('.catalog__categories'),
+	submenuParents: document.querySelectorAll('.submenu-parent'),
 };
 //! --------------------------------- Main.js ----------------------------------
 //todo закрываем "Menu-Catalog" 
@@ -42,25 +43,55 @@ export function showEMenu() {
 		prevScrollpos = currentScrollPos;
 	};
 }
+// -----------------------------------------------------------------------------
 
+export function showSubMenuCollapse() {
+	const subMenuParents = document.querySelectorAll('.submenu-parent__menu');
+	subMenuParents.forEach(subMenuParent => {
+		const trigger = subMenuParent.querySelector('.submenu-parent__link');
+		trigger.addEventListener('click', () => {
+			const opened_menu = $.menuCatalog.querySelector('._active');
+			console.log(opened_menu);
+			_toggleMenu(subMenuParent);
+			// if (opened_menu && opened_menu !== subMenuParent) {
+			// 	_toggleMenu(opened_menu);
+			// }
+			// if (opened_menu && opened_menu === opened_menu) {
+			// 	_toggleMenu(opened_menu);
+			// }
+		});
+	});
+	const _toggleMenu = (el) => {
+		if (el.classList.contains('_active')) {
+			el.classList.remove('_active');
+		} else {
+			el.classList.add('_active');
+		}
+	};
+}
+
+// -----------------------------------------------------------------------------
 export function collapseElement() {
 	$.menuParents.forEach((menuParent) => {
 		const trigger = menuParent.querySelector('._trigger-menu');
+
 		trigger.addEventListener('click', () => {
-			const opened_menu = $.menuList.querySelector('._open');
+			const opened_menu = $.menuCatalog.querySelector('._open');
+			console.log(opened_menu);
 			_toggleMenu(menuParent);
 			if (opened_menu && opened_menu !== menuParent) {
 				_toggleMenu(opened_menu);
 			}
 		});
 	});
-	const _toggleMenu = (menuParent) => {
-		const collapse = new ItcCollapse(menuParent.querySelector('._collapse'));
-		if (menuParent.classList.contains('_open')) {
-			menuParent.classList.remove('_open');
+
+	const _toggleMenu = (el) => {
+		const collapse = new ItcCollapse(el.querySelector('._collapse'));
+		if (el.classList.contains('_open')) {
+			el.classList.remove('_open');
 			collapse.toggle();
 		} else {
-			menuParent.classList.add('_open');
+			el.classList.add('_open');
 			collapse.toggle();
 		}
 	};
@@ -71,7 +102,7 @@ export function burgerMenu() {
 		_loop($.bttns, 'burger-button', '_active');
 	}
 }
-
+// -----------------------------------------------------------------------------
 function _loop(els, elClosest, md) {
 	for (let i = 0; i < els.length; i++) {
 		let item = els[i];
@@ -89,28 +120,15 @@ function _loop(els, elClosest, md) {
 	}
 }
 //! -------------------------------- Index.js ----------------------------------
-// export function heightOffSet() {
-// 	const headerHeight = $.header.offsetHeight;
-// 	const bottomMenuHeight = $.bottomMenu.offsetHeight;
-// 	addEventListener('DOMContentLoaded', () => {
-// 		$.sidebarSearch.style.top = `${headerHeight}px`;
-// 		$.sidebarSearch.style.height = `calc(100% - (${bottomMenuHeight}px + ${headerHeight}px))`;
-// 	});
-// }
+
 //! ------------------------------- Catalog.js ---------------------------------
 //todo Плавное открытие/закрытие блока при нажатии на кнопку "Фильтр:"
 export function collapseCatalogFilter() {
-	// $.catalogCategories.forEach((el) => {
 	const trigger = $.catalogCategories.querySelector('._trigger');
-	console.log(trigger);
 	trigger.addEventListener('click', () => {
-		// const opened_menu = $.menuList.querySelector('._open');
 		_toggleMenu($.catalogCategories);
-		// if (opened_menu && opened_menu !== el) {
-		// 	_toggleMenu(opened_menu);
-		// }
 	});
-	// });
+
 	const _toggleMenu = (el) => {
 		const collapse = new ItcCollapse($.catalogCategories.querySelector('._collapse'));
 		if ($.catalogCategories.classList.contains('_open')) {
@@ -123,3 +141,41 @@ export function collapseCatalogFilter() {
 	};
 }
 // -----------------------------------------------------------------------------
+export function LoadCatalog() {
+	const loadedMenuParent = document.querySelector('menu-catalog__parent-menu');
+	document.addEventListener("DOMContentLoaded", function () {
+
+		$.parentMenu.classList.add('_active');
+		console.log($.parentMenu);
+		// _toggleMenu($.catalogCategories);
+		const collapse = new ItcCollapse(loadedMenuParent.querySelector('._collapse'));
+		if (loaded.classList.contains('_open')) {
+			collapse.toggle();
+		}
+	});
+	// const _toggleMenu = (el) => {
+	// 	const collapse = new ItcCollapse(loadedMenuParent.querySelector('._collapse'));
+	// 	if ($.catalogCategories.classList.contains('_open')) {
+	// 		el.classList.remove('_open');
+	// 		collapse.toggle();
+	// 	} else {
+	// 		el.classList.add('_open');
+	// 		collapse.toggle();
+	// 	}
+	// };
+}
+
+// -----------------------------------------------------------------------------
+export function loadedCatalog() {
+	document.addEventListener("DOMContentLoaded", function () {
+		const active_menu = $.menuCatalog.querySelector('._active');
+		_loadedMenu(active_menu);
+	});
+	const _loadedMenu = (el) => {
+		const collapse = new ItcCollapse(el.querySelector('._collapse'));
+		if (el.classList.contains('_active')) {
+			el.classList.add('_open');
+			collapse.toggle();
+		}
+	};
+}

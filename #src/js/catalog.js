@@ -1,10 +1,12 @@
 import { select } from './modules/itsSelect.js';
 select();
-import { collapseCatalogFilter } from './layouts/layouts.js';
-collapseCatalogFilter();
+import { collapseCatalogFilter, loadedCatalog, showSubMenuCollapse } from './layouts/layouts.js';
+collapseCatalogFilter(); loadedCatalog(); showSubMenuCollapse();
 import * as wNumb from "./assets/wNumb.js";
 // -----------------------------------------------------------------------------
 import noUiSlider from 'nouislider';
+// -----------------------------------------------------------------------------
+
 // -----------------------------------------------------------------------------
 const priceSlider = document.querySelector(
 	'.price-filter__slider');

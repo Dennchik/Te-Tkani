@@ -12,7 +12,6 @@ export function select() {
 
 				itsSelect.addEventListener('click', function (el) {
 					let target = el.target;
-					console.log(target);
 					if (target.closest('.select__button')) {
 						const opened_select = document.querySelector('._active-collapse');
 						_toggleOpen(itsSelect);
