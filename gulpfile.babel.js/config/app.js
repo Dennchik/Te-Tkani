@@ -109,10 +109,12 @@ export default {
 			},
 		},
 		entry: {
-			wNumb: './#src/js/assets/wNumb.js',
+			// wNumb: './#src/js/assets/wNumb.js',
+			catalog: './#src/js/catalog.js',
 			catalog: './#src/js/catalog.js',
 			index: './#src/js/index.js',
-			main: './#src/js/main.js'
+			main: './#src/js/main.js',
+			cart: './#src/js/cart.js',
 		},
 		output: {
 			filename: '[name].min.js',

@@ -35,16 +35,10 @@
 
 	// .costume-fabrics__image
 	&__image {
-		background: url('../img/main/costume-fabrics/costume-fab.png') top / cover
-			no-repeat;
+		background: url('../img/main/costume-fab.png') top / cover no-repeat;
 		width: 100%;
 		height: 100%;
 		background-size: 100% 100%;
-		@include _690 {
-			// width: 603px;
-			// height: 800px;
-			// background-size: contain;
-		}
 	}
 }
 

@@ -1,7 +1,7 @@
 import { select } from './modules/itsSelect.js';
 select();
-import { collapseCatalogFilter, loadedCatalog, showSubMenuCollapse } from './layouts/layouts.js';
-collapseCatalogFilter(); loadedCatalog(); showSubMenuCollapse();
+import { collapseCatalogFilter, loadedCatalog } from './layouts/layouts.js';
+collapseCatalogFilter(); loadedCatalog();
 import * as wNumb from "./assets/wNumb.js";
 // -----------------------------------------------------------------------------
 import noUiSlider from 'nouislider';

@@ -27,6 +27,11 @@
   //* Better Font Rendering
 }
 
+.icon-trash {
+  &:before {
+    content: $icon-trash;
+  }
+}
 .icon-cross-middle {
   &:before {
     content: $icon-cross-middle;

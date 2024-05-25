@@ -18,12 +18,17 @@ block page-content
 				include ../layouts/header
 			._content
 				section._bread-crumbs
-					include ../chunk/bread-crumbs
+					nav.bread-crumbs
+						ul._list
+							li
+								a._link(href="@@webRoot/index.html" title="/ Главная") Главная / 
+							li
+								span._item Каталог
 				section._categories
 					include ../components/section-categories
 				section._new-products
 					include ../components/section-new-products
-				section._footer
-					include ../layouts/footer 
-				nav._buttom-menu
-					include ../layouts/float-menu
+			section._footer
+				include ../layouts/footer 
+			nav._buttom-menu
+				include ../layouts/float-menu
