@@ -179,3 +179,26 @@ export function loadedCatalog() {
 		}
 	};
 }
+//todo -----------Событие при нажатии на кнопку "Оформить заказ"----------------
+export function placeOrder() {
+	document.querySelector('.order-place__form-button').addEventListener('click', function () {
+		const element = document.querySelector('.send-order');
+		// Находим элемент, который нужно скопировать
+		const sourceBlock = document.querySelector('.order-place');
+
+		// Копируем содержимое блока
+		const clonedContent = sourceBlock.cloneNode(true);
+
+		// Находим целевой блок
+		const targetBlock = document.querySelector('.send-order__order-place');
+
+		// Очищаем целевой блок
+		targetBlock.innerHTML = '';
+
+		// Вставляем скопированное содержимое
+		targetBlock.appendChild(clonedContent);
+
+		// Добавляем семантический класс
+		targetBlock.classList.add('place-order');
+	});
+}

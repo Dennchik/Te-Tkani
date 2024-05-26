@@ -27,6 +27,21 @@
   //* Better Font Rendering
 }
 
+.icon-minus {
+  &:before {
+    content: $icon-minus;
+  }
+}
+.icon-heart {
+  &:before {
+    content: $icon-heart;
+  }
+}
+.icon-shopping-cart {
+  &:before {
+    content: $icon-shopping-cart;
+  }
+}
 .icon-trash {
   &:before {
     content: $icon-trash;
@@ -105,15 +120,5 @@
 .icon-search-doc {
   &:before {
     content: $icon-search-doc;
-  }
-}
-.icon-heart {
-  &:before {
-    content: $icon-heart;
-  }
-}
-.icon-shopping-cart {
-  &:before {
-    content: $icon-shopping-cart;
   }
 }

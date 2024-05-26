@@ -1,82 +1,156 @@
-.cart
+.cart-page
 	._title 
 		h1 ваша корзина
 	._body 
-		.making-order._order 
-			form(action="")._form#form-order
+		._thead
+			._table-head
 				._column
-					._thead
 						span Товар 
 				._column
 					._thead
 						span Количество
-				._column
-					._thead
+				._column 
 						span Цена 
-				._column
-					._thead
+				._column 
 						span Сумма 
-				._column
-					._thead
+				._column 
 						button(type="button")._button 
 							+iconfont('trash', 'icon')
-				._column
-					._product 
-						._image 
-							img(src="@@webRoot/img/products/catalog/K-5462.png", alt="картинка")
-						._description
-							span Название ткани описание Артикул 00000 
-				._column
-					._counter
-						.counter-product 
-							.quantity._quantity
-									span Стоимость -&nbsp;380&nbsp;руб
-				._column
-					._price
-						._value1 1000 
-							span._units  руб/п.м.
-				._column
-					spam Итого
-				._column
-					._cancel
-						button(type="button")._button 
-							+iconfont('cancel', 'icon')
-				._column.--login
-					.login-container
-						._body
-							._login 
-								+iconfont('user-check', '_icon')
-								._list
-									a(href="/")._link Личный кабинет
-									a(href="/")._link Войти 
-									span /
-									a(href="/")._link Регистриция
-				._column 
-					._discounts Скидка 3%
-				._column.--result 
-					._totalprice-order
-						span Итого:
-						span._total-sum 9 800
-				._column.--footer
+			.order-place
+				form(action="", method="get")._place-order
+					._content 
+						.shopping-cart
+							._item
+								.product-cart._row(data-quantity) 
+									._column
+										._product-info
+											._image 
+												img(src="@@webRoot/img/products/catalog/K-5462.png", alt="картинка")
+											._description
+												span Название ткани описание Артикул 00000 
+									._column
+										._counter
+											.counter-product 
+												.quantity._quantity
+													._button.quantity-remove
+														+iconfont('minus', 'icon')
+													._input
+														input.input(type="text", name="form[]", value="0.30", placeholder="<+>", autocomplete="off")
+													._button.quantity-add._arrow._arrow_next
+														+iconfont('cancel', 'icon')
+												p._price Стоимость - &nbsp;
+													span._price-product.product-price 380 
+													span руб
+									._column
+										._price
+											p._price 1000 
+												span._units руб/п.м.
+									._column 
+										span._quantity-price
+									._column
+										._cancel
+											button(type="button")._button 
+												+iconfont('cancel', 'icon')
+								.product-cart._row(data-quantity) 
+									._column
+										._product-info
+											._image 
+												img(src="@@webRoot/img/products/catalog/K-7446.png", alt="картинка")
+											._description
+												span Название ткани описание Артикул 00000 
+									._column
+										._counter
+											.counter-product 
+												.quantity._quantity
+													._button.quantity-remove
+														+iconfont('minus', 'icon')
+													._input
+														input.input(type="text", name="form[]", value="0.30", placeholder="<+>", autocomplete="off")
+													._button.quantity-add._arrow._arrow_next
+														+iconfont('cancel', 'icon')
+												p._price Стоимость - &nbsp;
+													span._price-product.product-price 380 
+													span руб
+									._column
+										._price
+											p._price 1000 
+												span._units руб/п.м.
+									._column 
+										span._quantity-price
+									._column
+										._cancel
+											button(type="button")._button 
+												+iconfont('cancel', 'icon')
+								.product-cart._row(data-quantity) 
+									._column
+										._product-info
+											._image 
+												img(src="@@webRoot/img/products/catalog/K-5589.png", alt="картинка")
+											._description
+												span Название ткани описание Артикул 00000 
+									._column
+										._counter
+											.counter-product 
+												.quantity._quantity
+													._button.quantity-remove
+														+iconfont('minus', 'icon')
+													._input
+														input.input(type="text", name="form[]", value="0.30", placeholder="<+>", autocomplete="off")
+													._button.quantity-add._arrow._arrow_next
+														+iconfont('cancel', 'icon')
+												p._price Стоимость - &nbsp;
+													span._price-product.product-price 380 
+													span руб
+									._column
+										._price
+											p._price 1000 
+												span._units руб/п.м.
+									._column 
+										span._quantity-price
+									._column
+										._cancel
+											button(type="button")._button 
+												+iconfont('cancel', 'icon')
+									
+					._column.--login
+						.login-container
+							._body
+								._login 
+									+iconfont('user-check', '_icon')
+									._list
+										a(href="/")._link Личный кабинет
+										a(href="/")._link Войти 
+										span /
+										a(href="/")._link Регистриция
+					._column 
+						._discounts Скидка 3%
+					._column.--result 
+						._totalprice-order.input-total
+							span._total-sum 9 800
 					._footer
-						._info 
-							p После поступления заказа, с вами свяжется менеджер. Он подтвердит наличие необходимого количества товара и обсудит все детали заказа. После согласования вам выставят счет для оплаты на электронную почту и в личный кабинет.
-				._column.--button 
-					button(type="submit")._form-button  
-						span оформить заказ
-
-		aside._help
-			._info
-				h1  Возникли вопросы при оформлении заказа?
-				._text
-					p Проконсультируйтесь с нашим специалистом
+						._footer._column.--footer
+							._info 
+								p После поступления заказа, с вами свяжется менеджер. Он подтвердит наличие необходимого количества товара и обсудит все детали заказа. После согласования вам выставят счет для оплаты на электронную почту и в личный кабинет.
+						._column.--button
+							button(type="button")._form-button  
+								span оформить заказ
+			.send-order
+				._title 
+					h1 оформление заказа
+				._order-place
+		._tbody
+			aside.help-order
+				._info
+					h1  Возникли вопросы при оформлении заказа?
+					._text
+						p Проконсультируйтесь с нашим специалистом
 					a._phone(href="tel:88000000000") 8 800 000 00 00
-			._info 
-				h1  Наша система скидок
-				._text
-					p - на сумму 5000 руб. и более, 
-						span скидка 3 %
-					p - на сумму 10 000 руб. и более, 
-						span скидка 5%
-					p - на сумму 20 000 руб. и более, 
-						span скидка 10% 
+				._info 
+					h1  Наша система скидок
+					._text
+						p - на сумму 5000 руб. и более, 
+							span скидка 3 %
+						p - на сумму 10 000 руб. и более, 
+							span скидка 5%
+						p - на сумму 20 000 руб. и более, 
+							span скидка 10% 

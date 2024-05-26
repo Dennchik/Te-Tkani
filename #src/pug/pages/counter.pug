@@ -1,4 +1,4 @@
-extends ../../layouts/app_layout
+extends ../layouts/app_layout
 append link 
 	link(rel="stylesheet" type="text/css" href="@@webRoot/css/cart.min.css")
 prepend script
@@ -14,9 +14,9 @@ block page-content
 					._top.bp-2
 						button(type="button")._icon-cancel
 							+iconfont('cancel-circle', 'icon')
-				include ../../chunk/sidebar-catalog
+				include ../chunk/sidebar-catalog
 			section._header
-				include ../../layouts/header
+				include ../layouts/header
 			._content
 				section._bread-crumbs
 					nav.bread-crumbs
@@ -27,10 +27,11 @@ block page-content
 								a._link._lnb(href="@@webRoot/catalog.html" title="/ Главная") Каталог /
 							li
 								span._item Корзина
-				section._cart-page 
-					include ../../components/section-cart
+				section._cart 
+					include ../chunk/counter
+					
 				
 			section._footer
-				include ../../layouts/footer 
+				include ../layouts/footer 
 			nav._buttom-menu
-				include ../../layouts/float-menu
+				include ../layouts/float-menu
