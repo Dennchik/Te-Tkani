@@ -52,14 +52,16 @@ header.header
 				.login-container
 					._body
 						._login 
-							+iconfont('user-check', '_icon')
-							._list
+							._button
+								+iconfont('user-check', '_icon')
+							._list(data-move-el="[{'bp-max': 960.98, 'index': 1, 'target': '.bp-6'}]")
 								a(href="/")._link Личный кабинет
 								a(href="/")._link Войти 
 								span /
 								a(href="/")._link Регистриция 
 						._phone
 							a(href="tel:88000000000") 8-800-000-00-00
+					._fade-in.bp-6
 		.menu-bottom._menu-bottom
 				ul._list
 					li

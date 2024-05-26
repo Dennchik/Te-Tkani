@@ -2,7 +2,7 @@
 	._title 
 		h1 ваша корзина
 	._body 
-		._thead
+		main._main-content
 			._table-head
 				._column
 						span Товар 
@@ -14,8 +14,8 @@
 				._column 
 						span Сумма 
 				._column 
-						button(type="button")._button 
-							+iconfont('trash', 'icon')
+					._button 
+						+iconfont('trash', 'icon')
 			.order-place
 				form(action="", method="get")._place-order
 					._content 
@@ -39,11 +39,11 @@
 													._button.quantity-add._arrow._arrow_next
 														+iconfont('cancel', 'icon')
 												p._price Стоимость - &nbsp;
-													span._price-product.product-price 380 
+													span._price-product 380 
 													span руб
 									._column
 										._price
-											p._price 1000 
+											p._price.product-price 1000 
 												span._units руб/п.м.
 									._column 
 										span._quantity-price
@@ -69,11 +69,11 @@
 													._button.quantity-add._arrow._arrow_next
 														+iconfont('cancel', 'icon')
 												p._price Стоимость - &nbsp;
-													span._price-product.product-price 380 
+													span._price-product 380 
 													span руб
 									._column
 										._price
-											p._price 1000 
+											p._price.product-price 1000 
 												span._units руб/п.м.
 									._column 
 										span._quantity-price
@@ -99,11 +99,11 @@
 													._button.quantity-add._arrow._arrow_next
 														+iconfont('cancel', 'icon')
 												p._price Стоимость - &nbsp;
-													span._price-product.product-price 380 
+													span._price-product 380 
 													span руб
 									._column
 										._price
-											p._price 1000 
+											p._price.product-price 1000 
 												span._units руб/п.м.
 									._column 
 										span._quantity-price
@@ -116,17 +116,19 @@
 						.login-container
 							._body
 								._login 
-									+iconfont('user-check', '_icon')
-									._list
+									._button
+										+iconfont('user-check', '_icon')
+									._list(data-move-el="[{'bp-max': 490.98, 'index': 1, 'target': '.bp-5'}]")
 										a(href="/")._link Личный кабинет
 										a(href="/")._link Войти 
 										span /
 										a(href="/")._link Регистриция
-					._column 
-						._discounts Скидка 3%
-					._column.--result 
-						._totalprice-order.input-total
-							span._total-sum 9 800
+								._column 
+									._discounts Скидка 3%
+								._column.--result 
+									._totalprice-order.input-total Итого:
+										span._total-sum 9 800
+							._fade-in.bp-5
 					._footer
 						._footer._column.--footer
 							._info 
@@ -134,19 +136,17 @@
 						._column.--button
 							button(type="button")._form-button  
 								span оформить заказ
-			.send-order
-				._title 
-					h1 оформление заказа
-				._order-place
-		._tbody
-			aside.help-order
+		aside._help-order
+			.help-order
 				._info
-					h1  Возникли вопросы при оформлении заказа?
+					._title
+						h1 Возникли вопросы при оформлении заказа?
 					._text
 						p Проконсультируйтесь с нашим специалистом
-					a._phone(href="tel:88000000000") 8 800 000 00 00
+						a._phone(href="tel:88000000000") 8 800 000 00 00
 				._info 
-					h1  Наша система скидок
+					._title
+						h1 Наша система скидок
 					._text
 						p - на сумму 5000 руб. и более, 
 							span скидка 3 %
@@ -154,3 +154,7 @@
 							span скидка 5%
 						p - на сумму 20 000 руб. и более, 
 							span скидка 10% 
+	.send-order
+		._title 
+			h1 оформление заказа
+		._order-place

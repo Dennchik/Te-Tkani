@@ -141,31 +141,20 @@ export function collapseCatalogFilter() {
 	};
 }
 // -----------------------------------------------------------------------------
-export function LoadCatalog() {
-	const loadedMenuParent = document.querySelector('menu-catalog__parent-menu');
-	document.addEventListener("DOMContentLoaded", function () {
+// export function LoadCatalog() {
+// 	const loadedMenuParent = document.querySelector('menu-catalog__parent-menu');
+// 	document.addEventListener("DOMContentLoaded", function () {
 
-		$.parentMenu.classList.add('_active');
-		console.log($.parentMenu);
-		// _toggleMenu($.catalogCategories);
-		const collapse = new ItcCollapse(loadedMenuParent.querySelector('._collapse'));
-		if (loaded.classList.contains('_open')) {
-			collapse.toggle();
-		}
-	});
-	// const _toggleMenu = (el) => {
-	// 	const collapse = new ItcCollapse(loadedMenuParent.querySelector('._collapse'));
-	// 	if ($.catalogCategories.classList.contains('_open')) {
-	// 		el.classList.remove('_open');
-	// 		collapse.toggle();
-	// 	} else {
-	// 		el.classList.add('_open');
-	// 		collapse.toggle();
-	// 	}
-	// };
-}
+// 		$.parentMenu.classList.add('_active');
+// 		console.log($.parentMenu);
+// 		const collapse = new ItcCollapse(loadedMenuParent.querySelector('._collapse'));
+// 		if (loaded.classList.contains('_open')) {
+// 			collapse.toggle();
+// 		}
+// 	});
+// }
 
-// -----------------------------------------------------------------------------
+//* --------------При загрузки "Catalog.html" открывает "Блэкаут"---------------
 export function loadedCatalog() {
 	document.addEventListener("DOMContentLoaded", function () {
 		const active_menu = $.menuCatalog.querySelector('._active');
@@ -201,4 +190,19 @@ export function placeOrder() {
 		// Добавляем семантический класс
 		targetBlock.classList.add('place-order');
 	});
+}
+//* -----------------------------Login-container--------------------------------
+export function loginMenu() {
+	const loginButtons = document.querySelectorAll('.login-container__button');
+	console.log(loginButtons);
+	for (let i = 0; i < loginButtons.length; i++) {
+		const loginButton = loginButtons[i];
+		loginButton.addEventListener('click', (e) => {
+			let target = e.target;
+			console.log(target);
+			let loginList = target.closest('.login-container').querySelector('.login-container__fade-in');
+			console.log(loginList);
+			loginList.classList.toggle('_visible');
+		});
+	}
 }

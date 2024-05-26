@@ -30,6 +30,41 @@
 				justify-self: end;
 			}
 		}
+		// .login-container__list
+		.login-container {
+			&__list {
+				font-size: 13px;
+				width: auto;
+			}
+
+			// .login-container__fade-in
+			&__fade-in {
+				@include _screen-960 {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 1rem 2rem;
+					background: #fff;
+					border: 1px solid $color;
+					border-radius: 5px;
+					height: 50px;
+					width: auto;
+					position: absolute;
+					opacity: 0;
+					z-index: 8;
+					right: 0;
+					pointer-events: none;
+					box-shadow: 1px 1px 3px #000;
+					transition: all 0.5s ease-in-out;
+					&._visible {
+						pointer-events: all;
+						transform: translatey(102%);
+						opacity: 1;
+						display: flex;
+					}
+				}
+			}
+		}
 	}
 
 	// .header__menu-middle
@@ -195,84 +230,6 @@
 		@include _screen-960 {
 			&:not(:last-child) {
 				display: none;
-			}
-		}
-	}
-}
-
-.login-container {
-	// .login-container__body
-	&__body {
-		padding-left: 2rem;
-		width: 100%;
-		height: 100%;
-		gap: 2rem;
-		display: grid;
-
-		grid-template-columns: auto minmax(13.048rem, max-content);
-
-		justify-content: space-between;
-		@include _screen-960 {
-			justify-content: end;
-		}
-	}
-
-	// .login-container__login
-	&__login {
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		[class*='icon-'] {
-			margin-right: 5px;
-			font-size: 2.7rem;
-		}
-	}
-
-	// .login-container__list
-	&__list {
-		width: 29rem;
-		height: 20px;
-		display: flex;
-		line-height: 0;
-		justify-content: space-between;
-		span {
-			line-height: 130%;
-		}
-		@include _screen-960 {
-			display: none;
-		}
-	}
-
-	// .login-container__link
-	&__link {
-		white-space: nowrap;
-		&:first-child {
-			padding-left: 0.5rem;
-		}
-		&:not(:last-child) {
-			margin-right: 0.5rem;
-		}
-		&:hover {
-			font-weight: 700;
-			font-size: 1.456rem;
-		}
-
-		@include flex-align-center;
-	}
-
-	// .login-container__phone
-	&__phone {
-		white-space: nowrap;
-		justify-self: end;
-		align-self: center;
-
-		a {
-			line-height: 120%;
-			&:hover {
-				line-height: 110%;
-				font-weight: 700;
-				font-size: 1.455rem;
-				letter-spacing: -0.4px;
 			}
 		}
 	}

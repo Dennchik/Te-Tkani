@@ -10,11 +10,10 @@
 	// .counter-product__new-price
 	&__price {
 		margin-top: 2rem;
-	}
-
-	// .counter-product__price-product
-
-	&__price-product {
+		@include _690 {
+			margin-top: 4rem;
+			text-align: center;
+		}
 	}
 }
 

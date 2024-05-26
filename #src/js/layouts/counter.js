@@ -91,7 +91,7 @@ export function counterProducy() {
 				currency: 'RUB',
 				minimumFractionDigits: 0,
 			});
-			inputTotal.innerHTML = totalSum.toLocaleString() + `<i class="icon-rub"></i>`;
+			inputTotal.innerHTML = 'Итого:' + ' ' + totalSum.toLocaleString() + `<i class="icon-rub"></i>`;
 		});
 	}
 
