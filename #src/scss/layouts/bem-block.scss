@@ -74,8 +74,9 @@
 
 		@include flex-align-center;
 	}
+
 	// .login-container__button
-	&__button {
+	&__user-button {
 		&._icon {
 			pointer-events: none;
 		}

@@ -180,14 +180,14 @@ export function userMenu() {
 
 		userButton.addEventListener('click', (e) => {
 			let target = e.target;
-
 			let loginContent = loginList(target, '.login-container__fade-in');
 			loginContent.classList.toggle('_visible');
+
 			let loginModal = loginList(target, '.login-modal');
-			removeElement(loginModal, '_show');
+			loginModal.classList.remove('_show');
 
 			window.addEventListener('click', function (e) {
-				let loginContainer = target.closest('.login-container');
+				const loginContainer = document.querySelector('.login-container');
 				if (!loginContainer.contains(e.target)) {
 					removeElement(loginContent, '_visible');
 				}
@@ -195,8 +195,16 @@ export function userMenu() {
 		});
 	}
 
-	// Выбираем все элементы с calss="login"
+	function loginList(target, el) {
+		return target.closest('.login-container').querySelector(el);
+	}
+
+	// Выбираем все элементы с id="login"
 	const userLogins = document.querySelectorAll('.login');
+	console.log(userLogins);
+
+	// Выбираем модальное окно и элементы внутри него  
+	const modal = document.querySelector('.login-modal');
 
 	// Добавляем обработчики событий для всех элементов с class="login"
 	userLogins.forEach((userLogin) => {
@@ -204,27 +212,23 @@ export function userMenu() {
 			let target = e.target;
 
 			let loginContent = loginList(target, '.login-container__fade-in');
-
-			// Выбираем модальное окно и элементы внутри него;
-			let loginModal = loginList(target, '.login-modal');
-
 			// Показываем модальное окно с плавным появлением 
-			loginModal.classList.toggle('_show');
+			modal.classList.toggle('_show');
+
+			// Скрываем окно "Fade-In"
 			removeElement(loginContent, '_visible');
 
-			let closeButton = loginModal.querySelector('.login-modal__close');
-			closeModal(closeButton, loginModal);
+			let loginModal = loginList(target, '.login-modal');
+
 
 			window.addEventListener('click', function (e) {
-				// let loginModal = target.closest('.login-modal');
-				let loginContainer = target.closest('.login-container');
+				const loginContainer = document.querySelector('.login-container');
 				if (!loginContainer.contains(e.target)) {
 					removeElement(loginModal, '_show');
 				}
 			});
 		});
 	});
-
 
 
 	// const loginRecoverys = document.querySelectorAll('.login-modal__recovery');
@@ -236,18 +240,22 @@ export function userMenu() {
 	// });
 
 	// Добавляем обработчик события для кнопки закрытия модального окна
-	function closeModal(el, modal) {
-		el.addEventListener('click', () => {
-			// Скрываем модальное окно с плавным исчезновением
-			modal.classList.remove('_show');
-		});
-	}
+	const closeModal = document.querySelector('.login-modal__close');
+	closeModal.addEventListener('click', () => {
+		// Скрываем модальное окно с плавным исчезновением
+		modal.classList.remove('_show');
+	});
 
-	function loginList(target, el) {
-		return target.closest('.login-container').querySelector(el);
-	}
-
+	// function removeElement(el) {
+	// 	el.classList.remove('_visible');
+	// }
 	function removeElement(el, className) {
 		el.classList.remove(className);
 	}
+	// Закрываем модальное окно, если пользователь кликает вне его
+	// window.addEventListener('click', (event) => {
+	// 	if (event.target === modal) {
+	// 		modal.classList.remove('_show');
+	// 	}
+	// });
 }

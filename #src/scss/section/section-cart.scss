@@ -187,6 +187,11 @@
 	&__column--login {
 		.login-container {
 			position: relative;
+			.login-modal {
+				left: 0;
+				top: 50px;
+				margin-right: -80px;
+			}
 			&__body {
 				background: $bg-color;
 				position: relative;
@@ -265,8 +270,9 @@
 					}
 				}
 			}
-			// .login-container__button
-			&__button {
+
+			// .login-container__user-button
+			&__user-button {
 				pointer-events: none;
 				@include _490 {
 					pointer-events: all;
