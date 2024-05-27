@@ -36,6 +36,7 @@
 [class*='icon-'] {
 	cursor: pointer;
 	height: 100%;
+	pointer-events: none;
 	@include flex-align-center-justify-center;
 }
 // todo --------------------------- Assets -------------------------------------
@@ -51,6 +52,7 @@
 @import 'chunk/burger-button';
 @import 'chunk/sidebar-menu';
 @import 'chunk/sidebar-catalog';
+@import 'chunk/login-modal';
 // todo -------------------------- Modules -------------------------------------
 @import 'modules/preloader';
 // todo -------------------------- Sections ------------------------------------

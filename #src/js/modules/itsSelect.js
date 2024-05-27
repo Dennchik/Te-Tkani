@@ -59,7 +59,7 @@ export function select() {
 					} else if (e.key == 'Enter') {
 						//* Key Enter ------------------------------------
 						selectValue();
-						closeBos();
+						closeBox();
 					}
 				});
 
@@ -90,7 +90,7 @@ export function select() {
 				document.addEventListener('keydown', function (el) {
 					if (el.key === 'Tab' || el.key === 'Escape') {
 						selectButton.blur();
-						closeBos();
+						closeBox();
 					}
 				});
 
@@ -103,13 +103,13 @@ export function select() {
 						case classList.contains('select__list-item'):
 							break;
 						default:
-							closeBos();
+							closeBox();
 							break;
 					};
 				});
 
 				//todo Клик снаружи дропдауна. Переключатель классов. Закрыть дропдаун;
-				function closeBos() {
+				function closeBox() {
 					const dropDown = document.querySelectorAll('.select');
 					dropDown.forEach(el => {
 						if (el.classList.contains('_active-collapse')) {

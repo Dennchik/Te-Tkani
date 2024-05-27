@@ -116,13 +116,14 @@
 						.login-container
 							._body
 								._login 
-									._button
+									._user-button
 										+iconfont('user-check', '_icon')
 									._list(data-move-el="[{'bp-max': 490.98, 'index': 1, 'target': '.bp-5'}]")
-										a(href="/")._link Личный кабинет
-										a(href="/")._link Войти 
+										button(type="button")._link Личный кабинет
+										button(type="button")._link#login Войти 
 										span /
-										a(href="/")._link Регистриция
+										button(type="button")._link Регистриция
+									include ../chunk/login-modal
 								._column 
 									._discounts Скидка 3%
 								._column.--result 

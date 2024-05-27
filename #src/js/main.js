@@ -4,10 +4,15 @@ loaded('.preloader');
 import { dinamicAdaptive } from './assets/move-elements.js';
 dinamicAdaptive();
 //* ----------------------------------------------------------------------------
-import { cancelButton, buttonSearch, burgerMenu, showEMenu, showSubMenuCollapse, collapseElement, loginMenu } from "./layouts/layouts.js";
-burgerMenu(); showEMenu(); buttonSearch(); cancelButton(); showSubMenuCollapse(); loginMenu(); collapseElement();
+import { cancelButton, buttonSearch, burgerMenu, showEMenu, showSubMenuCollapse, collapseElement, userMenu } from "./layouts/layouts.js";
+burgerMenu();
+showEMenu();
+buttonSearch();
+cancelButton();
+showSubMenuCollapse();
+collapseElement();
+userMenu();
 //* ----------------------------------------------------------------------------
-
 
 //* ----------------------------------------------------------------------------
 import { newProductsSlide } from "./modules/new-products-slide.js";

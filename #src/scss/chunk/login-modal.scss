@@ -1,0 +1,169 @@
+/* Стили для модального окна */
+.login-modal {
+	margin-right: -60px;
+	position: absolute;
+	top: 30px;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0; /* Начальная прозрачность */
+	transform: translate(20%, 20%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid $color;
+	background: $bg-color;
+	border: 1px solid $color;
+	border-radius: 10px;
+	z-index: 9;
+	transition: all 0.5s ease; /* Плавный переход */
+	pointer-events: none;
+	width: 300px;
+	// background-color: rgba(0, 0, 0, 0.4); /* Черный фон с прозрачностью */
+
+	/* Стили для модального контента */
+	&._show {
+		transform: translate(20%, 0);
+		pointer-events: all;
+		opacity: 1;
+	}
+	&__modal-content {
+		margin: 3.2rem 4.5rem;
+		position: relative;
+		border-radius: 10px;
+		transition: transform 0.5s ease; /* Плавный переход для трансформации */
+		// transform: translateY(-100px); /* Начальная позиция */
+	}
+
+	&__input {
+		width: 220px;
+		padding: 0.5rem;
+		display: flex;
+		border: 1px solid $color;
+		border-radius: 5px;
+		margin-bottom: 2rem;
+	}
+
+	&__label {
+		font-size: 14px;
+	}
+
+	&__close {
+		position: absolute;
+		top: -20px;
+		right: -35px;
+		font-size: 20px;
+	}
+
+	&__form {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__close:hover,
+	&__close:focus {
+		color: black;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	&__button-login {
+		padding: 1rem 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		background-color: $color;
+		border-radius: 23px;
+		color: $bg-color;
+		margin-bottom: 2rem;
+	}
+
+	&__recovery {
+		padding: 1rem 0;
+		width: 100%;
+		border-radius: 5px;
+		border: 1px solid $color;
+	}
+}
+
+/* Стили для кнопки закрытия */
+.recovery-modal {
+	padding: 3rem;
+	position: absolute;
+	top: 30px;
+	right: 0;
+	margin-right: -50px;
+	opacity: 0; /* Начальная прозрачность */
+	transform: translate(20%, 20%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid $color;
+	background: $bg-color;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9;
+	border: 1px solid $color;
+	transition: all 0.5s ease; /* Плавный переход */
+	pointer-events: none;
+
+	&__modal-content {
+		position: relative;
+		padding: 20px;
+		// border: 1px solid #888;
+		width: 300px;
+		border-radius: 10px;
+		transition: transform 0.5s ease; /* Плавный переход для трансформации */
+		// transform: translateY(-100px); /* Начальная позиция */
+	}
+
+	&__input {
+		width: 100%;
+		padding: 0.5rem;
+		display: flex;
+		border: 1px solid $color;
+		border-radius: 5px;
+		margin-bottom: 2rem;
+	}
+
+	&__form {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__label {
+		font-size: 14px;
+	}
+
+	&__close {
+		position: absolute;
+		top: -10px;
+		right: -10px;
+		font-size: 20px;
+	}
+
+	&__close:hover,
+	&__close:focus {
+		color: black;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	&__button-recovery {
+		padding: 1rem 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		background-color: $color;
+		border-radius: 23px;
+		color: $bg-color;
+		margin-bottom: 2rem;
+	}
+}

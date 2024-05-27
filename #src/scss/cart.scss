@@ -34,13 +34,12 @@
 [class*='icon-'] {
 	cursor: pointer;
 	height: 100%;
+	pointer-events: none;
 	@include flex-align-center-justify-center;
 }
 // todo --------------------------- layout -------------------------------------
-@import 'layouts/bem-block';
-@import 'layouts/header';
-@import 'layouts/footer';
-@import 'layouts/float-menu';
+@import 'layouts/layout.scss';
+
 // todo --------------------------- Pages --------------------------------------
 @import 'pages/page.scss';
 // todo --------------------------- Chunk --------------------------------------
@@ -51,8 +50,7 @@
 @import 'chunk/bread-crumbs';
 @import 'chunk/filter';
 @import 'chunk/counter-product';
-
 // todo -------------------------- Modules -------------------------------------
-@import 'modules/preloader';
+
 // todo -------------------------- Sections ------------------------------------
 @import 'section/section-cart';

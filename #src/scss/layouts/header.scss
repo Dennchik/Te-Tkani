@@ -1,4 +1,8 @@
 .header {
+	// .header__header-wrapper
+	&__header-wrapper {
+		background: $bg-color;
+	}
 	// .header__top-menu
 	&__top-menu {
 		border-bottom: 1px solid $color;
@@ -7,6 +11,7 @@
 		justify-content: space-between;
 		align-items: center;
 		grid-template-columns: 1fr 1fr;
+
 		@include _690 {
 			grid-template-columns: min-content 1fr min-content;
 			justify-items: center;
@@ -24,6 +29,8 @@
 
 	// .header__column
 	&__column {
+		display: flex;
+		flex-direction: column;
 		flex: 0 1 50%;
 		@include _690 {
 			&:nth-child(3) {
@@ -32,33 +39,45 @@
 		}
 		// .login-container__list
 		.login-container {
+			&__login {
+				position: relative;
+			}
 			&__list {
-				font-size: 13px;
+				// font-size: 13px;
 				width: auto;
+			}
+
+			// .login-container__user-button
+			&__user-button {
+				pointer-events: none;
+				@include _screen-960 {
+					pointer-events: all;
+				}
 			}
 
 			// .login-container__fade-in
 			&__fade-in {
+				position: absolute;
+				top: 0;
+				right: 0;
+				opacity: 0;
+				transform: translateY(70%);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 1rem 2rem;
+				border: 1px solid $color;
+				background: $bg-color;
+				border-radius: 5px;
+				height: 50px;
+				z-index: 8;
+				width: auto;
 				@include _screen-960 {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					padding: 1rem 2rem;
-					background: #fff;
-					border: 1px solid $color;
-					border-radius: 5px;
-					height: 50px;
-					width: auto;
-					position: absolute;
-					opacity: 0;
-					z-index: 8;
-					right: 0;
 					pointer-events: none;
 					box-shadow: 1px 1px 3px #000;
 					transition: all 0.5s ease-in-out;
 					&._visible {
 						pointer-events: all;
-						transform: translatey(102%);
 						opacity: 1;
 						display: flex;
 					}
@@ -69,6 +88,7 @@
 
 	// .header__menu-middle
 	&__middle-menu {
+		position: relative;
 		@include _690 {
 			display: none;
 		}

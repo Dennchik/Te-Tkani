@@ -265,6 +265,13 @@
 					}
 				}
 			}
+			// .login-container__button
+			&__button {
+				pointer-events: none;
+				@include _490 {
+					pointer-events: all;
+				}
+			}
 		}
 	}
 

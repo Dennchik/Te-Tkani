@@ -14,12 +14,14 @@
 .login-container {
 	// .login-container__body
 	&__body {
+		height: 100%;
 		position: relative;
 		padding-left: 2rem;
 		width: 100%;
 		height: 100%;
 		gap: 2rem;
 		display: grid;
+		z-index: 9;
 
 		grid-template-columns: auto minmax(13.048rem, max-content);
 
