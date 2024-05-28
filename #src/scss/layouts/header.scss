@@ -35,10 +35,20 @@
 		flex: 0 1 50%;
 
 		.login-modal {
+			top: 30px;
+			right: 0;
 			margin-right: -120px;
 		}
 
 		.recovery-modal {
+			top: 30px;
+			right: 0;
+			margin-right: -120px;
+		}
+
+		.registrations-modal {
+			top: 30px;
+			right: 0;
 			margin-right: -120px;
 		}
 
@@ -246,6 +256,7 @@
 
 	// .service-menu__text
 	&__text {
+		font-size: 1.5rem;
 		height: 20px;
 		line-height: 0;
 		padding: 0 0.5rem;

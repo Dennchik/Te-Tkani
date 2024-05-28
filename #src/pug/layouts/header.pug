@@ -28,13 +28,13 @@ header.header
 									span._text
 										| Моя корзина 
 									span._value-cart (0)  
-								a(href="#")._link 
+								a(href="#")._link
 									+iconfont('heart', '_icon')
-									span._text 
+									span._text
 										| Избранное 
 									span._value-favourites (0) 
 						._column
-								a(href="#")._link 
+								a(href="#")
 									span._text Контакты 
 				button._button-menu
 					include ../chunk/burger-button 
@@ -58,7 +58,7 @@ header.header
 								button(type="button")._link Личный кабинет
 								button(type="button")._link.login Войти 
 								span /
-								button(type="button")._link Регистриция 
+								button(type="button")._link.registrations Регистриция 
 							include ../chunk/login-form
 						._phone
 							a(href="tel:88000000000") 8-800-000-00-00

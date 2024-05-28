@@ -59,6 +59,7 @@
 
 	// .login-container__link
 	&__link {
+		line-height: 0;
 		white-space: nowrap;
 		&:first-child {
 			padding-left: 0.5rem;
@@ -160,6 +161,7 @@
 }
 // -----------------------------------------------------------------------------
 ._lnb {
+	position: relative;
 	&::before {
 		display: block;
 		content: attr(title);

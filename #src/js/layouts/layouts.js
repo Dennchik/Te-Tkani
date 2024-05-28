@@ -181,11 +181,21 @@ export function userMenu() {
 		userButton.addEventListener('click', (e) => {
 			let target = e.target;
 
+			// Открываем скрытое модальноеменю выбора;
 			let loginContent = loginList(target, '.login-container__fade-in');
 			loginContent.classList.toggle('_visible');
 
+			// Закрываем модальное окно "Login";
 			let loginModal = loginList(target, '.login-modal');
 			removeElement(loginModal, '_show');
+
+			// Закрываем модальное окно "Регистрация";
+			let registrationModal = loginList(target, '.registrations-modal');
+			removeElement(registrationModal, '_show');
+
+			// Закрываем модальное окно "востановление электронной почты";
+			let recoveryModal = loginList(target, '.recovery-modal');
+			removeElement(recoveryModal, '_show');
 
 			window.addEventListener('click', function (e) {
 				let loginContainer = target.closest('.login-container');
@@ -199,21 +209,29 @@ export function userMenu() {
 	// Выбираем все элементы с calss="login"
 	const userLogins = document.querySelectorAll('.login');
 
-	// Добавляем обработчики событий для всех элементов с class="login"
+	// Добавляем обработчики событий для всех элементов с class="login";
 	userLogins.forEach((userLogin) => {
 		userLogin.addEventListener('click', (e) => {
 			let target = e.target;
 
-			//Выбираем контейнер ранее открытый соответствующий нажатой кнопки
+			//Закрываем ранее открытое модальное окно "User-Content";
 			let loginContent = loginList(target, '.login-container__fade-in');
 			removeElement(loginContent, '_visible');
 
+			let recoveryModal = loginList(target, '.recovery-modal');
+			removeElement(recoveryModal, '_show');
+
 			// Выбираем модальное окно и элементы внутри него;
 			let loginModal = loginList(target, '.login-modal');
-			// Показываем модальное окно с плавным появлением 
+
+			// Закрываем модальное окно "Регистрация";
+			let registrationModal = loginList(target, '.registrations-modal');
+			removeElement(registrationModal, '_show');
+
+			// Показываем модальное окно с плавным появлением;
 			loginModal.classList.toggle('_show');
 
-			// Закрываем модальное окно
+			// Закрываем модальное окно при нажатии на кнопку закрыть "X";
 			let closeButton = loginModal.querySelector('.login-modal__close');
 			closeModal(closeButton, loginModal);
 
@@ -227,34 +245,83 @@ export function userMenu() {
 	});
 
 
-	// Добавляем обработчики событий для всех элементов востановить пароль.
+	// Добавляем обработчики событий для всех элементов востановить пароль;
 	const loginRecoverys = document.querySelectorAll('.login-modal__recovery');
 
 	loginRecoverys.forEach(loginRecovery => {
 		loginRecovery.addEventListener('click', (e) => {
 			let target = e.target;
-			let loginContent = loginList(target, '.recovery-modal');
-			// Закрываем модальное окно
-			let closeButton = loginModal.querySelector('.recovery-modal__close');
-			console.log(closeButton);
 
-			closeModal(closeButton, loginModal);
-			console.log(loginContent);
+			// Открываем модальное окно "востановление электронной почты";
+			let recoveryModal = loginList(target, '.recovery-modal');
+			recoveryModal.classList.toggle('_show');
+
+			// Закрываем ранее открытое модальное;
+			let loginModal = loginList(target, '.login-modal');
+			removeElement(loginModal, '_show');
+
+			// Закрываем модальное окно при нажатии на кнопку закрыть "X";
+			let closeButton = recoveryModal.querySelector('.recovery-modal__close');
+			closeModal(closeButton, recoveryModal);
+
+			window.addEventListener('click', function (e) {
+				let loginContainer = target.closest('.login-container');
+				if (!loginContainer.contains(e.target)) {
+					removeElement(recoveryModal, '_show');
+				}
+			});
 		});
 	});
 
-	// Добавляем обработчик события для кнопки закрытия модального окна
+	// Добавляем обработчики событий для всех элементов 'Регистрация';
+	const registrations = document.querySelectorAll('.registrations');
+	registrations.forEach(registration => {
+		registration.addEventListener('click', (e) => {
+			let target = e.target;
+			console.log(target);
+
+			// Закрываем модальное окно "User-Content";
+			let loginContent = loginList(target, '.login-container__fade-in');
+			removeElement(loginContent, '_visible');
+
+			// Открываем модальное окно "Регистрация";
+			let registrationModal = loginList(target, '.registrations-modal');
+			registrationModal.classList.toggle('_show');
+
+
+
+
+			window.addEventListener('click', function (e) {
+				let loginContainer = target.closest('.login-container');
+				if (!loginContainer.contains(e.target)) {
+					removeElement(registrationModal, '_show');
+				}
+			});
+		});
+
+
+
+
+	});
+
+
+
+	// Добавляем обработчик события для кнопки закрытия модального окна;
 	function closeModal(el, modal) {
 		el.addEventListener('click', () => {
-			// Скрываем модальное окно с плавным исчезновением
+			// Скрываем модальное окно с плавным исчезновением;
 			modal.classList.remove('_show');
 		});
 	}
 
+
+	const modalRegistrations = document.querySelectorAll('.registrations');
+
+	//todo Функция выбора элементов внутри контецнера "login-container";
 	function loginList(target, el) {
 		return target.closest('.login-container').querySelector(el);
 	}
-
+	//todo Функция удалениет классов;
 	function removeElement(el, className) {
 		el.classList.remove(className);
 	}

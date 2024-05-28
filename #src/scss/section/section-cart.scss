@@ -188,17 +188,26 @@
 		.login-container {
 			position: relative;
 
-			.recovery-modal {
-				left: 0;
+			.registrations-modal {
 				top: 50px;
+				left: 0;
+				margin-right: -120px;
+				@include _490 {
+					width: 100%;
+				}
+			}
+
+			.recovery-modal {
+				top: 50px;
+				left: 0;
 				@include _490 {
 					width: 100%;
 				}
 			}
 
 			.login-modal {
-				left: 0;
 				top: 50px;
+				left: 0;
 				@include _490 {
 					width: 100%;
 				}
@@ -248,10 +257,8 @@
 			}
 			// .login-container__list
 			&__list {
-				font-size: 13px;
+				font-size: 1.5rem;
 				width: auto;
-				@include _490 {
-				}
 			}
 
 			// .login-container__fade-in
@@ -274,6 +281,7 @@
 					pointer-events: none;
 					box-shadow: 1px 1px 3px #000;
 					transition: all 0.5s ease-in-out;
+
 					&._visible {
 						pointer-events: all;
 						transform: translatey(102%);
@@ -299,7 +307,10 @@
 
 	// .order-place__info
 	&__info {
-		max-width: 70rem;
+		max-width: 60rem;
+		p {
+			font-size: 13px;
+		}
 	}
 
 	// .order-place__column
@@ -366,12 +377,16 @@
 				grid-column: 1 / 5;
 			}
 		}
+
 		&:nth-child(5) {
 			padding: 1.5rem 0;
-			flex: 0 0 50px;
 			text-align: center;
 			align-self: start;
+			align-self: center;
+			@include _690 {
+			}
 		}
+
 		@include _690 {
 			&:nth-child(2) {
 				padding-left: 0 !important;
