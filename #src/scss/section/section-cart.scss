@@ -187,11 +187,23 @@
 	&__column--login {
 		.login-container {
 			position: relative;
+
+			.recovery-modal {
+				left: 0;
+				top: 50px;
+				@include _490 {
+					width: 100%;
+				}
+			}
+
 			.login-modal {
 				left: 0;
 				top: 50px;
-				margin-right: -80px;
+				@include _490 {
+					width: 100%;
+				}
 			}
+
 			&__body {
 				background: $bg-color;
 				position: relative;
@@ -287,7 +299,7 @@
 
 	// .order-place__info
 	&__info {
-		max-width: 56rem;
+		max-width: 70rem;
 	}
 
 	// .order-place__column

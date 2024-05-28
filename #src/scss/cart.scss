@@ -34,7 +34,6 @@
 [class*='icon-'] {
 	cursor: pointer;
 	height: 100%;
-	pointer-events: none;
 	@include flex-align-center-justify-center;
 }
 // todo --------------------------- layout -------------------------------------

@@ -3,6 +3,7 @@
 	&__header-wrapper {
 		background: $bg-color;
 	}
+
 	// .header__top-menu
 	&__top-menu {
 		border-bottom: 1px solid $color;
@@ -32,6 +33,15 @@
 		display: flex;
 		flex-direction: column;
 		flex: 0 1 50%;
+
+		.login-modal {
+			margin-right: -120px;
+		}
+
+		.recovery-modal {
+			margin-right: -120px;
+		}
+
 		@include _690 {
 			&:nth-child(3) {
 				justify-self: end;
@@ -42,6 +52,7 @@
 			&__login {
 				position: relative;
 			}
+
 			&__list {
 				// font-size: 13px;
 				width: auto;

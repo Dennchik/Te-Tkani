@@ -183,6 +183,7 @@ export function userMenu() {
 
 			let loginContent = loginList(target, '.login-container__fade-in');
 			loginContent.classList.toggle('_visible');
+
 			let loginModal = loginList(target, '.login-modal');
 			removeElement(loginModal, '_show');
 
@@ -203,20 +204,20 @@ export function userMenu() {
 		userLogin.addEventListener('click', (e) => {
 			let target = e.target;
 
+			//Выбираем контейнер ранее открытый соответствующий нажатой кнопки
 			let loginContent = loginList(target, '.login-container__fade-in');
+			removeElement(loginContent, '_visible');
 
 			// Выбираем модальное окно и элементы внутри него;
 			let loginModal = loginList(target, '.login-modal');
-
 			// Показываем модальное окно с плавным появлением 
 			loginModal.classList.toggle('_show');
-			removeElement(loginContent, '_visible');
 
+			// Закрываем модальное окно
 			let closeButton = loginModal.querySelector('.login-modal__close');
 			closeModal(closeButton, loginModal);
 
 			window.addEventListener('click', function (e) {
-				// let loginModal = target.closest('.login-modal');
 				let loginContainer = target.closest('.login-container');
 				if (!loginContainer.contains(e.target)) {
 					removeElement(loginModal, '_show');
@@ -226,14 +227,21 @@ export function userMenu() {
 	});
 
 
+	// Добавляем обработчики событий для всех элементов востановить пароль.
+	const loginRecoverys = document.querySelectorAll('.login-modal__recovery');
 
-	// const loginRecoverys = document.querySelectorAll('.login-modal__recovery');
-	// loginRecoverys.forEach(loginRecovery => {
-	// 	loginRecovery.addEventListener('click', (e) => {
-	// 		let target = e.target;
-	// 		let loginList = target.closest('.login-container').querySelector('.login-modal__recovery');
-	// 	});
-	// });
+	loginRecoverys.forEach(loginRecovery => {
+		loginRecovery.addEventListener('click', (e) => {
+			let target = e.target;
+			let loginContent = loginList(target, '.recovery-modal');
+			// Закрываем модальное окно
+			let closeButton = loginModal.querySelector('.recovery-modal__close');
+			console.log(closeButton);
+
+			closeModal(closeButton, loginModal);
+			console.log(loginContent);
+		});
+	});
 
 	// Добавляем обработчик события для кнопки закрытия модального окна
 	function closeModal(el, modal) {

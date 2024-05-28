@@ -7,7 +7,7 @@ dinamicAdaptive();
 import { cancelButton, buttonSearch, burgerMenu, showEMenu, showSubMenuCollapse, collapseElement, userMenu } from "./layouts/layouts.js";
 burgerMenu();
 showEMenu();
-// buttonSearch();
+buttonSearch();
 cancelButton();
 showSubMenuCollapse();
 collapseElement();

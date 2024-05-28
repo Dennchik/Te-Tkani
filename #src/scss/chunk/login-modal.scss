@@ -1,14 +1,14 @@
 /* Стили для модального окна */
 .login-modal {
-	margin-right: -60px;
 	position: absolute;
+	padding: 3.2rem 4.5rem;
 	top: 30px;
 	right: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	opacity: 0; /* Начальная прозрачность */
-	transform: translate(20%, 20%);
+	transform: translate(0, 20%);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -19,40 +19,45 @@
 	z-index: 9;
 	transition: all 0.5s ease; /* Плавный переход */
 	pointer-events: none;
-	width: 300px;
+	width: 350px;
 	box-shadow: 1px 1px 5px #000;
-	// background-color: rgba(0, 0, 0, 0.4); /* Черный фон с прозрачностью */
 
 	/* Стили для модального контента */
 	&._show {
-		transform: translate(20%, 0);
+		transform: translate(0, 0);
 		pointer-events: all;
 		opacity: 1;
 	}
+
 	&__modal-content {
-		margin: 3.2rem 4.5rem;
 		position: relative;
 		border-radius: 10px;
-		transition: transform 0.5s ease; /* Плавный переход для трансформации */
+		transition: transform 0.4s ease; /* Плавный переход для трансформации */
 		// transform: translateY(-100px); /* Начальная позиция */
 	}
 
 	&__input {
-		width: 220px;
-		padding: 0.5rem;
+		display: flex;
+		align-items: center;
 		display: flex;
 		border: 1px solid $color;
 		border-radius: 5px;
 		margin-bottom: 2rem;
+		input {
+			width: 100%;
+			height: 32px;
+			padding-left: 0.5rem;
+		}
 	}
 
 	&__label {
 		font-size: 14px;
+		padding-left: 0.5rem;
 	}
 
 	&__close {
 		position: absolute;
-		top: -20px;
+		top: -15px;
 		right: -35px;
 		font-size: 20px;
 	}
@@ -92,44 +97,58 @@
 
 /* Стили для кнопки закрытия */
 .recovery-modal {
-	padding: 3rem;
 	position: absolute;
+	padding: 3.2rem 2.5rem;
 	top: 30px;
 	right: 0;
-	margin-right: -50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	opacity: 0; /* Начальная прозрачность */
-	transform: translate(20%, 20%);
+	transform: translate(0, 20%);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border: 1px solid $color;
 	background: $bg-color;
-	border-radius: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 9;
 	border: 1px solid $color;
+	border-radius: 10px;
+	z-index: 9;
 	transition: all 0.5s ease; /* Плавный переход */
 	pointer-events: none;
+	width: 390px;
+
+	box-shadow: 1px 1px 5px #000;
+	&._show {
+		transform: translate(0, 0);
+		pointer-events: all;
+		opacity: 1;
+	}
 
 	&__modal-content {
 		position: relative;
-		padding: 20px;
-		// border: 1px solid #888;
-		width: 300px;
 		border-radius: 10px;
 		transition: transform 0.5s ease; /* Плавный переход для трансформации */
 		// transform: translateY(-100px); /* Начальная позиция */
 	}
+	&__text {
+		margin-bottom: 2rem;
+	}
 
 	&__input {
-		width: 100%;
-		padding: 0.5rem;
 		display: flex;
-		border: 1px solid $color;
-		border-radius: 5px;
+		align-items: center;
+		width: 100%;
+		display: flex;
 		margin-bottom: 2rem;
+
+		input {
+			padding-left: 0.5rem;
+			border: 1px solid $color;
+			border-radius: 5px;
+			height: 32px;
+			width: 100%;
+		}
 	}
 
 	&__form {
@@ -139,13 +158,14 @@
 	}
 
 	&__label {
-		font-size: 14px;
+		font-size: 1.4rem;
+		padding-right: 1rem;
 	}
 
 	&__close {
 		position: absolute;
-		top: -10px;
-		right: -10px;
+		top: -25px;
+		right: -25px;
 		font-size: 20px;
 	}
 
@@ -165,6 +185,5 @@
 		background-color: $color;
 		border-radius: 23px;
 		color: $bg-color;
-		margin-bottom: 2rem;
 	}
 }
