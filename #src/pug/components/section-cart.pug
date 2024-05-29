@@ -98,7 +98,7 @@
 														input.input(type="text", name="form[]", value="0.30", placeholder="<+>", autocomplete="off")
 													._button.quantity-add._arrow._arrow_next
 														+iconfont('cancel', 'icon')
-												p._price Стоимость - &nbsp;
+												p._price Стоимость -&nbsp;
 													span._price-product 380 
 													span руб
 									._column
@@ -113,30 +113,39 @@
 												+iconfont('cancel', 'icon')
 									
 					._column.--login
-						.login-container
+						.result-container
 							._body
-								._login 
-									._user-button
-										+iconfont('user-check', '_icon')
-									._list(data-move-el="[{'bp-max': 490.98, 'index': 1, 'target': '.bp-5'}]")
-										button(type="button")._link Личный кабинет
-										button(type="button")._link.login Войти 
-										span /
-										button(type="button")._link.registrations Регистриция
-									include ../chunk/login-form-cart
+								//- ._login 
+								//- 	._user-button
+								//- 		+iconfont('user-check', '_icon')
+								//- 	._list(data-move-el="[{'bp-max': 490.98, 'index': 1, 'target': '.bp-5'}]")
+								//- 		button(type="button")._link Личный кабинет
+								//- 		button(type="button")._link.login Войти 
+								//- 		span /
+								//- 		button(type="button")._link.registrations Регистриция
+								//- 	include ../chunk/login-form-cart
 								._column 
 									._discounts Скидка 3%
 								._column.--result 
 									._totalprice-order.input-total Итого:
 										span._total-sum 9 800
 							._fade-in.bp-5
-					._footer
-						._footer._column.--footer
-							._info 
-								p После поступления заказа, с&nbsp;вами свяжется менеджер. Он&nbsp;подтвердит наличие необходимого количества товара и&nbsp;обсудит все детали заказа. После согласования вам&nbsp;выставят счет для&nbsp;оплаты на&nbsp;электронную почту и&nbsp;в&nbsp;личный кабинет.
-						._column.--button
-							button(type="button")._form-button  
-								span оформить заказ
+						._send-order
+							include ./section-send-order
+						._footer
+							._footer._column.--footer
+								._info 
+									p После поступления заказа, с&nbsp;вами свяжется менеджер. Он&nbsp;подтвердит наличие необходимого количества товара и&nbsp;обсудит все детали заказа. После согласования вам&nbsp;выставят счет для&nbsp;оплаты на&nbsp;электронную почту и&nbsp;в&nbsp;личный кабинет.
+							._column.--button 
+								button(type="button")._form-button
+									span оформить заказ 
+								button(type="submit")._send-button 
+									span отправить заказ
+								label._checkbox.checkbox
+									input.checkbox__input(name="form[]", type="checkbox", checked)
+									.checkbox__text
+										span Я согласен с условиями предоставления услуг и политикой конфиденциальности
+						
 		aside._help-order
 			.help-order
 				._info
@@ -155,7 +164,3 @@
 							span скидка&nbsp;5%
 						p - на сумму 20&nbsp;000 руб. и более, 
 							span скидка&nbsp;10% 
-	.send-order
-		._title 
-			h1 оформление заказа
-		._order-place

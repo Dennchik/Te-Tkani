@@ -152,25 +152,20 @@ export function loadedCatalog() {
 }
 //todo -----------Событие при нажатии на кнопку "Оформить заказ"----------------
 export function placeOrder() {
+	let orderCollapse = document.querySelector('.send-order');
+	const collapse = new ItcCollapse(orderCollapse.querySelector('._collapse'));
+
 	document.querySelector('.order-place__form-button').addEventListener('click', function () {
-		const element = document.querySelector('.send-order');
-		// Находим элемент, который нужно скопировать
-		const sourceBlock = document.querySelector('.order-place');
+		let titleDocument = document.querySelector('.cart-page__title>h1');
+		let sendOrder = document.querySelector('.order-place__send-order');
+		let sendButton = document.querySelector('.order-place__send-button');
+		let formButton = document.querySelector('.order-place__form-button');
+		console.log(orderCollapse);
+		titleDocument.innerHTML = 'оформление заказа';
+		collapse.toggle();
+		sendButton.style.display = 'block'; formButton.style.display = 'none';
 
-		// Копируем содержимое блока
-		const clonedContent = sourceBlock.cloneNode(true);
 
-		// Находим целевой блок
-		const targetBlock = document.querySelector('.send-order__order-place');
-
-		// Очищаем целевой блок
-		targetBlock.innerHTML = '';
-
-		// Вставляем скопированное содержимое
-		targetBlock.appendChild(clonedContent);
-
-		// Добавляем семантический класс
-		targetBlock.classList.add('place-order');
 	});
 }
 //* -----------------------------Login-container--------------------------------
@@ -278,7 +273,6 @@ export function userMenu() {
 	registrations.forEach(registration => {
 		registration.addEventListener('click', (e) => {
 			let target = e.target;
-			console.log(target);
 
 			// Закрываем модальное окно "User-Content";
 			let loginContent = loginList(target, '.login-container__fade-in');
@@ -288,9 +282,6 @@ export function userMenu() {
 			let registrationModal = loginList(target, '.registrations-modal');
 			registrationModal.classList.toggle('_show');
 
-
-
-
 			window.addEventListener('click', function (e) {
 				let loginContainer = target.closest('.login-container');
 				if (!loginContainer.contains(e.target)) {
@@ -298,10 +289,6 @@ export function userMenu() {
 				}
 			});
 		});
-
-
-
-
 	});
 
 
