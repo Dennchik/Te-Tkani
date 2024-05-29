@@ -3,38 +3,57 @@ import ItcCollapse from "../assets/collapse.js";
 //! ---------------------------------- Root ------------------------------------
 const $ = {
 	header: document.querySelector('.page__header'),
-	bttns: document.querySelectorAll('.burger-button'),
-	bttnSearch: document.querySelector('.header__button-search'),
+	bttns: document.querySelector('.burger-button'),
+	bttnSearch: document.querySelector('.header__button-sidebarcatalog'),
+	burgerButton: document.querySelector('.burger-button'),
 	sidebarCatalog: document.querySelector('.page__sidebar-catalog'),
+	sidebarMenu: document.querySelector('.page__sidebar-menu'),
 	bottomMenu: document.querySelector('.page__buttom-menu'),
-	cancelButton: document.querySelector('.sidebar-search__icon-cancel'),
+	cancelButtons: document.querySelectorAll('.button-cansel'),
 	menuParents: document.querySelectorAll('.menu-catalog__parent-menu'),
 	menuCatalog: document.querySelector('.menu-catalog'),
 	catalogCategories: document.querySelector('.catalog__categories'),
 	submenuParents: document.querySelectorAll('.submenu-parent'),
 	userButtons: document.querySelectorAll('.login-container__user-button')
 };
-// -----------------------------------------------------------------------------
 
+// -----------------------------------------------------------------------------
+export function burgerMenu() {
+	if (isMobile.any()) {
+		// _loop($.bttns, 'burger-button', '_active');
+	}
+}
 
 //! --------------------------------- Main.js ----------------------------------
 //todo закрываем "Menu-Catalog" 
 export function cancelButton() {
-	$.cancelButton.addEventListener('click', () => {
-		$.sidebarCatalog.classList.remove('_opened-menu');
-		document.body.classList.remove('no-scroll');
+	$.cancelButtons.forEach(cancelButton => {
+		cancelButton.addEventListener('click', () => {
+			$.sidebarCatalog.classList.remove('_opened-menu');
+			$.sidebarMenu.classList.remove('_opened-menu');
+			$.bttns.classList.remove('_active');
+			document.body.classList.remove('no-scroll');
+		});
 	});
 }
 
 //todo запрещаем скроллинг страницы при открытии "Menu-Catalog"
-export function buttonSearch() {
+export function openMenuCatalog() {
 	$.bttnSearch.addEventListener('click', () => {
 		$.sidebarCatalog.classList.add('_opened-menu');
 		document.body.classList.add('no-scroll');
 	});
 }
+//todo запрещаем скроллинг страницы при открытии "Main-Menu"
+export function openMainMenu() {
+	$.burgerButton.addEventListener('click', () => {
+		$.sidebarMenu.classList.add('_opened-menu');
+		$.bttns.classList.add('_active');
+		document.body.classList.add('no-scroll');
+	});
+}
 //todo Показываем/скрываем всплывающее меню при скроллинге страницы
-export function showEMenu() {
+export function showBottomMenu() {
 	let prevScrollpos = window.scrollY;
 	window.onscroll = function () {
 		const scrollmenu = document.querySelector('.page__buttom-menu');
@@ -54,7 +73,6 @@ export function showSubMenuCollapse() {
 	subMenuParents.forEach(subMenuParent => {
 		const trigger = subMenuParent.querySelector('.submenu-parent__link');
 		trigger.addEventListener('click', () => {
-			// const opened_menu = $.menuCatalog.querySelector('._active');
 			_toggleMenu(subMenuParent);
 		});
 	});
@@ -91,12 +109,6 @@ export function collapseElement() {
 			collapse.toggle();
 		}
 	};
-}
-// -----------------------------------------------------------------------------
-export function burgerMenu() {
-	if (isMobile.any()) {
-		_loop($.bttns, 'burger-button', '_active');
-	}
 }
 // -----------------------------------------------------------------------------
 function _loop(els, elClosest, md) {
@@ -159,8 +171,7 @@ export function placeOrder() {
 		let titleDocument = document.querySelector('.cart-page__title>h1');
 		let sendOrder = document.querySelector('.order-place__send-order');
 		let sendButton = document.querySelector('.order-place__send-button');
-		let formButton = document.querySelector('.order-place__form-button');
-		console.log(orderCollapse);
+		let formButton = document.querySelector('.order-place__form-button');;
 		titleDocument.innerHTML = 'оформление заказа';
 		collapse.toggle();
 		sendButton.style.display = 'block'; formButton.style.display = 'none';
@@ -278,6 +289,10 @@ export function userMenu() {
 			let loginContent = loginList(target, '.login-container__fade-in');
 			removeElement(loginContent, '_visible');
 
+			// Закрываем ранее открытое модальное окно;
+			let loginModal = loginList(target, '.login-modal');
+			removeElement(loginModal, '_show');
+
 			// Открываем модальное окно "Регистрация";
 			let registrationModal = loginList(target, '.registrations-modal');
 			registrationModal.classList.toggle('_show');
@@ -291,18 +306,61 @@ export function userMenu() {
 		});
 	});
 
+	const buttonPrivatePersons = document.querySelectorAll('.registrations-modal__button-private-person');
+	const registrationsFiz = document.querySelector('.modal-registrations-fiz');
+	buttonPrivatePersons.forEach(buttonPrivatePerson => {
+		buttonPrivatePerson.addEventListener('click', (e) => {
+			let target = e.target;
+
+			// Закрываем ранее открытое модальное окно;
+			let registrationModal = loginList(target, '.registrations-modal');
+			removeElement(registrationModal, '_show');
+
+			// Открываем модальное окно "Регистрация для физ-лиц";
+			registrationsFiz.classList.add('_show');
+
+			let closeButton = registrationsFiz.querySelector('.modal-registrations-fiz__close-btn');
+			closeButton.addEventListener('click', () => {
+				registrationsFiz.classList.remove('_show');
+			});
+		});
 
 
-	// Добавляем обработчик события для кнопки закрытия модального окна;
+		const buttonCorporatePersons = document.querySelectorAll('.registrations-modal__button-corporate-person');
+		const registrationsUre = document.querySelector('.modal-registrations-ure');
+		buttonCorporatePersons.forEach(buttonCorporatePerson => {
+			buttonCorporatePerson.addEventListener('click', (e) => {
+				let target = e.target;
+
+				// Закрываем ранее открытое модальное окно;
+				let registrationModal = loginList(target, '.registrations-modal');
+				removeElement(registrationModal, '_show');
+
+				// Открываем модальное окно "Регистрация для юр-лиц";
+				registrationsUre.classList.add('_show');
+
+				let closeButton = registrationsUre.querySelector('.modal-registrations-ure__close-btn');
+				closeButton.addEventListener('click', () => {
+					registrationsUre.classList.remove('_show');
+				});
+			});
+
+
+		});
+
+
+
+	});
+
+
+
+	//todo Функция закрытия модального окна;
 	function closeModal(el, modal) {
 		el.addEventListener('click', () => {
 			// Скрываем модальное окно с плавным исчезновением;
 			modal.classList.remove('_show');
 		});
 	}
-
-
-	const modalRegistrations = document.querySelectorAll('.registrations');
 
 	//todo Функция выбора элементов внутри контецнера "login-container";
 	function loginList(target, el) {

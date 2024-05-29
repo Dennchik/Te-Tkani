@@ -4,7 +4,6 @@
 		@include _min-690 {
 			display: none;
 		}
-		// overflow: hidden;
 	}
 
 	// .catalog__body
@@ -188,10 +187,8 @@
 		width: 100%;
 		border: 1px solid $color;
 		border-radius: 5px;
-		padding: 0.5rem 0;
 		background: $bg-color;
 		z-index: 9;
-		margin-bottom: 2rem;
 	}
 
 	// .select__list-item

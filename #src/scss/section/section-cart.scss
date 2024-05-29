@@ -33,10 +33,15 @@
 .cart-page {
 	// .cart-page__title
 	&__title {
-		color: $color;
-		font-size: 3rem;
 		margin-bottom: 5rem;
 		text-transform: uppercase;
+		h1 {
+			color: $color;
+			font-size: 3rem;
+			@include _425 {
+				font-size: 2.3rem;
+			}
+		}
 	}
 
 	// .cart-page__body
@@ -176,6 +181,11 @@
 		}
 	}
 
+	// .order-place__column
+	&__column {
+		flex: 0 1 50%;
+	}
+
 	// .order-place__footer
 	&__footer {
 		display: flex;
@@ -306,7 +316,6 @@
 
 	// .order-place__column--button
 	&__column--button {
-		padding: 0 2rem;
 		display: grid;
 		grid-template-columns: 1fr;
 	}
@@ -336,7 +345,7 @@
 		border-radius: 16px;
 		background: $color;
 		justify-self: end;
-		@include _425 {
+		@include _490 {
 			width: 100%;
 		}
 	}
@@ -352,7 +361,7 @@
 		border-radius: 16px;
 		background: #004646;
 		justify-self: end;
-		@include _425 {
+		@include _490 {
 			width: 100%;
 		}
 	}

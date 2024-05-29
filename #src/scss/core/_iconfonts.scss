@@ -27,6 +27,51 @@
   //* Better Font Rendering
 }
 
+.icon-arow-down {
+  &:before {
+    content: $icon-arow-down;
+  }
+}
+.icon-mobile-profile {
+  &:before {
+    content: $icon-mobile-profile;
+  }
+}
+.icon-mobile-catalog {
+  &:before {
+    content: $icon-mobile-catalog;
+  }
+}
+.icon-rub {
+  &:before {
+    content: $icon-rub;
+  }
+}
+.icon-arow-right {
+  &:before {
+    content: $icon-arow-right;
+  }
+}
+.icon-arow-left {
+  &:before {
+    content: $icon-arow-left;
+  }
+}
+.icon-whatsapp {
+  &:before {
+    content: $icon-whatsapp;
+  }
+}
+.icon-vk-brand {
+  &:before {
+    content: $icon-vk-brand;
+  }
+}
+.icon-telegram-fly {
+  &:before {
+    content: $icon-telegram-fly;
+  }
+}
 .icon-minus {
   &:before {
     content: $icon-minus;
@@ -75,46 +120,6 @@
 .icon-user-check {
   &:before {
     content: $icon-user-check;
-  }
-}
-.icon-mobile-profile {
-  &:before {
-    content: $icon-mobile-profile;
-  }
-}
-.icon-mobile-catalog {
-  &:before {
-    content: $icon-mobile-catalog;
-  }
-}
-.icon-rub {
-  &:before {
-    content: $icon-rub;
-  }
-}
-.icon-arow-right {
-  &:before {
-    content: $icon-arow-right;
-  }
-}
-.icon-arow-left {
-  &:before {
-    content: $icon-arow-left;
-  }
-}
-.icon-whatsapp {
-  &:before {
-    content: $icon-whatsapp;
-  }
-}
-.icon-vk-brand {
-  &:before {
-    content: $icon-vk-brand;
-  }
-}
-.icon-telegram-fly {
-  &:before {
-    content: $icon-telegram-fly;
   }
 }
 .icon-search-doc {

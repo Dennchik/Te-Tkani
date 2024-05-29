@@ -9,12 +9,16 @@ block title
 block page-content
 	.page#page
 		._container
-			aside._sidebar-catalog
+			include ../chunk/modal-regisrations-fiz
+			include ../chunk/modal-regisrations-ure
+			nav._sidebar-catalog
 				.sidebar-search.bp-4
 					._top.bp-2
-						button(type="button")._icon-cancel
+						button(type="button")._icon-cancel.button-cansel
 							+iconfont('cancel-circle', 'icon')
-				include ../chunk/sidebar-catalog
+				include ../chunk/sidebar-catalog 
+			nav._sidebar-menu._opened-menu
+				include ../chunk/sidebar-menu
 			section._header
 				include ../layouts/header
 			._content 

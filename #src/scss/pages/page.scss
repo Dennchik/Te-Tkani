@@ -112,30 +112,6 @@
 		}
 	}
 
-	// .page__sidebar-catalog
-	&__sidebar-catalog {
-		display: none;
-		overflow-x: hidden;
-		position: fixed;
-		z-index: 9;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		transition: all 0.5s ease-in-out;
-		transform: translateX(-100%);
-		background: $bg-color;
-		@include _screen-690 {
-			&._opened-menu {
-				transform: translateX(0);
-			}
-		}
-
-		@include _690 {
-			display: block;
-			padding: 0 10px 15px;
-		}
-	}
-
 	// .page__bread-crumbs
 	&__bread-crumbs {
 		margin-bottom: 2rem;
@@ -148,7 +124,53 @@
 			padding: 0;
 		}
 	}
-	// ---------------------------------------------------------------------------
+	//* --------------------------------------------------------------------------
+	// .page__sidebar-catalog
+	&__sidebar-catalog {
+		border: 1px solid red;
+		display: none;
+		overflow-x: hidden;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		transition: all 0.5s ease-in-out;
+		transform: translateX(-100%);
+		background: $bg-color;
+
+		@include _screen-690 {
+			display: block;
+			padding: 0 10px 15px;
+			&._opened-menu {
+				transform: translateX(0);
+			}
+		}
+	}
+
+	// .page__sidebar-menu
+	&__sidebar-menu {
+		border: 1px solid red;
+		display: none;
+		overflow-x: hidden;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		transition: all 0.5s ease-in-out;
+		transform: translateX(100%);
+		background: $bg-color;
+
+		@include _screen-690 {
+			display: block;
+			padding: 0 15px 10px;
+			&._opened-menu {
+				transform: translateX(0);
+			}
+		}
+	}
+	//* --------------------------------------------------------------------------
 	// .cart-page
 	&__cart-page {
 		padding-bottom: 5rem;
