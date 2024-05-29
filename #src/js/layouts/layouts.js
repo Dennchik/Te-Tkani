@@ -9,14 +9,15 @@ const $ = {
 	sidebarCatalog: document.querySelector('.page__sidebar-catalog'),
 	sidebarMenu: document.querySelector('.page__sidebar-menu'),
 	bottomMenu: document.querySelector('.page__buttom-menu'),
-	cancelButtons: document.querySelectorAll('.button-cansel'),
+	cancelButtonsCatalog: document.querySelector('.catalog-cansel'),
+	cancelButtonsMenu: document.querySelector('.menu-cansel'),
 	menuParents: document.querySelectorAll('.menu-catalog__parent-menu'),
 	menuCatalog: document.querySelector('.menu-catalog'),
 	catalogCategories: document.querySelector('.catalog__categories'),
 	submenuParents: document.querySelectorAll('.submenu-parent'),
 	userButtons: document.querySelectorAll('.login-container__user-button')
 };
-
+console.log($.cancelButtonsCatalog);
 // -----------------------------------------------------------------------------
 export function burgerMenu() {
 	if (isMobile.any()) {
@@ -27,13 +28,12 @@ export function burgerMenu() {
 //! --------------------------------- Main.js ----------------------------------
 //todo закрываем "Menu-Catalog" 
 export function cancelButton() {
-	$.cancelButtons.forEach(cancelButton => {
-		cancelButton.addEventListener('click', () => {
-			$.sidebarCatalog.classList.remove('_opened-menu');
-			$.sidebarMenu.classList.remove('_opened-menu');
-			$.bttns.classList.remove('_active');
-			document.body.classList.remove('no-scroll');
-		});
+	$.cancelButtonsCatalog.addEventListener('click', () => {
+		$.sidebarCatalog.classList.remove('_opened-menu');
+	});
+	$.cancelButtonsMenu.addEventListener('click', () => {
+		$.sidebarMenu.classList.remove('_opened-menu');
+		$.bttns.classList.remove('_active');
 	});
 }
 
@@ -41,6 +41,8 @@ export function cancelButton() {
 export function openMenuCatalog() {
 	$.bttnSearch.addEventListener('click', () => {
 		$.sidebarCatalog.classList.add('_opened-menu');
+		$.sidebarMenu.classList.remove('_opened-menu');
+		$.bttns.classList.remove('_active');
 		document.body.classList.add('no-scroll');
 	});
 }
@@ -48,6 +50,7 @@ export function openMenuCatalog() {
 export function openMainMenu() {
 	$.burgerButton.addEventListener('click', () => {
 		$.sidebarMenu.classList.add('_opened-menu');
+		$.sidebarCatalog.classList.remove('_opened-menu');
 		$.bttns.classList.add('_active');
 		document.body.classList.add('no-scroll');
 	});
