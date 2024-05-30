@@ -9,16 +9,16 @@
 		position: relative;
 		z-index: 7;
 
-		// @include _screen-690 {
 		position: fixed;
 		top: 0;
 		left: 0;
 		background: $bg-color;
 		width: 100%;
 		padding: 0 10px;
-		// transition: all 0.7s ease-in-out;
-		transition: top 0.3s;
-		// }
+		transition: all 0.7s ease-in-out;
+		@include _screen-690 {
+			box-shadow: 0 0 5px #000;
+		}
 	}
 
 	// .page__content
