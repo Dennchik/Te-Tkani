@@ -37,10 +37,21 @@
 						li._item Состав: 100% Вискоза
 						li._item Производитель: Италия
 						li._item Код товара: 11872
-					p._text Цена за погонный метр:
-						span 1000&nbsp;руб
 					.counter._counter
-						form(action="") 
+						._title Цена за погонный метр:
+							span 1000&nbsp;руб
+						form(action="")
+							.counter-product 
+								.quantity._quantity
+									._button.quantity-remove
+										+iconfont('minus', 'icon')
+									._input
+										input.input(type="text", name="form[]", value="0.30", placeholder="<+>", autocomplete="off")
+									._button.quantity-add._arrow._arrow_next
+										+iconfont('cancel', 'icon')
+								p._price Стоимость - &nbsp;
+									span._price-product 380 
+									span руб 
 					
 
 							._buttons
@@ -77,6 +88,7 @@
 									img(src="@@webRoot/img/products/assortment/K-6112.png", alt="") 
 						._title
 						._delivery
+							h4 Доставка
 							p Наличными, безналичные способы (картой, электронные деньги и тп.)
 		._offer
 			.product-offer

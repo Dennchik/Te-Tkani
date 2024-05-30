@@ -117,22 +117,22 @@
 		margin-bottom: 2rem;
 	}
 
-	// .specifications__text
-
-	&__text {
-		span {
-			color: $color;
-			font-weight: 700;
-		}
-	}
-
 	// .specifications__counter
-
 	&__counter {
+		margin-bottom: 15px;
 	}
 }
 
 .counter {
+	// .counter__title
+	&__title {
+		margin-bottom: 10px;
+		span {
+			color: $color;
+			font-weight: 700;
+			margin-left: 10px;
+		}
+	}
 	// .counter__buttons
 	&__buttons {
 		display: flex;
@@ -195,6 +195,8 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		gap: 8px;
+		margin-bottom: 6.6rem;
+		max-width: 217px;
 	}
 
 	// .assortment__column
@@ -208,8 +210,12 @@
 	}
 
 	// .assortment__delivery
-
 	&__delivery {
+		h4 {
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin-bottom: 1rem;
+		}
 	}
 }
 
@@ -226,5 +232,10 @@
 	}
 	&__column {
 		max-width: 180px;
+	}
+}
+.counter-product {
+	&__quantity {
+		max-width: 185px;
 	}
 }

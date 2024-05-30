@@ -1,20 +1,22 @@
 // todo -------------------------- Variables -----------------------------------
 @import 'core/variables';
 @import 'core/variables-icon';
-@import 'core/swiper-vars';
+// @import 'core/swiper-vars';
 //todo ----------------------------- Core --------------------------------------
 @import 'core/mixins';
 @import 'core/extend';
 @import 'core/reset';
+// @import 'core/ui';
 //todo ------------------------- Default fonts ---------------------------------
 // &display=swap&subset=cyrillic-ext
 @import url('https://fonts.googleapis.com/css?family=Inter:1300,regular,500,600,700,800,900&display=swap&subset=cyrillic-ext');
+
 // todo --------------------------- Fonts --------------------------------------
 @import 'core/fonts';
 //todo  ------------------------ Icon Fonts ------------------------------------
 @import 'core/iconfonts';
 // todo -------------------------- Plugins -------------------------------------
-@import 'assets/swiper';
+// @import 'assets/swiper';
 // todo -------------------------- Classes -------------------------------------
 // #region
 .wrapper {
@@ -36,9 +38,12 @@
 	height: 100%;
 	@include flex-align-center-justify-center;
 }
+// todo --------------------------- Assets -------------------------------------
 // todo --------------------------- layout -------------------------------------
-@import 'layouts/layout.scss';
-
+@import 'layouts/bem-block';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/float-menu';
 // todo --------------------------- Pages --------------------------------------
 @import 'pages/page.scss';
 // todo --------------------------- Chunk --------------------------------------
@@ -46,12 +51,10 @@
 @import 'chunk/burger-button';
 @import 'chunk/sidebar-menu';
 @import 'chunk/sidebar-catalog';
-@import 'chunk/bread-crumbs';
-// @import 'chunk/filter';
-@import 'chunk/counter-product';
-// todo -------------------------- Modules -------------------------------------
+@import 'chunk/login-modal';
 @import 'chunk/modal-registration';
+@import 'chunk/bread-crumbs';
+// todo -------------------------- Modules -------------------------------------
+@import 'modules/preloader';
 // todo -------------------------- Sections ------------------------------------
-@import 'section/section-products-slide';
-@import 'section/section-product-card';
-// -----------------------------------------------------------------------------
+@import 'section/section-info-work';
