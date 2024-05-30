@@ -1,5 +1,9 @@
 import { select } from './modules/itsSelect.js';
 select();
+// -----------------------------------------------------------------------------
+import { newProductsSlide } from "./modules/new-products-slide.js";
+newProductsSlide();
+// -----------------------------------------------------------------------------
 import { collapseCatalogFilter, loadedCatalog } from './layouts/layouts.js';
 collapseCatalogFilter(); loadedCatalog();
 // -----------------------------------------------------------------------------
