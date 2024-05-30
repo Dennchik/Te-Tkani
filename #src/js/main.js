@@ -6,8 +6,8 @@ loaded('.preloader');
 import { dinamicAdaptive } from './assets/move-elements.js';
 dinamicAdaptive();
 //* ----------------------------------------------------------------------------
-import { cancelButton, openMenuCatalog, openMainMenu, showBottomMenu, showSubMenuCollapse, collapseElement, userMenu, addFafouritItems } from "./layouts/layouts.js";
-showBottomMenu();
+import { cancelButton, openMenuCatalog, openMainMenu, showSubMenuCollapse, collapseElement, userMenu, addFafouritItems } from "./layouts/layouts.js";
+
 openMenuCatalog();
 openMainMenu();
 cancelButton();
@@ -16,7 +16,10 @@ collapseElement();
 userMenu();
 addFafouritItems();
 //* ----------------------------------------------------------------------------
-
+import { showPopUpenuBottom, showPopUpMenuTop } from "./assets/pop-up-menu.js";
+showPopUpenuBottom('.page__buttom-menu');
+showPopUpMenuTop('.page__header');
+// showPopUpMenuTop();
 //* ----------------------------------------------------------------------------
 
 //* ----------------------------------------------------------------------------

@@ -168,6 +168,7 @@
 		max-width: 54rem;
 		justify-content: space-between;
 		@include _screen-920 {
+			// position: fixed;
 			li {
 				margin-left: 2.5rem;
 			}

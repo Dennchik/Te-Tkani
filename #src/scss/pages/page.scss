@@ -9,14 +9,16 @@
 		position: relative;
 		z-index: 7;
 
-		@include _screen-690 {
-			position: fixed;
-			top: 0;
-			left: 0;
-			background: $bg-color;
-			width: 100%;
-			padding: 0 10px;
-		}
+		// @include _screen-690 {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: $bg-color;
+		width: 100%;
+		padding: 0 10px;
+		// transition: all 0.7s ease-in-out;
+		transition: top 0.3s;
+		// }
 	}
 
 	// .page__content
@@ -32,10 +34,14 @@
 
 	// .page__textile
 	&__textile {
+		margin-top: 14.2rem;
 		margin-bottom: 8.9rem;
 		img {
 			width: 100%;
 			max-width: 100%;
+		}
+		@include _690 {
+			margin-top: 0;
 		}
 	}
 

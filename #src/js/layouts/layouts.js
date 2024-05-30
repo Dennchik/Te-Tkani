@@ -18,26 +18,25 @@ const $ = {
 	userButtons: document.querySelectorAll('.login-container__user-button'),
 	favouritItems: document.querySelectorAll('.slide-container__favourit')
 };
-// -----------------------------------------------------------------------------
+//! -------------------------- Добавить в избранное ---------------------------
 export function addFafouritItems() {
 	$.favouritItems.forEach(favouritItem => {
 		favouritItem.addEventListener('click', () => {
 			favouritItem.classList.toggle('_add-product');
 		});
 	});
-
 }
-
-
 //! --------------------------------- Main.js ----------------------------------
 //todo закрываем "Menu-Catalog" 
 export function cancelButton() {
 	$.cancelButtonsCatalog.addEventListener('click', () => {
 		$.sidebarCatalog.classList.remove('_opened-menu');
+		document.body.classList.remove('no-scroll');
 	});
 	$.cancelButtonsMenu.addEventListener('click', () => {
 		$.sidebarMenu.classList.remove('_opened-menu');
 		$.bttns.classList.remove('_active');
+		document.body.classList.remove('no-scroll');
 	});
 }
 
@@ -59,22 +58,7 @@ export function openMainMenu() {
 		document.body.classList.add('no-scroll');
 	});
 }
-//todo Показываем/скрываем всплывающее меню при скроллинге страницы
-export function showBottomMenu() {
-	let prevScrollpos = window.scrollY;
-	window.onscroll = function () {
-		const scrollmenu = document.querySelector('.page__buttom-menu');
-		let currentScrollPos = window.scrollY;
-		if (prevScrollpos > currentScrollPos) {
-			scrollmenu.style.bottom = "0px";
-		} else {
-			scrollmenu.style.bottom = "-65px";
-		}
-		prevScrollpos = currentScrollPos;
-	};
-}
 // -----------------------------------------------------------------------------
-
 export function showSubMenuCollapse() {
 	const subMenuParents = document.querySelectorAll('.submenu-parent__menu');
 	subMenuParents.forEach(subMenuParent => {
