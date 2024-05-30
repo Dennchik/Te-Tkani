@@ -109,7 +109,7 @@ export default {
 			},
 		},
 		entry: {
-			// wNumb: './#src/js/assets/wNumb.js',
+			'product-card': './#src/js/product-card.js',
 			catalog: './#src/js/catalog.js',
 			catalog: './#src/js/catalog.js',
 			index: './#src/js/index.js',

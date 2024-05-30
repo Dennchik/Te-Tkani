@@ -14,7 +14,7 @@ block page-content
 			aside._sidebar-catalog 
 				.sidebar-search.bp-4
 					._top.bp-2
-						button(type="button")._icon-cancel
+						button(type="button")._icon-cancel.catalog-cansel
 							+iconfont('cancel-circle', 'icon')
 				include ../../chunk/sidebar-catalog
 			nav._sidebar-menu
@@ -31,7 +31,7 @@ block page-content
 								a._link._lnb(href="@@webRoot/catalog.html" title="/ Главная") Каталог /
 							li
 								span._item Корзина
-				section._cart-page 
+				section._cart-page
 					include ../../components/section-cart
 				section._footer
 					include ../../layouts/footer 

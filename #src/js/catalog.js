@@ -2,11 +2,9 @@ import { select } from './modules/itsSelect.js';
 select();
 import { collapseCatalogFilter, loadedCatalog } from './layouts/layouts.js';
 collapseCatalogFilter(); loadedCatalog();
+// -----------------------------------------------------------------------------
 import * as wNumb from "./assets/wNumb.js";
-// -----------------------------------------------------------------------------
 import noUiSlider from 'nouislider';
-// -----------------------------------------------------------------------------
-
 // -----------------------------------------------------------------------------
 const priceSlider = document.querySelector(
 	'.price-filter__slider');

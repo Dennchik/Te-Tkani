@@ -10,15 +10,15 @@ html(lang="ru")
 		block link
 			link(rel="icon" type="image/icon" href="@@webRoot/img/icons/brand.png") 
 		block script 
-			script(defer="defer" type="text/javascript" src="@@webRoot/js/main.min.js") 
+			script(defer type="text/javascript" src="@@webRoot/js/main.min.js") 
 
 		block title
 		- var text
 			title #{text}
 
-	body
-		include ../modules/preloader
-		include ../includes/mixins
-		div(class="wrapper")
-			block page-content 
-				block main-content 
+body
+	include ../modules/preloader
+	include ../includes/mixins
+	div(class="wrapper")
+		block page-content 
+			block main-content 

@@ -1,4 +1,4 @@
-import isMobile from "../assets/Js-devise.js";
+// import isMobile from "../assets/Js-devise.js";
 import ItcCollapse from "../assets/collapse.js";
 //! ---------------------------------- Root ------------------------------------
 const $ = {
@@ -15,15 +15,19 @@ const $ = {
 	menuCatalog: document.querySelector('.menu-catalog'),
 	catalogCategories: document.querySelector('.catalog__categories'),
 	submenuParents: document.querySelectorAll('.submenu-parent'),
-	userButtons: document.querySelectorAll('.login-container__user-button')
+	userButtons: document.querySelectorAll('.login-container__user-button'),
+	favouritItems: document.querySelectorAll('.slide-container__favourit')
 };
-console.log($.cancelButtonsCatalog);
 // -----------------------------------------------------------------------------
-export function burgerMenu() {
-	if (isMobile.any()) {
-		// _loop($.bttns, 'burger-button', '_active');
-	}
+export function addFafouritItems() {
+	$.favouritItems.forEach(favouritItem => {
+		favouritItem.addEventListener('click', () => {
+			favouritItem.classList.toggle('_add-product');
+		});
+	});
+
 }
+
 
 //! --------------------------------- Main.js ----------------------------------
 //todo закрываем "Menu-Catalog" 

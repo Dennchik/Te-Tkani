@@ -188,9 +188,12 @@
 	}
 	// .slide-container__favourit
 	&__favourit {
+		color: #fff;
 		.icon-heart-like {
-			color: #fff;
 			font-size: 18px;
+		}
+		&._add-product {
+			color: red;
 		}
 	}
 

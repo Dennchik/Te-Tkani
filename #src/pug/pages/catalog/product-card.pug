@@ -1,0 +1,46 @@
+extends ../../layouts/app_layout
+append link 
+	link(rel="stylesheet" type="text/css" href="@@webRoot/css/product-card.min.css")
+prepend script
+	script(defer="defer" type="text/javascript" src="@@webRoot/js/product-card.min.js") 
+	block title
+	- var text='Корзина - Те Ткани "Обнинск"'
+
+block page-content
+	.page#page
+		._container
+			include ../../chunk/modal-regisrations-fiz
+			include ../../chunk/modal-regisrations-ure
+			aside._sidebar-catalog 
+				.sidebar-search.bp-4
+					._top.bp-2
+						button(type="button")._icon-cancel.catalog-cansel
+							+iconfont('cancel-circle', 'icon')
+				include ../../chunk/sidebar-catalog
+			nav._sidebar-menu
+				include ../../chunk/sidebar-menu
+			section._header
+				include ../../layouts/header
+			._content
+				section._bread-crumbs
+				nav.bread-crumbs
+					ul._list
+						li
+							a._link(href="@@webRoot/index.html" title="/ Главная") Главная /
+						li
+							a._link._lnb(href="@@webRoot/catalog.html" title="/ Главная") Каталог /
+						li
+							a._link._lnb(href="@@webRoot/catalog.html" title="/ Главная") Раздел 1 /
+						li
+							span._item Карточка товара
+			section._product-card 
+
+			section._row-card#watch-recently
+				include ../../components/section-watchrecently-slide
+			section._row-card#similar-products
+				include ../../components/section-similar-products
+			section._footer
+				include ../../layouts/footer 
+			nav._buttom-menu
+				include ../../layouts/float-menu
+
