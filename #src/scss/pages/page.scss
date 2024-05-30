@@ -30,11 +30,13 @@
 			left: 0;
 			z-index: 1;
 		}
+		@include _min-690 {
+			margin-top: 14.2rem;
+		}
 	}
 
 	// .page__textile
 	&__textile {
-		margin-top: 14.2rem;
 		margin-bottom: 8.9rem;
 		img {
 			width: 100%;
