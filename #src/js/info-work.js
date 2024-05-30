@@ -1,6 +1,8 @@
 import { anchorsSmoothScrolling } from "./modules/anchors-smooth-scrolling.js";
 anchorsSmoothScrolling();
-const sideBarButton = document.querySelector('.side-bar__menu');
-sideBarButton; addEventListener('click', () => {
-	sideBarButton.classList.toggle('_open');
+const sideBarInfo = document.querySelector('.side-info__info');
+const sideInfoButton = document.querySelector('.side-info__button');
+
+sideInfoButton.addEventListener('click', () => {
+	sideBarInfo.classList.toggle('_open');
 });
