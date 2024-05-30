@@ -1,4 +1,6 @@
 .header {
+	max-width: $maxWidthContainer;
+	margin: 0 auto;
 	// .header__header-wrapper
 	&__header-wrapper {
 		background: $bg-color;

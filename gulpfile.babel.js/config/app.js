@@ -109,6 +109,7 @@ export default {
 			},
 		},
 		entry: {
+			'info-work': './#src/js/info-work.js',
 			'product-card': './#src/js/product-card.js',
 			catalog: './#src/js/catalog.js',
 			catalog: './#src/js/catalog.js',
