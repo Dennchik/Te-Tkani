@@ -122,12 +122,13 @@
 
 	// .header__bottom-menu
 	&__menu-bottom {
+		box-shadow: 1px 1px 5px #00000085;
 		@include _690 {
 			display: none;
 		}
-		padding: 1.5rem;
+
 		width: 100%;
-		border-radius: 1rem;
+		border-radius: 10px;
 		color: $font-color-other;
 
 		background: linear-gradient(
@@ -277,32 +278,6 @@
 			&:not(:last-child) {
 				display: none;
 			}
-		}
-	}
-}
-
-.menu-bottom {
-	&__list {
-		@include flex-align-center-justify-space-between;
-		li {
-			&:not(:first-child) {
-				margin-left: 2rem;
-			}
-		}
-	}
-
-	// .menu-bottom__link
-	&__link {
-		span {
-			white-space: nowrap;
-			margin-right: 1.2rem;
-		}
-		@include flex-align-center;
-
-		.icon-arow-left {
-			width: 2rem;
-			height: 2rem;
-			transform: rotate(-90deg);
 		}
 	}
 }

@@ -7,7 +7,6 @@ $footerHeight: 4rem;
 $sidebarWidth: 4rem;
 $titleHeight: 3rem;
 $min-height: calc(100% - ($headerHeight + $footerHeight));
-$bg-color: #fbf9f4;
 //* ---------------------------- [Font Variables] ------------------------------
 $font-path: '../fonts';
 $font-defoult: 'Inter', sans-serif;
@@ -20,7 +19,9 @@ $font-color-secondary: rgb(0, 70, 70);
 $font-color-other: #e1b69e;
 //* -------------------------------- [Color] -----------------------------------
 $color: #004646;
+$bg-color: #fbf9f4;
 $color-second: #1c153f;
+$color-link: #dd8686;
 $color-hover: red;
 //* ------------------------------- [margins] ----------------------------------
 $margins-footer: 1.7rem;

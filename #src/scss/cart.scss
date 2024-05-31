@@ -37,8 +37,10 @@
 	@include flex-align-center-justify-center;
 }
 // todo --------------------------- layout -------------------------------------
-@import 'layouts/layout.scss';
-
+@import 'layouts/bem-block';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/float-menu';
 // todo --------------------------- Pages --------------------------------------
 @import 'pages/page.scss';
 // todo --------------------------- Chunk --------------------------------------
@@ -49,9 +51,11 @@
 @import 'chunk/bread-crumbs';
 @import 'chunk/filter';
 @import 'chunk/counter-product';
+@import 'chunk/login-modal';
 @import 'chunk/modal-registration';
 // todo -------------------------- Modules -------------------------------------
-
+@import 'modules/preloader';
+@import 'modules/swinging-menu';
 // todo -------------------------- Sections ------------------------------------
 @import 'section/section-cart';
 @import 'section/section-sendorder';

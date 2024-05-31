@@ -38,7 +38,6 @@
 	height: 100%;
 	@include flex-align-center-justify-center;
 }
-// todo --------------------------- Assets -------------------------------------
 // todo --------------------------- layout -------------------------------------
 @import 'layouts/bem-block';
 @import 'layouts/header';
@@ -47,14 +46,15 @@
 // todo --------------------------- Pages --------------------------------------
 @import 'pages/page.scss';
 // todo --------------------------- Chunk --------------------------------------
+@import 'chunk/login-modal';
 @import 'chunk/search';
 @import 'chunk/burger-button';
 @import 'chunk/sidebar-menu';
 @import 'chunk/sidebar-catalog';
-@import 'chunk/login-modal';
 @import 'chunk/modal-registration';
 // todo -------------------------- Modules -------------------------------------
 @import 'modules/preloader';
+@import 'modules/swinging-menu';
 // todo -------------------------- Sections ------------------------------------
 @import 'section/section-products-slide';
 @import 'section/section-portiere-fabrics';

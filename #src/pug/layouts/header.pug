@@ -29,7 +29,7 @@ header.header
 										span._text
 											| Моя корзина 
 										span._value-cart (0)  
-									a(href="@@webRoot/catalog/product-card.html")._link
+									a(href="@@webRoot/favourites.html")._link
 										+iconfont('heart', '_icon')
 										span._text
 											| Избранное 
@@ -64,29 +64,215 @@ header.header
 							._phone
 								a(href="tel:88000000000") 8-800-000-00-00
 						._fade-in.bp-6 
-		.menu-bottom._menu-bottom
-				ul._list
-					li
-						a(href="")._link 
-							span Ткани 
-							+iconfont("arow-left", '_icon')
-					li
-						a(href="#")._link
-							span Швейная фурнитура 
-							+iconfont("arow-left", '_icon')
-					li
-						a(href="#")._link
-							span Товары для рукоделия 
-							+iconfont("arow-left", '_icon')
-					li
-						a(href="#")._link
-							span Пряжа 
-							+iconfont("arow-left", '_icon')
-					li
-						a(href="#")._link
-							span Новинки 
-							+iconfont("arow-left", '_icon')
-					li
-						a(href="#")._link
-							span Акции 
-							+iconfont("arow-left", '_icon')
+		nav.menu-bottom._menu-bottom 
+			ul._list
+				li._list-item
+					a(href="#")._link 
+						span Ткани 
+						+iconfont("arow-left", '_icon')
+					ul._sub-menu
+						li
+							a(href="#") меню второго уровня
+						li
+							a(href="#")
+								| меню второго уровня
+								+iconfont("arow-right", '_icon') 
+							ul._sub-menu
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+						li
+							a(href="#")._sub-link
+								| меню второго уровня 
+								+iconfont("arow-right", 'arow-left')
+							ul._sub-menu
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+						li
+							a(href) меню второго уровня
+				li._list-item
+					a(href="#")._link
+						span Швейная фурнитура 
+						+iconfont("arow-left", '_icon')
+					ul._sub-menu
+						li
+							a(href="#") меню второго уровня
+						li
+							a(href="#")
+								| меню второго уровня
+								+iconfont("arow-right", '_icon') 
+							ul._sub-menu
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+						li
+							a(href="#")._sub-link
+								| меню второго уровня 
+								+iconfont("arow-right", 'arow-left')
+							ul._sub-menu
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+						li
+							a(href) меню второго уровня
+				li._list-item
+					a(href="#")._link
+						span Товары для рукоделия 
+						+iconfont("arow-left", '_icon')
+					ul._sub-menu
+						li
+							a(href="#") меню второго уровня
+						li
+							a(href="#")
+								| меню второго уровня
+								+iconfont("arow-right", '_icon') 
+							ul._sub-menu
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+						li
+							a(href="#")._sub-link
+								| меню второго уровня 
+								+iconfont("arow-right", 'arow-left')
+							ul._sub-menu
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+						li
+							a(href) меню второго уровня
+				li._list-item
+					a(href="#")._link
+						span Пряжа 
+						+iconfont("arow-left", '_icon')
+					ul._sub-menu
+						li
+							a(href="#") меню второго уровня
+						li
+							a(href="#")
+								| меню второго уровня
+								+iconfont("arow-right", '_icon') 
+							ul._sub-menu
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+						li
+							a(href="#")._sub-link
+								| меню второго уровня 
+								+iconfont("arow-right", '_icon') 
+							ul._sub-menu
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+						li
+							a(href) меню второго уровня
+				li._list-item
+					a(href="#")._link
+						span Новинки 
+						+iconfont("arow-left", '_icon')
+					ul._sub-menu
+						li
+							a(href="#") меню второго уровня
+						li
+							a(href="#")._sub-link
+								+iconfont("arow-left", 'arow-left')
+								| меню второго уровня 
+							ul._sub-menu
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+						li
+							a(href="#")._sub-link
+								+iconfont("arow-left", 'arow-left')
+								| меню второго уровня 
+							ul._sub-menu
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+						li
+							a(href) меню второго уровня
+				li._list-item
+					a(href="#")._link
+						span Акции 
+						+iconfont("arow-left", '_icon')
+					ul._sub-menu 
+						li
+							a(href="#") меню второго уровня
+						li
+							a(href="#")._sub-link
+								+iconfont("arow-left", 'arow-left')
+								| меню второго уровня 
+							ul._sub-menu
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+						li
+							a(href="#")._sub-link
+								+iconfont("arow-left", 'arow-left')
+								| меню второго уровня 
+							ul._sub-menu
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+								li
+									a(href) меню третьего уровня
+						li
+							a(href) меню второго уровня

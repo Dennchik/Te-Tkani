@@ -1,0 +1,30 @@
+extends ../layouts/app_layout
+append link 
+	link(rel="stylesheet" type="text/css" href="@@webRoot/css/favourites.min.css")
+prepend script 
+	script(defer="defer" type="text/javascript" src="@@webRoot/js/favourites.min.js")
+block title
+	- var text='Избранное "Те Ткани -Обнинск"' 
+
+block page-content
+	.page#page
+		._container
+			include ../chunk/modal-regisrations-fiz
+			include ../chunk/modal-regisrations-ure
+			nav._sidebar-catalog
+				.sidebar-search.bp-4
+					._top.bp-2
+						button(type="button")._icon-cancel.catalog-cansel
+							+iconfont('cancel-circle', 'icon')
+				include ../chunk/sidebar-catalog 
+			nav._sidebar-menu
+				include ../chunk/sidebar-menu
+			section._header
+				include ../layouts/header
+			._content 
+
+
+		section._footer
+			include ../layouts/footer 
+		nav._buttom-menu
+			include ../layouts/float-menu

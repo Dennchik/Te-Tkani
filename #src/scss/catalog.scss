@@ -36,6 +36,8 @@
 	height: 100%;
 	@include flex-align-center-justify-center;
 }
+// todo --------------------------- Assets -------------------------------------
+@import 'assets/noui-slider';
 // todo --------------------------- layout -------------------------------------
 @import 'layouts/bem-block';
 @import 'layouts/header';
@@ -44,17 +46,17 @@
 // todo --------------------------- Pages --------------------------------------
 @import 'pages/page.scss';
 // todo --------------------------- Chunk --------------------------------------
+@import 'chunk/login-modal';
 @import 'chunk/search';
 @import 'chunk/burger-button';
 @import 'chunk/sidebar-menu';
 @import 'chunk/sidebar-catalog';
 @import 'chunk/bread-crumbs';
 @import 'chunk/filter';
-@import 'assets/noui-slider';
-@import 'chunk/login-modal';
 @import 'chunk/modal-registration';
 // todo -------------------------- Modules -------------------------------------
 @import 'modules/preloader';
+@import 'modules/swinging-menu';
 // todo -------------------------- Sections ------------------------------------
 @import 'section/section-categories';
 @import 'section/section-products-slide';

@@ -3,8 +3,10 @@ swiperLayout('_swiper');
 //* import Swiper bundle with all modules installed 
 import Swiper from 'swiper/bundle';
 
-export function thumbCardSlide() {
-	if (document.querySelector('.product-slide')) {
+export function thumbCardSlide(
+	mainslide = '.product-slide',
+) {
+	if (mainslide) {
 		let swiper = new Swiper('.thumb-slide', {
 			spaceBetween: 10,
 			slidesPerView: 4,
