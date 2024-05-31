@@ -215,6 +215,8 @@
 			box-shadow: 1px 1px 0.5rem #000;
 		}
 		a {
+			display: flex;
+			align-items: center;
 			position: relative;
 			z-index: 1;
 			transition: 0.25s linear;

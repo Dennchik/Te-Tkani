@@ -9,7 +9,8 @@ export function thumbCardSlide() {
 			spaceBetween: 10,
 			slidesPerView: 4,
 			freeMode: true,
-			watchSlidesProgress: true, updateOnWindowResize: true,
+			watchSlidesProgress: true,
+			updateOnWindowResize: true,
 
 		});
 
@@ -17,7 +18,8 @@ export function thumbCardSlide() {
 			spaceBetween: 10,
 			speed: 800,
 			loop: true,
-			slidesPerView: 1, updateOnWindowResize: true,
+			slidesPerView: 1,
+			updateOnWindowResize: true,
 			thumbs: {
 				swiper: swiper,
 			},
