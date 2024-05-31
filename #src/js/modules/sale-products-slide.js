@@ -1,5 +1,5 @@
 import { swiperLayout } from "../layouts/swiper-layout";
-swiperLayout('._swiper');
+swiperLayout();
 //* import Swiper bundle with all modules installed 
 import Swiper from 'swiper/bundle';
 export function saleProductsSlide(
@@ -45,7 +45,5 @@ export function saleProductsSlide(
 				}
 			}
 		});
-
-
 	}
 }

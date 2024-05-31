@@ -29,7 +29,6 @@
 .side-info {
 	// .sidebar-menu__menu
 	&__info {
-		background: $bg-color;
 		&._open {
 			transform: translateX(0);
 			background: $bg-color;
@@ -50,20 +49,24 @@
 		display: flex;
 		width: 25.4rem;
 		min-height: 50rem;
-		height: 50rem;
 		border: 1px solid #000000d5;
 		border-radius: 10px;
 		position: sticky;
 		top: 15.2rem;
-		box-shadow: 1px 1px 3px #0000006c;
+		background: $bg-color;
+		@include _690 {
+			height: 50rem;
+		}
 	}
 
 	// .sidebar-menu__button
 	&__button {
 		position: relative;
-		border-left: 1px dotted #000;
 		width: 20px;
 		flex: 0 0 20px;
+		@include _690 {
+			border-left: 1px dotted #00000080;
+		}
 
 		.icon {
 			transition: opacity 0.4s ease-in-out;
@@ -83,6 +86,7 @@
 		width: 100%;
 		flex: 0 1 auto;
 		padding: 2.8rem 2rem;
+		scrollbar-width: none;
 	}
 
 	// .sidebar-menu__list-item
@@ -91,13 +95,19 @@
 		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 3rem;
+
 		.icon {
 			color: $color;
 		}
 	}
 	// .sidebar-menu__link
 	&__link {
+		transition: all 0.5s ease 0s;
 		width: 100%;
+		&:hover {
+			color: $color;
+			text-decoration: underline;
+		}
 	}
 }
 

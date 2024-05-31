@@ -1,29 +1,37 @@
 .product-card
 	._body 
+		._header
+			._title Название ткани 
+			._button-close 
+				+iconfont('cancel', 'icon')
 		._content
-			._header
-				._title Название ткани 
-				._button-close 
-					+iconfont('cancel', 'icon')
 			._column
-				main._main-content
-					.item-product
-						.slide-product._slide 
-							._slide
-
-						._info-product
-							._row
-								._title Описание
-								._text
-									p Штапель вискозный 11872 плотность 110 гр/м² — идеальный вариант. У материала актуальный цвет, который при необходимости легко комбинируется с другими оттенками, довольно высокий показатель прочности на разрыв благодаря особому переплетению и интересная фактура. Именно поэтому его часто выбирают дизайнеры для своих коллекций. С полотном шириной 140 см легко работать вручную и на машинке. А его состав (100% Вискоза) обуславливает отличную износостойкость, устойчивость к выгоранию и сохранение эстетичности после чистки. 
-									p Италия — в числе лучших мировых производителей качественных тканей, и мы поставляем их напрямую, не завышая цены.
-							._row
-								._column
-									._title Гарантия
-									._text Если вас не устроит покупка, обменяем или вернем деньги
-								._column
-									._title Оплата
-									._text Наличными, безналичные способы (картой, электронные деньги и тп.)
+				main.content-product._main-content
+					._item
+						.product-slide._slide
+							._slide._swiper 
+								._card.swiper-slide 
+									<img src="@@webRoot/img/products/catalog/K-5462.png" alt="Картинка">
+								._card.swiper-slide
+									<img src="@@webRoot/img/products/catalog/K-5462.png" alt="Картинка">
+								._card.swiper-slide
+									<img src="@@webRoot/img/products/catalog/K-5462.png" alt="Картинка">
+								._card.swiper-slide
+									<img src="@@webRoot/img/products/catalog/K-5462.png" alt="Картинка">
+							.video-box._video
+								._item
+									video(controls muted loop)
+										source(src="@@webRoot/img/video/promo-it.mp4", type="video/mp4")
+										| Your browser does not support HTML5 video.
+						.thumb-slide._thumb._swiper(thumbsSlider="") 
+							._card
+								<img src="@@webRoot/img/products/catalog/K-5462.png" alt="Картинка">
+							._card
+								<img src="@@webRoot/img/products/catalog/K-5462.png" alt="Картинка">
+							._card
+								<img src="@@webRoot/img/products/catalog/K-5462.png" alt="Картинка">
+							._card
+								<img src="@@webRoot/img/products/catalog/K-5462.png" alt="Картинка">
 			._column
 				aside.specifications
 					ul._list 
@@ -51,45 +59,51 @@
 										+iconfont('cancel', 'icon')
 								p._price Стоимость - &nbsp;
 									span._price-product 380 
-									span руб 
-					
-
+									span руб
 							._buttons
 								button(type="submit")._button-cart в корзину
 								button(type="submit")._button-favourites в избранное
 									+iconfont('heart', 'icon')
+		section.description-product._description
+			._column
+				._title Описание
+				._text
+					p Штапель вискозный 11872 плотность 110 гр/м² — идеальный вариант. У материала актуальный цвет, который при необходимости легко комбинируется с другими оттенками, довольно высокий показатель прочности на разрыв благодаря особому переплетению и интересная фактура. Именно поэтому его часто выбирают дизайнеры для своих коллекций. С полотном шириной 140 см легко работать вручную и на машинке. А его состав (100% Вискоза) обуславливает отличную износостойкость, устойчивость к выгоранию и сохранение эстетичности после чистки. 
+					p Италия — в числе лучших мировых производителей качественных тканей, и мы поставляем их напрямую, не завышая цены. 
+			._column 
+				.assortment
+					._title Возможные цвета
+					._items 
+						._image
+							img(src="@@webRoot/img/products/assortment/K-5443.png", alt="") 
+						._image 
+							img(src="@@webRoot/img/products/assortment/K-5588.png", alt="") 
+						._image 
+							img(src="@@webRoot/img/products/assortment/K-7444.png", alt="") 
+						._image 
+							img(src="@@webRoot/img/products/assortment/K-6814.png", alt="") 
+						._image 
+							img(src="@@webRoot/img/products/assortment/K-7457.png", alt="") 
+						._image 
+							img(src="@@webRoot/img/products/assortment/K-5586.png", alt="")  
+						._image 
+							img(src="@@webRoot/img/products/assortment/K-7443.png", alt="") 
+						._image 
+							img(src="@@webRoot/img/products/assortment/K-6112.png", alt="") 
+				._title
+				._delivery
+		.services-product._services
+			._column
+				._title Гарантия
+				._text Если вас не устроит покупка, обменяем или вернем деньги
+			._column
+				._title Оплата
+				._text Наличными, безналичные способы (картой, электронные деньги и тп.)
+			._column
+				._title Доставка
+				._text Наличными, безналичные способы (картой, электронные деньги и тп.)
 
-					.assortment
-						._title Возможные цвета
-						._items
-							._column 
-								._image
-									img(src="@@webRoot/img/products/assortment/K-5443.png", alt="")
-							._column 
-								._image 
-									img(src="@@webRoot/img/products/assortment/K-5588.png", alt="")
-							._column 
-								._image 
-									img(src="@@webRoot/img/products/assortment/K-7444.png", alt="")
-							._column 
-								._image 
-									img(src="@@webRoot/img/products/assortment/K-6814.png", alt="")
-							._column 
-								._image 
-									img(src="@@webRoot/img/products/assortment/K-7457.png", alt="")
-							._column 
-								._image 
-									img(src="@@webRoot/img/products/assortment/K-5586.png", alt="")
-							._column 
-								._image 
-									img(src="@@webRoot/img/products/assortment/K-7443.png", alt="")
-							._column 
-								._image 
-									img(src="@@webRoot/img/products/assortment/K-6112.png", alt="") 
-						._title
-						._delivery
-							h4 Доставка
-							p Наличными, безналичные способы (картой, электронные деньги и тп.)
+
 		._offer
 			.product-offer
 				._title С этим товаром покупают
