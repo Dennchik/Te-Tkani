@@ -52,14 +52,14 @@
 			margin-right: 1.2rem;
 		}
 
-		.icon-arow-left {
+		.arow-down {
 			transition: all 0.4s ease 0s;
 			width: 2rem;
 			height: 2rem;
 			transform: rotate(-90deg);
 		}
 		&:hover {
-			.icon-arow-left {
+			> .arow-down {
 				transform: rotate(-270deg);
 			}
 		}
@@ -97,9 +97,9 @@
 				background: $bg-color;
 				background: linear-gradient(
 					90deg,
-					#05342ada -23.739%,
-					#0e614fd5 11.827%,
-					#05342ada 100%
+					#05342aec -23.739%,
+					#0e614fef 11.827%,
+					#05342aec 100%
 				);
 
 				visibility: hidden;

@@ -45,10 +45,12 @@ const watcher = () => {
 	$.gulp.watch(path.js.watch, $.gulp.series(js, reload));
 	// $.gulp.watch(path.reactSass.watch, $.gulp.series(js, reload));
 	// $.gulp.watch(path.react.watch, $.gulp.series(react, reload));
-	$.gulp.watch(path.pug.watch, pug).on('all', $.browserSync.reload);
+	// $.gulp.watch(path.pug.watch, pug).on('all', $.browserSync.reload);
+	$.gulp.watch(path.pug.watch, $.gulp.series(pug, reload));
 	$.gulp.watch(path.json.watch, changejson).on('all', $.browserSync.reload);
 	$.gulp.watch(path.json.readFile, pug).on('all', $.browserSync.reload);
-	$.gulp.watch(path.scss.watch, scss).on('all', $.browserSync.reload);
+	$.gulp.watch(path.scss.watch, $.gulp.series(scss, reload));
+	// $.gulp.watch(path.scss.watch, scss).on('all', $.browserSync.reload);
 	$.gulp.watch(path.image.watch, image).on('all', $.browserSync.reload);
 	$.gulp.watch(path.sprite.watch, sprite).on('all', $.browserSync.reload);
 	$.gulp.watch(path.fonts.watch, fonts).on('all', $.browserSync.reload);
