@@ -65,11 +65,9 @@
 		line-height: 120%; /* 36px/30 */
 		letter-spacing: 0%;
 		text-transform: uppercase;
-		h1 {
-			font-size: 3rem;
-			@include _425 {
-				font-size: 2.3rem;
-			}
+		font-size: 3rem;
+		@include _425 {
+			font-size: 2.3rem;
 		}
 	}
 

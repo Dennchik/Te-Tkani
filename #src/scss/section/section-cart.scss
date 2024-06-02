@@ -35,12 +35,11 @@
 	&__title {
 		margin-bottom: 5rem;
 		text-transform: uppercase;
-		h1 {
-			color: $color;
-			font-size: 3rem;
-			@include _425 {
-				font-size: 2.3rem;
-			}
+
+		color: $color;
+		font-size: 3rem;
+		@include _425 {
+			font-size: 2.3rem;
 		}
 	}
 
@@ -226,36 +225,6 @@
 				}
 			}
 
-			&__body {
-				// position: relative;
-				// z-index: 9;
-				// margin-bottom: 4.3rem;
-				// padding: 0 1.5rem;
-				// height: 50px;
-				// border: 1px solid $color;
-				// border-radius: 5px;
-				// align-items: center;
-				// justify-items: start;
-				// grid-template-columns: 30rem 15rem;
-
-				// @include _490 {
-				// 	grid-template-columns: 1fr 1fr 1fr;
-				// }
-			}
-
-			// .login-container__totalprice-order
-			// &__totalprice-order {
-			// 	font-weight: 600;
-			// 	display: flex;
-			// 	align-items: center;
-			// 	white-space: nowrap;
-			// 	.icon-rub {
-			// 		align-items: flex-end;
-			// 		line-height: 120%;
-			// 		margin-left: 0.5rem;
-			// 	}
-			// }
-
 			// .login-container__discounts
 			&__discounts {
 				font-weight: 700;
@@ -325,6 +294,8 @@
 		padding: 2rem 0;
 		display: flex;
 		flex-direction: row-reverse;
+		display: none;
+		justify-self: end;
 	}
 
 	// .order-place__info
@@ -398,9 +369,6 @@
 		font-size: 13px;
 		@include _690 {
 			font-size: 12px;
-		}
-		&:nth-child(n + 2):nth-child(-n + 4) {
-			// padding: 0 1rem;
 		}
 
 		&:nth-child(1) {

@@ -231,6 +231,7 @@
 
 	// .checkbox__lable
 	&__label {
+		max-width: 250px;
 		cursor: pointer;
 		position: relative;
 		display: inline-flex;
@@ -279,7 +280,7 @@
 			}
 		}
 		span {
-			font-size: 11px;
+			font-size: 10px;
 		}
 	}
 }
