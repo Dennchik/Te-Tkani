@@ -1,8 +1,6 @@
 import loaded from './modules/preloader.js';
 loaded('.preloader');
 //* ----------------------------------------------------------------------------
-
-//* ----------------------------------------------------------------------------
 import { dinamicAdaptive } from './assets/move-elements.js';
 dinamicAdaptive();
 //* ----------------------------------------------------------------------------
@@ -29,6 +27,10 @@ dromLinks.forEach(dromLink => {
 		dropMenu.classList.toggle('._active');
 	});
 });
+
+//* ----------------------------------------------------------------------------
+import { anchorsSmoothScrolling } from "./modules/anchors-smooth-scrolling.js";
+anchorsSmoothScrolling();
 //* ----------------------------------------------------------------------------
 console.log("%c РОССИЯ ", "background: blue; color: yellow; font-size: x-large; border-left: 5px solid black; border-top: 30px solid white; border-right: 2px solid black; border-bottom: 30px solid red;");
 //* ----------------------------------------------------------------------------

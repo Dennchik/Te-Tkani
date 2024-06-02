@@ -398,10 +398,10 @@
 		color: $bg-color;
 		font-weight: 500;
 		white-space: nowrap;
-		transition: all 0.4s ease-in-out;
-		@include flex-align-center;
+		transition: all 0.2s ease;
 		justify-content: center;
-		&:hover {
+		@include flex-align-center;
+		&:active {
 			background: $bg-color;
 			color: #000;
 		}
@@ -420,13 +420,13 @@
 		font-weight: 500;
 		border-radius: 23px;
 		white-space: nowrap;
-		transition: color 0.4s ease-in-out;
+		transition: all 0.2s ease;
 		justify-content: center;
 		@include flex-align-center;
 		.icon {
 			margin-right: 1rem;
 		}
-		&:hover {
+		&:active {
 			background: $color;
 			color: $bg-color;
 		}

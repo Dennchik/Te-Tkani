@@ -50,7 +50,7 @@
 						._title Цена за погонный метр:
 							span 1000&nbsp;руб
 						form(action="")
-							.counter-product 
+							.counter-product(data-quantity) 
 								.quantity._quantity
 									._button.quantity-remove
 										+iconfont('minus', 'icon')
@@ -62,8 +62,8 @@
 									span._price-product 380 
 									span руб
 							._buttons
-								button(type="submit")._button-cart в корзину
-								button(type="submit")._button-favourites в избранное
+								button(type="button")._button-cart в корзину
+								button(type="button")._button-favourites в избранное
 									+iconfont('heart', 'icon')
 			._column 
 				section.description-product._description

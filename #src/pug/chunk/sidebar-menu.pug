@@ -24,9 +24,9 @@ nav.sidebar-menu.page__sidebar-menu
 					li._item
 						a(href="")._link Новости
 					li._item
-						a(href="")._link Контакты
-					li._item
 						a(href="@@webRoot/catalog/cart.html")._link Корзина
+					li._item
+						a(href="#contacts")._link.anchor-link Контакты
 		._search 
 			.search-container
 				form.search-form._form#menu-search(action="#" metod="get")
@@ -36,6 +36,8 @@ nav.sidebar-menu.page__sidebar-menu
 					button(type="submit")._button
 						+iconfont('search', '_icon')
 		._footer
+			._logo
+				img(src="@@webRoot/img/footer/logo-footer.png", alt="картинка")
 			.networks-brend 
 				._icon
 					+iconfont('vk-brand', 'icon')

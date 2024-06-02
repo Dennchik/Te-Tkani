@@ -1,6 +1,4 @@
 .sidebar-menu {
-	// height: calc(100% - 65px);
-
 	// .sidebar-menu__login
 	&__login {
 		position: relative;
@@ -62,18 +60,18 @@
 		width: 100%;
 		background: $color;
 		border-radius: 10px;
+		@include flex-align-center;
+		padding: 0 2rem;
 	}
 }
 
 .networks-brend {
 	height: 50px;
 	width: 100%;
+	border-radius: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-
-	border-radius: 50%;
-	margin-right: 1.5rem;
 
 	[class*='icon-'] {
 		width: 32px;
@@ -88,7 +86,10 @@
 	&__icon {
 		width: 32px;
 		height: 32px;
-		margin-right: 2rem;
+
+		&:not(:last-child) {
+			margin-right: 2rem;
+		}
 	}
 }
 

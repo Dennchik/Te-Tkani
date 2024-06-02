@@ -1,5 +1,3 @@
-import { anchorsSmoothScrolling } from "./modules/anchors-smooth-scrolling.js";
-anchorsSmoothScrolling();
 const sideBarInfo = document.querySelector('.side-info__info');
 const sideInfoButton = document.querySelector('.side-info__button');
 

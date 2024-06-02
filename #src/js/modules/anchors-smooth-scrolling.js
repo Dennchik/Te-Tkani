@@ -10,7 +10,19 @@ export function anchorsSmoothScrolling() {
 				const targetElement = document.getElementById(targetId);
 				const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
 				const offsetPosition = targetPosition - 150; // 150px отступ сверху
-				sideBarInfo.classList.remove('_open');
+				if (link.classList.contains('side-info__link')) {
+					sideBarInfo.classList.remove('_open');
+				}
+
+				if (link.classList.contains('menu-side-bar__link')) {
+					const sidebarMenu = document.querySelector('.page__sidebar-menu');
+					const burgerButton = document.querySelector('.burger-button');
+					console.log(sidebarMenu);
+					sidebarMenu.classList.remove('_opened-menu');
+					burgerButton.classList.remove('_active');
+					document.body.classList.remove('no-scroll');
+				}
+
 				window.scrollTo({
 					top: offsetPosition,
 					behavior: 'smooth'
@@ -18,5 +30,4 @@ export function anchorsSmoothScrolling() {
 			});
 		});
 	});
-
 }

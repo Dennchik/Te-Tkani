@@ -1,0 +1,20 @@
+include ../includes/mixins 
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0") 
+		block link
+			link(rel="icon" type="image/icon" href="@@webRoot/img/icons/brand.png")  
+	title Page Not Found
+	link(rel="stylesheet" type="text/css" href="@@webRoot/css/404.min.css")
+
+block page-content
+	.page#page 
+		._wrapper
+			._content
+				
+				h1 404
+				p Oops! It looks like you've gotten tangled in the wrong thread.
+				a.btn(href="@@webRoot/index.html") Back to Home

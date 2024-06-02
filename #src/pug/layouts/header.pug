@@ -18,7 +18,7 @@ header.header
 							li 
 								a(href="#" title="Доставка")._link._lnb Доставка
 							li 
-								a(href="#" title="Скидки")._link._lnb Скидки
+								a(href="@@webRoot/404.html" title="Скидки")._link._lnb Скидки
 				._column.bp-1
 				._column 
 					.service-menu
@@ -35,7 +35,7 @@ header.header
 											| Избранное 
 										span._value-favourites (0) 
 							._column
-									a(href="#")
+									a(href="#contacts").anchor-link
 										span._text Контакты 
 					button._button-menu
 						include ../chunk/burger-button 
@@ -179,8 +179,8 @@ header.header
 							a(href="#") меню второго уровня
 						li
 							a(href="#")
+								+iconfont("arow-left", 'arow-left') 
 								| меню второго уровня
-								+iconfont("arow-right", 'arow-right') 
 							ul._sub-menu
 								li
 									a(href) меню третьего уровня
@@ -192,8 +192,8 @@ header.header
 									a(href) меню третьего уровня
 						li
 							a(href="#")._sub-link
+								+iconfont("arow-left", 'arow-left') 
 								| меню второго уровня 
-								+iconfont("arow-right", 'arow-right') 
 							ul._sub-menu
 								li
 									a(href) меню третьего уровня

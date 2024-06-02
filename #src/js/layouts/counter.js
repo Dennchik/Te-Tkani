@@ -8,7 +8,6 @@ export function counterProducy() {
 
 			counter.addEventListener('click', (e) => {
 				let target = e.target;
-				console.log(target);
 
 				if (target.closest('.quantity__button')) {
 					let input = target.closest('.quantity').querySelector('input');
