@@ -14,18 +14,16 @@
 .login-container {
 	// .login-container__body
 	&__body {
-		height: 100%;
 		position: relative;
 		padding-left: 2rem;
 		width: 100%;
 		height: 100%;
 		gap: 2rem;
 		display: grid;
+		grid-template-columns: auto minmax(13.048rem, max-content);
+		justify-content: space-between;
 		z-index: 9;
 
-		grid-template-columns: auto minmax(13.048rem, max-content);
-
-		justify-content: space-between;
 		@include _screen-960 {
 			justify-content: end;
 		}
@@ -45,32 +43,60 @@
 
 	// .login-container__list
 	&__list {
-		width: 29rem;
-		height: 20px;
+		// width: 29rem;
+		// height: 20px;
+		width: auto;
 		display: flex;
-		line-height: 0;
 		justify-content: space-between;
+
+		@include _690-960 {
+			padding: 2rem;
+			pointer-events: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			opacity: 0;
+			transform: translateY(60%);
+			border: 1px solid $color;
+			background: $bg-color;
+			border-radius: 10px;
+			transition: all 0.5s ease-in-out;
+			&._visible {
+				pointer-events: all;
+				opacity: 1;
+				display: flex;
+			}
+		}
 
 		span {
 			margin-right: 1rem;
-			line-height: 140%;
+			line-height: 170%;
 		}
 	}
 
 	// .login-container__link
 	&__link {
-		line-height: 0;
 		white-space: nowrap;
-		&:first-child {
-			padding-left: 0.5rem;
-		}
 
 		&:not(:last-child) {
 			margin-right: 1rem;
 		}
-		&:hover {
-			font-weight: 700;
-			font-size: 1.456rem;
+		@include _min-690 {
+			&:hover {
+				font-weight: 700;
+				font-size: 1.456rem;
+			}
+		}
+
+		@include _690 {
+			font-size: 1.7rem;
+			line-height: 150%;
+		}
+		@include _min-960 {
+			&:first-child {
+				padding-left: 0.5rem;
+			}
+			line-height: 0;
 		}
 
 		@include flex-align-center;
@@ -79,6 +105,10 @@
 	// .login-container__button
 	&__user-button {
 		&._icon {
+			pointer-events: none;
+		}
+		@include _690 {
+			display: none;
 			pointer-events: none;
 		}
 	}

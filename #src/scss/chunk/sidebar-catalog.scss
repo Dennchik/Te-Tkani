@@ -7,9 +7,9 @@
 		.search-container {
 			margin-right: 2.5rem;
 		}
-		.search-container__form {
-			border: 2px solid $color;
-		}
+		height: 30px;
+		margin: 20px 0;
+
 		display: flex;
 		.icon-cancel-circle {
 			margin: 18px 0;
@@ -47,7 +47,7 @@
 
 	// .catalog__body
 	&__body {
-		border: 1px solid #000;
+		border: 1px solid $color;
 		border-radius: 10px;
 	}
 

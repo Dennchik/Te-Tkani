@@ -1,8 +1,10 @@
-.sidebar-menu
+nav.sidebar-menu.page__sidebar-menu 
 	._body 
-		span._button-close.menu-cansel
-			+iconfont('cancel-circle', 'icon')
+		//- span._button-close.menu-cansel
+		//- 	+iconfont('cancel-circle', 'icon')
 		._content 
+			._login
+				.login-container.bp-7
 			.menu-side-bar._menu
 				ul._list 
 					li._item
@@ -33,12 +35,12 @@
 							input.input(id='search-menu',placeholder="поиск..", autocomplete="off",data-value, name="search-menu", type="text")
 					button(type="submit")._button
 						+iconfont('search', '_icon')
-	._footer
-		.networks-brend 
-			._icon
-				+iconfont('vk-brand', 'icon')
-			._icon
-				+iconfont('whatsapp', 'icon')
-			._icon
-				+iconfont('telegram-fly', 'icon')
+		._footer
+			.networks-brend 
+				._icon
+					+iconfont('vk-brand', 'icon')
+				._icon
+					+iconfont('whatsapp', 'icon')
+				._icon
+					+iconfont('telegram-fly', 'icon')
 				

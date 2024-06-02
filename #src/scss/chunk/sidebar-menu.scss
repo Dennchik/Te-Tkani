@@ -1,32 +1,50 @@
 .sidebar-menu {
-	// .sidebar-menu__body
+	// height: calc(100% - 65px);
 
+	// .sidebar-menu__login
+	&__login {
+		position: relative;
+		margin-bottom: 20px;
+		border: 1px solid $color;
+		border-radius: 10px;
+		padding: 2rem 1rem;
+		display: flex;
+		justify-content: center;
+
+		.recovery-modal,
+		.login-modal,
+		.registrations-modal {
+			top: 55px;
+		}
+	}
+
+	// .sidebar-menu__body
 	&__body {
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		min-height: 100%;
 	}
 
 	// .sidebar-menu__content
 	&__content {
+		flex: 1 1 auto;
 		display: flex;
-		height: 100%;
-		flex-direction: column;
 		height: 100%;
 		flex-direction: column;
 	}
 
 	// .sidebar-menu__menu
 	&__menu {
-		margin-top: 50px;
 		border: 1px solid $color;
 		border-radius: 10px;
 	}
 	// .sidebar-menu__search
 	&__search {
-		display: flex;
-		flex-direction: column;
-		flex: 1 1 auto;
+		padding: 15px 0;
+		// display: flex;
+		// flex-direction: column;
+		// flex: 1 1 auto;
 	}
 
 	// .sidebar-menu__button-close
@@ -44,7 +62,6 @@
 		width: 100%;
 		background: $color;
 		border-radius: 10px;
-		// @include flex-align-center;
 	}
 }
 

@@ -1,7 +1,8 @@
 /* Стили для модального окна */
 .login-modal {
-	position: absolute;
 	padding: 3.2rem 4.5rem;
+	position: absolute;
+	top: 30px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -14,8 +15,11 @@
 	z-index: 9;
 	transition: all 0.5s ease; /* Плавный переход */
 	pointer-events: none;
-	width: 350px;
 	box-shadow: 1px 1px 5px #000;
+
+	@include _screen-960 {
+		right: 0;
+	}
 
 	/* Стили для модального контента */
 	&._show {
@@ -35,6 +39,7 @@
 		display: flex;
 		align-items: center;
 		display: flex;
+		width: 100%;
 		border: 1px solid $color;
 		border-radius: 5px;
 		margin-bottom: 2rem;
@@ -55,6 +60,7 @@
 		top: -15px;
 		right: -35px;
 		font-size: 20px;
+		color: $color;
 	}
 
 	&__form {
@@ -93,6 +99,7 @@
 /* Стили для кнопки закрытия */
 .recovery-modal {
 	position: absolute;
+	top: 30px;
 	padding: 3.2rem 2.5rem;
 	display: flex;
 	align-items: center;
@@ -106,9 +113,15 @@
 	z-index: 9;
 	transition: all 0.5s ease; /* Плавный переход */
 	pointer-events: none;
-	width: 390px;
 
 	box-shadow: 1px 1px 5px #000;
+	@include _min-690 {
+		min-width: 390px;
+	}
+
+	@include _screen-960 {
+		right: 0;
+	}
 	&._show {
 		transform: translate(0, 0);
 		pointer-events: all;
@@ -156,6 +169,7 @@
 		top: -25px;
 		right: -25px;
 		font-size: 20px;
+		color: $color;
 	}
 
 	&__close:hover,
@@ -179,6 +193,7 @@
 
 .registrations-modal {
 	position: absolute;
+	top: 30px;
 	padding: 3.2rem 2.5rem;
 	display: flex;
 	align-items: center;
@@ -195,6 +210,9 @@
 	width: 300px;
 
 	box-shadow: 1px 1px 5px #000;
+	@include _screen-960 {
+		right: 0;
+	}
 	&._show {
 		transform: translate(0, 0);
 		pointer-events: all;

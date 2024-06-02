@@ -3,22 +3,22 @@
 		1fr
 		minmax(25rem, min-content)
 		minmax(20rem, min-content)
-		minmax(8rem, min-content)
+		minmax(7rem, min-content)
 		50px;
 
 	@include _1440 {
 		grid-template-columns:
 			1fr
 			minmax(20rem, min-content)
-			minmax(18rem, min-content)
-			minmax(8rem, min-content)
+			minmax(11rem, min-content)
+			minmax(7rem, min-content)
 			50px;
 	}
 	@include _690 {
 		grid-template-columns:
 			minmax(20rem, min-content)
 			minmax(13rem, min-content)
-			minmax(7rem, min-content)
+			minmax(5rem, min-content)
 			30px;
 	}
 	@include _490 {
@@ -60,7 +60,6 @@
 		}
 
 		&:nth-child(5) {
-			flex: 0 0 50px;
 			text-align: center;
 		}
 	}
@@ -77,6 +76,7 @@
 		margin-bottom: 2rem;
 		font-weight: 700;
 		@extend.greed-laout;
+
 		@include _690 {
 			display: none;
 		}
@@ -135,7 +135,7 @@
 
 	&__title {
 		padding-bottom: 2rem;
-		font-size: 2.1rem;
+		font-size: 1.8rem;
 
 		@include _920 {
 			display: flex;
@@ -182,15 +182,21 @@
 
 	// .order-place__column
 	&__column {
-		flex: 0 1 50%;
+		flex: 0 1 auto;
+		&:nth-child(2) {
+			@include _min-690 {
+				flex: 0 1 300px;
+			}
+		}
 	}
 
 	// .order-place__footer
 	&__footer {
 		display: flex;
 		gap: 2rem;
+		align-items: flex-end;
 		justify-content: space-between;
-		@include _490 {
+		@include _690 {
 			flex-direction: column-reverse;
 		}
 	}
@@ -291,7 +297,7 @@
 
 	// .order-place__checkbox
 	&__checkbox {
-		padding: 2rem 0;
+		padding-top: 0.8rem;
 		display: flex;
 		flex-direction: row-reverse;
 		display: none;
@@ -300,9 +306,12 @@
 
 	// .order-place__info
 	&__info {
-		max-width: 60rem;
 		p {
+			line-height: 170%;
 			font-size: 13px;
+		}
+		@include _min-690 {
+			max-width: 60rem;
 		}
 	}
 
@@ -370,7 +379,9 @@
 		@include _690 {
 			font-size: 12px;
 		}
-
+		&:nth-child(n + 1):nth-child(-n + 4) {
+			padding: 0 1rem;
+		}
 		&:nth-child(1) {
 			@include _690 {
 				grid-column: 1 / 5;

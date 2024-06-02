@@ -37,24 +37,6 @@
 		flex-direction: column;
 		flex: 0 1 50%;
 
-		.login-modal {
-			top: 30px;
-			right: 0;
-			margin-right: -120px;
-		}
-
-		.recovery-modal {
-			top: 30px;
-			right: 0;
-			margin-right: -120px;
-		}
-
-		.registrations-modal {
-			top: 30px;
-			right: 0;
-			margin-right: -120px;
-		}
-
 		@include _690 {
 			&:nth-child(3) {
 				justify-self: end;
@@ -62,18 +44,14 @@
 		}
 		// .login-container__list
 		.login-container {
-			&__login {
-				position: relative;
-			}
-
-			&__list {
-				// font-size: 13px;
-				width: auto;
-			}
+			// &__list {
+			// 	width: auto;
+			// }
 
 			// .login-container__user-button
 			&__user-button {
 				pointer-events: none;
+
 				@include _screen-960 {
 					pointer-events: all;
 				}

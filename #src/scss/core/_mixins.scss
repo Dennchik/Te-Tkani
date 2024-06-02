@@ -211,6 +211,12 @@
 	}
 }
 
+@mixin _690-960 {
+	@media (min-width: 690.98px) and (max-width: 960px) {
+		@content;
+	}
+}
+
 @mixin _1024-1140 {
 	@media (min-width: 1024px) and (max-width: 1140px) {
 		@content;

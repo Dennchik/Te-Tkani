@@ -3,7 +3,6 @@ import ItcCollapse from "../assets/collapse.js";
 //! ---------------------------------- Root ------------------------------------
 const $ = {
 	header: document.querySelector('.page__header'),
-	bttns: document.querySelector('.burger-button'),
 	bttnSearch: document.querySelector('.header__button-sidebarcatalog'),
 	burgerButton: document.querySelector('.burger-button'),
 	sidebarCatalog: document.querySelector('.page__sidebar-catalog'),
@@ -33,11 +32,7 @@ export function cancelButton() {
 		$.sidebarCatalog.classList.remove('_opened-menu');
 		document.body.classList.remove('no-scroll');
 	});
-	$.cancelButtonsMenu.addEventListener('click', () => {
-		$.sidebarMenu.classList.remove('_opened-menu');
-		$.bttns.classList.remove('_active');
-		document.body.classList.remove('no-scroll');
-	});
+
 }
 
 //todo запрещаем скроллинг страницы при открытии "Menu-Catalog"
@@ -45,17 +40,21 @@ export function openMenuCatalog() {
 	$.bttnSearch.addEventListener('click', () => {
 		$.sidebarCatalog.classList.add('_opened-menu');
 		$.sidebarMenu.classList.remove('_opened-menu');
-		$.bttns.classList.remove('_active');
+		$.burgerButton.classList.remove('_active');
 		document.body.classList.add('no-scroll');
 	});
 }
 //todo запрещаем скроллинг страницы при открытии "Main-Menu"
 export function openMainMenu() {
 	$.burgerButton.addEventListener('click', () => {
-		$.sidebarMenu.classList.add('_opened-menu');
+		$.sidebarMenu.classList.toggle('_opened-menu');
 		$.sidebarCatalog.classList.remove('_opened-menu');
-		$.bttns.classList.add('_active');
-		document.body.classList.add('no-scroll');
+		$.burgerButton.classList.toggle('_active');
+		if ($.sidebarMenu.classList.contains('_opened-menu')) {
+			document.body.classList.add('no-scroll');
+		} else {
+			document.body.classList.remove('no-scroll');
+		}
 	});
 }
 // -----------------------------------------------------------------------------
@@ -181,7 +180,7 @@ export function userMenu() {
 			let target = e.target;
 
 			// Открываем скрытое модальноеменю выбора;
-			let loginContent = loginList(target, '.login-container__fade-in');
+			let loginContent = loginList(target, '.login-container__list');
 			loginContent.classList.toggle('_visible');
 
 			// Закрываем модальное окно "Login";
@@ -214,7 +213,7 @@ export function userMenu() {
 			let target = e.target;
 
 			//Закрываем ранее открытое модальное окно "User-Content";
-			let loginContent = loginList(target, '.login-container__fade-in');
+			let loginContent = loginList(target, '.login-container__list');
 			removeElement(loginContent, '_visible');
 
 			let recoveryModal = loginList(target, '.recovery-modal');
@@ -279,7 +278,7 @@ export function userMenu() {
 			let target = e.target;
 
 			// Закрываем модальное окно "User-Content";
-			let loginContent = loginList(target, '.login-container__fade-in');
+			let loginContent = loginList(target, '.login-container__list');
 			removeElement(loginContent, '_visible');
 
 			// Закрываем ранее открытое модальное окно;
@@ -289,6 +288,9 @@ export function userMenu() {
 			// Открываем модальное окно "Регистрация";
 			let registrationModal = loginList(target, '.registrations-modal');
 			registrationModal.classList.toggle('_show');
+
+			let recoveryModal = loginList(target, '.recovery-modal');
+			removeElement(recoveryModal, '_show');
 
 			window.addEventListener('click', function (e) {
 				let loginContainer = target.closest('.login-container');
@@ -337,15 +339,8 @@ export function userMenu() {
 					registrationsUre.classList.remove('_show');
 				});
 			});
-
-
 		});
-
-
-
 	});
-
-
 
 	//todo Функция закрытия модального окна;
 	function closeModal(el, modal) {
