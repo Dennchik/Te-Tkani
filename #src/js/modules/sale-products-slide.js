@@ -25,7 +25,7 @@ export function saleProductsSlide(
 			breakpoints: {
 				200: {
 					spaceBetween: 10,
-					slidesPerView: 1,
+					slidesPerView: 2,
 				},
 				376: {
 					spaceBetween: 20,

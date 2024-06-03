@@ -4,7 +4,6 @@ swiperLayout();
 import Swiper from 'swiper/bundle';
 export function newProductsSlide(
 	mainslide = '.new-products__content',
-	scrollbar = '',
 	nextEl = '.new-products__button-next',
 	prevEl = '.new-products__button-prev',
 
@@ -26,7 +25,7 @@ export function newProductsSlide(
 			breakpoints: {
 				200: {
 					spaceBetween: 10,
-					slidesPerView: 1,
+					slidesPerView: 2,
 				},
 				376: {
 					spaceBetween: 20,

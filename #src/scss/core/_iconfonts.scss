@@ -27,6 +27,16 @@
   //* Better Font Rendering
 }
 
+.icon-star {
+  &:before {
+    content: $icon-star;
+  }
+}
+.icon-star-o {
+  &:before {
+    content: $icon-star-o;
+  }
+}
 .icon-arow-down {
   &:before {
     content: $icon-arow-down;
