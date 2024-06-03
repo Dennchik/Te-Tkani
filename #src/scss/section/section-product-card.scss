@@ -53,6 +53,9 @@
 	// .product-card__button-close
 	&__button-close {
 		font-size: 18px;
+		.icon-cancel {
+			color: $color;
+		}
 	}
 
 	// .product-card__column
