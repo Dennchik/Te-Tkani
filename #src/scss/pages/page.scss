@@ -153,6 +153,7 @@
 			width: 320px;
 			display: block;
 			padding: 0 10px 123px;
+
 			&._opened-menu {
 				transform: translateX(0);
 			}
@@ -170,17 +171,15 @@
 		transition: all 0.5s ease-in-out;
 		transform: translateX(100%);
 		background: $bg-color;
-		height: calc(100vh - (57px + 46px));
-		height: 100%;
 
 		@include _screen-690 {
 			border-top-left-radius: 10px;
 			border-bottom-left-radius: 10px;
 			width: 320px;
 			display: block;
-			padding: 20px 10px;
-			padding-bottom: calc((57px + 66px));
-			box-shadow: -1px 0 3px #000;
+			padding: 20px 10px 123px;
+			box-shadow: 1px 0px 3px #0000008c;
+
 			&._opened-menu {
 				transform: translateX(0);
 			}
