@@ -44,10 +44,6 @@
 		}
 		// .login-container__list
 		.login-container {
-			// &__list {
-			// 	width: auto;
-			// }
-
 			// .login-container__user-button
 			&__user-button {
 				pointer-events: none;
@@ -185,9 +181,6 @@
 		display: grid;
 		justify-content: space-between;
 		align-items: center;
-		grid-template-columns:
-			minmax(32.4rem, max-content)
-			minmax(13.048rem, max-content);
 		grid-template-columns: auto minmax(13.048rem, max-content);
 		@include _screen-960 {
 			justify-content: end;
@@ -222,7 +215,11 @@
 		height: 100%;
 		transition: all 0.3s ease;
 		@include flex-align-center;
-
+		.icon-shopping-cart {
+			&::before {
+				font-size: 3rem;
+			}
+		}
 		[class*='icon-'] {
 			font-size: 2.7rem;
 		}
@@ -233,7 +230,7 @@
 		}
 
 		&:nth-child(2) {
-			margin-left: 3.7rem;
+			margin-left: 4.4rem;
 		}
 	}
 
@@ -285,5 +282,14 @@
 	&__body {
 		max-width: 54rem;
 		@include flex-justify-space-between;
+	}
+}
+
+.anchor-link {
+	// .anchor-link_link
+	&__link {
+		&:hover {
+			font-weight: 700;
+		}
 	}
 }
