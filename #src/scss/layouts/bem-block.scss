@@ -43,8 +43,7 @@
 
 	// .login-container__list
 	&__list {
-		// width: 29rem;
-		// height: 20px;
+		cursor: pointer;
 		width: auto;
 		display: flex;
 		justify-content: space-between;
@@ -77,7 +76,7 @@
 	// .login-container__link
 	&__link {
 		white-space: nowrap;
-
+		font-size: 1.5rem;
 		&:not(:last-child) {
 			margin-right: 1rem;
 		}
@@ -128,6 +127,8 @@
 				letter-spacing: -0.4px;
 			}
 		}
+	}
+	button {
 	}
 }
 // -----------------------------------------------------------------------------

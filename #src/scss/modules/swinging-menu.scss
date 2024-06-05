@@ -16,14 +16,36 @@
 		@include flex-align-center;
 	}
 
-	li {
+	// .menu-bottom__link
+	&__link {
+		span {
+			white-space: nowrap;
+			margin-right: 1.2rem;
+		}
+
+		.arow-down {
+			transition: all 0.4s ease 0s;
+			width: 2rem;
+			height: 2rem;
+			transform: rotate(-90deg);
+		}
 		&:hover {
-			> .menu-bottom__sub-menu {
-				transform: rotateX(0deg);
-				visibility: visible;
-				opacity: 1;
+			> .arow-down {
+				scale: -1;
 			}
 		}
+	}
+
+	// .menu-bottom__sub-link
+	&__sub-link {
+		.arow-left {
+			margin-right: 1.5rem;
+		}
+	}
+
+	// .menu-mottom__list-item
+	&__list-item {
+		position: relative;
 
 		&:last-child {
 			.menu-bottom__sub-menu {
@@ -52,32 +74,33 @@
 				}
 			}
 		}
-	}
 
-	// .menu-bottom__link
-	&__link {
-		span {
-			white-space: nowrap;
-			margin-right: 1.2rem;
-		}
-
-		.arow-down {
-			transition: all 0.4s ease 0s;
-			width: 2rem;
-			height: 2rem;
-			transform: rotate(-90deg);
-		}
 		&:hover {
-			> .arow-down {
-				scale: -1;
+			> .menu-bottom__sub-menu {
+				transform: rotateX(0deg);
+				visibility: visible;
+				opacity: 1;
 			}
 		}
-	}
 
-	// .menu-bottom__sub-link
-	&__sub-link {
-		.arow-left {
-			margin-right: 1.5rem;
+		.menu-bottom__sub-menu {
+			border-radius: 5px;
+			position: absolute;
+			z-index: 999;
+			background: $bg-color;
+			background: linear-gradient(
+				90deg,
+				#05342aec -23.739%,
+				#0e614fef 11.827%,
+				#05342aec 100%
+			);
+
+			visibility: hidden;
+			opacity: 0;
+			transform-origin: 0% 0%;
+			transform: rotateX(-90deg);
+			transition: 0.3s linear;
+			box-shadow: 1px 1px 5px #000;
 		}
 	}
 
@@ -90,34 +113,14 @@
 			}
 		}
 
-		@include flex-justify-center;
+		@include flex-align-center-justify-space-between;
 		li {
-			float: left;
-			position: relative;
+			// float: left;
 
 			&:first-child {
-				border-left: 0;
+				// border-left: 0;
 			}
 
-			.menu-bottom__sub-menu {
-				border-radius: 5px;
-				position: absolute;
-				z-index: 999;
-				background: $bg-color;
-				background: linear-gradient(
-					90deg,
-					#05342aec -23.739%,
-					#0e614fef 11.827%,
-					#05342aec 100%
-				);
-
-				visibility: hidden;
-				opacity: 0;
-				transform-origin: 0% 0%;
-				transform: rotateX(-90deg);
-				transition: 0.3s linear;
-				box-shadow: 1px 1px 5px #000;
-			}
 			li {
 				position: relative;
 			}
@@ -132,6 +135,7 @@
 	// .menu-mottom__sub-menu
 	&__sub-menu {
 		li {
+			position: relative;
 			width: 100%;
 			a {
 				color: $font-color-other;
@@ -163,6 +167,14 @@
 
 				.arow-right {
 					scale: -1;
+				}
+			}
+
+			&:hover {
+				> .menu-bottom__sub-menu {
+					transform: rotateX(0deg);
+					visibility: visible;
+					opacity: 1;
 				}
 			}
 		}

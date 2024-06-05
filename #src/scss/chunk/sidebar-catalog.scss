@@ -70,12 +70,13 @@
 
 	// .menu-catalog__link
 	&__link {
+		padding: 8px 0;
 		cursor: pointer;
 		user-select: none;
 		color: $color;
 		font-size: 15px;
 		font-weight: 700;
-		line-height: 200%;
+		line-height: 110%;
 		border-bottom: 1px solid $color;
 
 		@include flex-align-center-justify-space-between;
@@ -83,6 +84,9 @@
 			width: 2rem;
 			height: 2rem;
 			transition: all 0.4s ease-in-out;
+		}
+		a {
+			width: 100%;
 		}
 	}
 
@@ -99,23 +103,20 @@
 }
 
 .submenu-parent {
-	// .submenu-parent__item
-	&__item {
-		// padding: 0.5rem 0;
-	}
-
 	// .submenu-parent__menu
 	&__menu {
-		padding-left: 38px;
+		padding-left: 20px;
 		&._active {
 			.menu-parrent__collapse {
 				grid-template-rows: 1fr;
 			}
+
 			.menu-parrent__menu {
 				opacity: 1;
 				border-bottom: 1px solid $color;
 				opacity: 1;
 			}
+
 			.submenu-parent__link {
 				color: $color;
 				font-weight: 700;
@@ -128,9 +129,10 @@
 
 	// .submenu-parent__link
 	&__link {
+		padding: 8px 0;
 		font-size: 15px;
 		font-weight: 500;
-		line-height: 200%;
+		line-height: 130%;
 		border-bottom: 1px solid $color;
 		user-select: none;
 		cursor: pointer;
@@ -164,13 +166,13 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: start;
-		padding-left: 3.8rem;
+		padding-left: 20px;
 		transition: opacity 0.7s ease-in-out;
 	}
 
 	// .menu-parrent__link
 	&__link {
-		font-size: 1.5rem;
+		font-size: 15px;
 		line-height: 200%; /* 38px/15 */
 		font-weight: 500;
 	}

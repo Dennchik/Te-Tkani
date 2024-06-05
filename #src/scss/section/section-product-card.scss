@@ -100,6 +100,7 @@
 
 	// .product-card__description
 	&__description {
+		margin-top: 3rem;
 		display: grid;
 		column-gap: 13rem;
 		grid-template-columns: 1fr 30rem;
@@ -370,7 +371,7 @@
 .counter {
 	// .counter__title
 	&__title {
-		margin-bottom: 20px;
+		margin-bottom: 1rem;
 		span {
 			color: $color;
 			font-weight: 700;
@@ -382,7 +383,7 @@
 	&__buttons {
 		display: flex;
 		gap: 2.7rem;
-		margin: 2rem 0;
+		margin-top: 2rem;
 		@include _920 {
 			gap: 0.5rem;
 		}
@@ -443,7 +444,7 @@
 	// .specifications__list
 	&__list {
 		&:not(:last-child) {
-			margin-bottom: 3rem;
+			margin-bottom: 1.5rem;
 		}
 	}
 
@@ -457,7 +458,7 @@
 	&__title {
 		text-transform: uppercase;
 		font-weight: 700;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 	}
 
 	// .specifications__counter

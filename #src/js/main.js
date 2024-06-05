@@ -17,14 +17,12 @@ addFafouritItems();
 import { showPopUpenuBottom, showPopUpMenuTop } from "./assets/pop-up-menu.js";
 showPopUpenuBottom('.page__buttom-menu');
 showPopUpMenuTop('.page__header');
-// showPopUpMenuTop();
 //* ----------------------------------------------------------------------------
 const dromLinks = document.querySelectorAll('.menu-bottom__link');
 dromLinks.forEach(dromLink => {
 	dromLink.addEventListener('click', () => {
 		const dropMenu = dromLink.nextElementSibling;
-		console.log(dropMenu);
-		dropMenu.classList.toggle('._active');
+		dropMenu.classList.toggle('_active');
 	});
 });
 

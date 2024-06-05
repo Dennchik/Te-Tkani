@@ -63,7 +63,10 @@ export function showSubMenuCollapse() {
 	subMenuParents.forEach(subMenuParent => {
 		const trigger = subMenuParent.querySelector('.submenu-parent__link');
 		trigger.addEventListener('click', () => {
-			_toggleMenu(subMenuParent);
+			if (trigger.classList.contains('_trigger')) {
+				_toggleMenu(subMenuParent);
+			}
+
 		});
 	});
 	const _toggleMenu = (el) => {
@@ -77,11 +80,13 @@ export function showSubMenuCollapse() {
 
 // -----------------------------------------------------------------------------
 export function collapseElement() {
-	$.menuParents.forEach((menuParent) => {
+	const menuParents = document.querySelectorAll('.menu-catalog__parent-menu');
+	const menuList = document.querySelector('.sidebar-catalog__menu');
+	menuParents.forEach((menuParent) => {
 		const trigger = menuParent.querySelector('._trigger-menu');
 
 		trigger.addEventListener('click', () => {
-			const opened_menu = $.menuCatalog.querySelector('._open');
+			const opened_menu = menuList.querySelector('._open');
 			_toggleMenu(menuParent);
 			if (opened_menu && opened_menu !== menuParent) {
 				_toggleMenu(opened_menu);
@@ -89,13 +94,13 @@ export function collapseElement() {
 		});
 	});
 
-	const _toggleMenu = (el) => {
-		const collapse = new ItcCollapse(el.querySelector('._collapse'));
-		if (el.classList.contains('_open')) {
-			el.classList.remove('_open');
+	const _toggleMenu = (menuParent) => {
+		const collapse = new ItcCollapse(menuParent.querySelector('._collapse'));
+		if (menuParent.classList.contains('_open')) {
+			menuParent.classList.remove('_open');
 			collapse.toggle();
 		} else {
-			el.classList.add('_open');
+			menuParent.classList.add('_open');
 			collapse.toggle();
 		}
 	};

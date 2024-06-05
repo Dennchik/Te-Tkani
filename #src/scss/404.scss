@@ -10,12 +10,13 @@
 @import url('https://fonts.googleapis.com/css?family=Inter:1300,regular,500,600,700,800,900&display=swap&subset=cyrillic-ext');
 .page {
 	&__wrapper {
+		background: $bg-color;
+		background: url('../img/bg-404.png') center / cover no-repeat;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
 		height: 100vh;
-		@extend .gradient-services;
 	}
 
 	&__title {
@@ -24,30 +25,24 @@
 		font-size: 3.5rem;
 		color: black;
 		text-align: center;
-		margin-bottom: 4rem;
 		text-shadow: 1px 1px 2px #ffffff;
+		h1 {
+			font-size: 12.8rem;
+			font-weight: 800;
+			margin: 0;
+			color: $color;
+			animation: float 2s infinite;
+		}
 	}
 
 	&__content {
+		transform: translateY(-50px);
 		text-align: center;
-		padding: 50px;
-		background: $bg-color;
-		box-shadow: 0 4px 8px rgb(0, 0, 0);
-		border-radius: 10px;
-		background: linear-gradient(-110deg, #004646, #81eeee 50%, #004646);
 	}
-}
-
-h1 {
-	font-size: 10rem;
-	margin: 0;
-	color: $color-link;
-	animation: float 2s infinite;
 }
 
 p {
 	font-size: 1.6rem;
-	color: #374553;
 }
 [class*='_container'] {
 	max-width: $maxWidthContainer;
@@ -66,12 +61,14 @@ p {
 	border: none;
 	border-radius: 15px;
 	text-decoration: none;
-	transition: background 0.3s;
+	transition: all 0.3s;
 	box-shadow: 0 4px 8px rgb(0, 0, 0);
+	line-height: 138%;
 }
 
 .btn:hover {
-	background: #0056b3;
+	background: #004646af;
+	box-shadow: none;
 }
 
 @keyframes float {
