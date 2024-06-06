@@ -57,7 +57,8 @@ const watcher = () => {
 	$.gulp.watch(path.fontsStyle.watch, change).on('all', $.browserSync.reload);
 };
 const end = $.gulp.series(
-	clear, json, redirect,
+	clear, json,
+	// redirect,
 	$.gulp.parallel(pug, scss, js, image, sprite, fonts), fontsStyle
 );
 const dev = $.gulp.series(end, $.gulp.parallel(watcher, server));

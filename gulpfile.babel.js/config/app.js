@@ -109,6 +109,7 @@ export default {
 			},
 		},
 		entry: {
+			account: './#src/js/account.js',
 			favourites: './#src/js/favourites.js',
 			'info-work': './#src/js/info-work.js',
 			'product-card': './#src/js/product-card.js',

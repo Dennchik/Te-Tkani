@@ -5,10 +5,6 @@
 	display: none;
 }
 .send-order {
-	// .send-order__wrapp-collapse
-	&__wrapp-collapse {
-	}
-
 	// .send-order__order-place
 	&__order-place {
 		display: flex;
@@ -155,11 +151,6 @@
 		}
 	}
 
-	// .select__collapse
-
-	&__collapse {
-	}
-
 	// .select__list-item
 
 	&__list-item {
@@ -177,18 +168,7 @@
 	}
 }
 
-.icon-arrow {
-	// .icon-arrow_select
-
-	&_select {
-	}
-}
-
 .checkbox {
-	// .checkbox__input
-	&__input {
-	}
-
 	// .checkbox__text
 	&__text {
 		span {

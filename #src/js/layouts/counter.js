@@ -11,8 +11,8 @@ export function counterProducy() {
 
 				if (target.closest('.quantity__button')) {
 					let input = target.closest('.quantity').querySelector('input');
-					let value = parseFloat(input.value) || 0;
 
+					let value = parseFloat(input.value) || 0;
 					if (target.classList.contains('quantity-add')) {
 						value += 1;
 					} else if (target.classList.contains('quantity-remove')) {

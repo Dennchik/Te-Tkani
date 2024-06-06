@@ -1,0 +1,43 @@
+aside.personal-account
+	._title личный кабинет
+		.burger-block
+			.toggle-wrap
+				.toggle-menu
+					span
+					span
+					span
+	._body
+		._column 
+			.user-bar._sidebar-menu
+				._user-name
+					+iconfont('user-check', 'icon')
+					span Валентина Белова
+				ul._list
+					li._item._active 
+						span(data-page="user-personal-data").link Профиль
+						+iconfont('arow-right', 'icon')
+					li._item
+						span(data-page="user-order").link Корзина
+						+iconfont('arow-right', 'icon')
+					li._item
+						a(href="") Оформление заказа
+						+iconfont('arow-right', 'icon')
+					li._item
+						a(href="") История заказов
+						+iconfont('arow-right', 'icon')
+					li._item
+						span Персональные скидки
+						+iconfont('arow-right', 'icon')
+					li._item
+						span(data-page="user-favourites").link Избранное
+						+iconfont('arow-right', 'icon') 
+					li._item
+						a(href="") Обратная связь
+						+iconfont('arow-right', 'icon') 
+					li._item
+						a(href="") Сменить пароль
+						+iconfont('arow-right', 'icon') 
+		._column 
+			._personal-data
+				include ../pages/user-data/user-personal-data		
+

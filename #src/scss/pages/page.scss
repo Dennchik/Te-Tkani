@@ -201,11 +201,18 @@
 		padding: 0 0 8.9rem;
 	}
 
+	// .page__row-card
 	&__row-card {
 		padding: 0 0 8.9rem;
 	}
 
+	// .page__favourites
 	&__favourites {
+		padding: 4.3rem 0 8.9rem;
+	}
+	//* --------------------------------------------------------------------------
+	// .page__personal-account
+	&__personal-account {
 		padding: 4.3rem 0 8.9rem;
 	}
 }

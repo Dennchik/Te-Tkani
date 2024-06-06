@@ -165,12 +165,13 @@ export function placeOrder() {
 
 	document.querySelector('.order-place__form-button').addEventListener('click', function () {
 		let titleDocument = document.querySelector('.cart-page__title');
-		let sendOrder = document.querySelector('.order-place__send-order');
+		// let sendOrder = document.querySelector('.order-place__send-order');
 		let sendButton = document.querySelector('.order-place__send-button');
-		let formButton = document.querySelector('.order-place__form-button');;
-		titleDocument.innerHTML = 'оформление заказа';
+		let formButton = document.querySelector('.order-place__form-button');
+		// titleDocument.innerHTML = 'оформление заказа';
 		collapse.toggle();
-		sendButton.style.display = 'block'; formButton.style.display = 'none';
+		sendButton.style.display = 'block';
+		formButton.style.display = 'none';
 		elcheckboxLabelement.style.display = 'block';
 
 
