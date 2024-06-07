@@ -1,6 +1,7 @@
 .personal-account {
 	// .personal-account__title
 	&__title {
+		width: 100%;
 		font-size: 3rem;
 		margin-bottom: 2.6rem;
 		text-transform: uppercase;
@@ -102,7 +103,7 @@
 			display: block;
 			width: 100%;
 			font-size: 1.5rem;
-			margin-right: 0.5rem;
+			margin-right: 1.5rem;
 		}
 		.icon-arow-right {
 			font-size: 12px;

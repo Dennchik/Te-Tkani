@@ -11,7 +11,7 @@
 			1fr
 			minmax(20rem, min-content)
 			minmax(11rem, min-content)
-			minmax(7rem, min-content)
+			minmax(10rem, min-content)
 			50px;
 	}
 	@include _690 {
@@ -25,7 +25,7 @@
 		grid-template-columns:
 			minmax(18rem, min-content)
 			minmax(7rem, min-content)
-			minmax(5rem, min-content)
+			minmax(4rem, min-content)
 			30px;
 	}
 }
@@ -82,16 +82,16 @@
 		}
 	}
 
-	// .cart-page__user-order
-	&__user-order {
-		flex: 1 1 100%;
-	}
-
 	// .cart-page__help-order
 	&__help-order {
 		@include _min-920 {
 			flex: 0 0 28.3rem;
 		}
+	}
+
+	// .cart-page__user-order
+	&__user-order {
+		flex: 1 1 100%;
 	}
 
 	// .cart-page__button
@@ -293,6 +293,9 @@
 	&__column--button {
 		display: grid;
 		grid-template-columns: 1fr;
+		@include _490 {
+			width: 100%;
+		}
 	}
 
 	// .order-place__checkbox
@@ -384,16 +387,27 @@
 		}
 		&:nth-child(1) {
 			@include _690 {
-				grid-column: 1 / 5;
+				grid-column: 1 / 4;
 			}
+		}
+		&:nth-child(3) {
+			justify-self: center;
+			align-self: end;
+		}
+
+		&:nth-child(4) {
+			grid-column: -3 / -1;
+			justify-self: center;
+			align-self: end;
 		}
 
 		&:nth-child(5) {
 			padding: 1.5rem 0;
 			text-align: center;
 			align-self: start;
-			align-self: center;
 			@include _690 {
+				grid-row: -1 / -2;
+				grid-column: 4 / 5;
 			}
 		}
 

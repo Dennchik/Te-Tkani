@@ -25,7 +25,6 @@ function addClassOpen() {
 // -----------------------------------------------------------------------------
 import { select } from './modules/itsSelect.js';
 import { counterProducy } from "./layouts/counter.js";
-select();
 document.addEventListener('DOMContentLoaded', function () {
 	const content = document.querySelector('.personal-account__personal-data');
 
@@ -52,17 +51,16 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			})
 			.catch(error => {
-				console.error('Error loading page:', error);
+				// console.error('Error loading page:', error);
 				content.innerHTML = 'Error loading content';
 			});
 	}
 
 	function restartScripts() {
+		// Ваш код для перезапуска скриптов только при загрузке страницы user-order
 		select();
 		counterProducy();
 		placeOrder();
-		// Ваш код для перезапуска скриптов только при загрузке страницы user-order
-		console.log('Scripts restarted for user-order');
 	}
 
 	bindEvents(); // Вызываем в начале, чтобы привязать события к уже существующим ссылкам
