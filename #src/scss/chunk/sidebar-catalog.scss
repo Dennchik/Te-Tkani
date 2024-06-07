@@ -67,6 +67,13 @@
 			}
 		}
 	}
+	ul {
+		&:last-child {
+			.menu-catalog__link {
+				border: none;
+			}
+		}
+	}
 
 	// .menu-catalog__link
 	&__link {
@@ -78,6 +85,9 @@
 		font-weight: 700;
 		line-height: 110%;
 		border-bottom: 1px solid $color;
+		&:not(:last-child) {
+			//
+		}
 
 		@include flex-align-center-justify-space-between;
 		.icon-arow-right {
