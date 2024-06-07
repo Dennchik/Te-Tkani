@@ -15,13 +15,64 @@ function placeOrder() {
 }
 // -----------------------------------------------------------------------------
 const toggleWrap = document.querySelector('.toggle-wrap');
-const sudebarMenu = document.querySelector('.personal-account__column');
+const sidebarMenu = document.querySelector('.personal-account__column');
 toggleWrap.addEventListener('click', addClassOpen);
 function addClassOpen() {
 	const menuPageSide = document.querySelector('.toggle-menu');
 	menuPageSide.classList.toggle('_open');
-	sudebarMenu.classList.toggle('_opened-menu');;
+	sidebarMenu.classList.toggle('_opened-menu');;
 }
+// -----------------------------------------------------------------------------
+let prevScrollpos = window.scrollY;
+window.addEventListener('scroll', function () {
+	let currentScrollPos = window.scrollY;
+	let viewportWidth = window.innerWidth;
+	if (viewportWidth < 690) {
+		sidebarMenu.style.top = "47px";
+		if (prevScrollpos > currentScrollPos) {
+			sidebarMenu.style.top = "47px";
+			sidebarMenu.style.height = "calc(100% - (46px + 58px))";
+		} else if (prevScrollpos > 150) {
+			sidebarMenu.style.height = '100%';
+			sidebarMenu.style.top = "0";
+		}
+		prevScrollpos = currentScrollPos;
+	} else if (viewportWidth > 690) {
+		sidebarMenu.style.top = "113.76px"; // Или другое значение по умолчанию
+		if (prevScrollpos > currentScrollPos) {
+			sidebarMenu.style.top = "113.76px";
+			sidebarMenu.style.height = "calc(100% - 113.76px)";
+		} else if (prevScrollpos > 150) {
+			sidebarMenu.style.height = '100%';
+			sidebarMenu.style.top = "0";
+		}
+		prevScrollpos = currentScrollPos;
+	}
+
+});
+// -----------------------------------------------------------------------------
+const userBarList = document.querySelector('.user-bar__list');
+const userBarItems = document.querySelectorAll('.user-bar__item');
+
+userBarItems.forEach(userBarItem => {
+	userBarItem.addEventListener('click', () => {
+		const loaded_doc = userBarList.querySelector('._active');
+		_toggledDoc(userBarItem);
+		if (loaded_doc && loaded_doc !== userBarItem) {
+			_toggledDoc(loaded_doc);
+		}
+		if (loaded_doc && loaded_doc === userBarItem) {
+			_toggledDoc(userBarItem);
+		}
+	});
+});
+const _toggledDoc = (userBarItem) => {
+	if (userBarItem.classList.contains('_active')) {
+		userBarItem.classList.remove('_active');
+	} else {
+		userBarItem.classList.add('_active');
+	}
+};
 // -----------------------------------------------------------------------------
 import { select } from './modules/itsSelect.js';
 import { counterProducy } from "./layouts/counter.js";
@@ -66,26 +117,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	bindEvents(); // Вызываем в начале, чтобы привязать события к уже существующим ссылкам
 });
 
-// -----------------------------------------------------------------------------
-const userBarList = document.querySelector('.user-bar__list');
-const userBarItems = document.querySelectorAll('.user-bar__item');
-
-userBarItems.forEach(userBarItem => {
-	userBarItem.addEventListener('click', () => {
-		const loaded_doc = userBarList.querySelector('._active');
-		_toggledDoc(userBarItem);
-		if (loaded_doc && loaded_doc !== userBarItem) {
-			_toggledDoc(loaded_doc);
-		}
-	});
-});
-const _toggledDoc = (userBarItem) => {
-	if (userBarItem.classList.contains('_active')) {
-		userBarItem.classList.remove('_active');
-	} else {
-		userBarItem.classList.add('_active');
-	}
-};
 
 
 

@@ -30,17 +30,22 @@
 		&:nth-child(1) {
 			flex: 0 1 255px;
 			@include _920 {
-				border: 1px solid #6d6d6d;
+				border: none;
+				border-radius: 0 10px 10px 0;
 				box-shadow: 1px 1px 7px #0000008c;
-				position: absolute;
-				top: 0;
+				position: fixed;
+				top: 113.76px;
 				z-index: 5;
-				height: 100%;
+				height: calc(100% - 113.76px);
 				transform: translateX(-110%);
 				transition: all 0.5s ease 0s;
 				&._opened-menu {
-					transform: translateX(0);
+					transform: translateX(-5%);
 				}
+			}
+			@include _690 {
+				top: 47px;
+				height: calc(100% - (46px + 58px));
 			}
 		}
 
