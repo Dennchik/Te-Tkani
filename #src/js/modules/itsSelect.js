@@ -3,7 +3,6 @@ import ItcCollapse from "../assets/collapse.js";
 export function select() {
 	document.querySelectorAll('[data-select]').forEach(function (selectGroup) {
 		const itsSelects = selectGroup.querySelectorAll('.select');
-		console.log(itsSelects);
 		if (itsSelects) {
 			itsSelects.forEach(itsSelect => {
 				const listItems = itsSelect.querySelectorAll('.select__list-item');
