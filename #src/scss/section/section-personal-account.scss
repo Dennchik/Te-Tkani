@@ -7,6 +7,7 @@
 		color: $color;
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		@include _425 {
 			font-size: 2.3rem;
 		}
@@ -14,7 +15,6 @@
 
 	// .personal-account__body
 	&__body {
-		position: relative;
 		display: flex;
 		gap: 3rem;
 	}
@@ -28,12 +28,13 @@
 
 		&:nth-child(1) {
 			flex: 0 1 255px;
-			@include _screen-960 {
+			@include _920 {
 				border: 1px solid #6d6d6d;
-				box-shadow: 1px 1px 3px #000;
-				height: 100%;
+				box-shadow: 1px 1px 7px #0000008c;
 				position: absolute;
-				z-index: 999;
+				top: 0;
+				z-index: 5;
+				height: 100%;
 				transform: translateX(-110%);
 				transition: all 0.5s ease 0s;
 				&._opened-menu {
@@ -44,7 +45,7 @@
 
 		&:nth-child(2) {
 			flex: 1 1 auto;
-			@include _425 {
+			@include _screen-960 {
 				padding: 3rem 1rem;
 			}
 		}
@@ -53,10 +54,11 @@
 	// .personal-account__sidebar-menu
 	&__sidebar-menu {
 		@include _screen-960 {
-			width: 250px;
+			height: 100%;
+			// width: 250px;
 		}
 		@include _min-960 {
-			min-width: 150px;
+			// min-width: 150px;
 		}
 	}
 }
@@ -99,7 +101,8 @@
 		span {
 			display: block;
 			width: 100%;
-			font-size: 15px;
+			font-size: 1.5rem;
+			margin-right: 0.5rem;
 		}
 		.icon-arow-right {
 			font-size: 12px;
@@ -121,7 +124,7 @@
 	width: 36px;
 	cursor: pointer;
 	border-radius: 3px;
-	@include _min-960 {
+	@include _min-920 {
 		display: none;
 	}
 }

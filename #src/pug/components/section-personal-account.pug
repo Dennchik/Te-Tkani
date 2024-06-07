@@ -20,7 +20,7 @@ aside.personal-account
 						span(data-page="user-order").link Корзина
 						+iconfont('arow-right', 'icon')
 					li._item
-						a(href="") Оформление заказа
+						span(data-page="ure-personal-data").link Оформление заказа
 						+iconfont('arow-right', 'icon')
 					li._item
 						a(href="") История заказов
@@ -32,12 +32,12 @@ aside.personal-account
 						span(data-page="user-favourites").link Избранное
 						+iconfont('arow-right', 'icon') 
 					li._item
-						a(href="") Обратная связь
+						span(data-page="feed-back").link Обратная связь
 						+iconfont('arow-right', 'icon') 
 					li._item
-						a(href="") Сменить пароль
+						span(data-page="change-password").link Сменить пароль
 						+iconfont('arow-right', 'icon') 
 		._column 
-			._personal-data
-				include ../pages/user-data/user-personal-data		
+			._personal-data 
+				include ../pages/user-data/user-personal-data
 

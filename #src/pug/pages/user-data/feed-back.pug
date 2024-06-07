@@ -1,0 +1,34 @@
+.feed-back
+	form(action="").data-form 
+		._title Сменить пароль
+		._body
+			._column
+				._line
+					label(for="user-data-phone")._lebel Задайте&nbsp;вопрос:
+					textarea.send-order__comments#form-massege(name="massege", placeholder="Enter your message...")
+				._line(data-select)
+					label(for="form-select")._lebel Способ доставки:
+					.select._input
+						._box-button
+							input._button.input(id="form-select", type="button", name="form-select", value="способ доставки") 
+							i.icon-arow-right
+						ul._list._collapse
+							li._list-item._selected(value="CDK") СДЭК
+							li._list-item(value="RussianPost") Почта России
+							li._list-item(value="Boxberry") Boxberry
+							li._list-item(value="TransportCompany") Траспортная компания 
+							li._list-item(value="CourierToDoor")  Курьер до двери 
+							li._list-item(value="Pickup") Самовывоз
+
+				._line
+					label(for="user-data-phone")._lebel Телефон:
+					._input
+						input.input(id='user-data-phone', autocomplete="off", type="text", value="+7 900 (545) 17-54", name="phone")
+				._line
+					label(for="user-data-email")._lebel Эл.почта:
+					._input
+						input.input(id="user-data-email", autocomplete="off", type="text", value="fjjopk@mail.ru", name="email")
+				._line
+					label(for="user-data-whatsapp")._lebel Ватсап:
+					._input
+						input.input(id='user-data-whatsapp', autocomplete="off", type="text", value="+7 900 (545) 17-54", name="phone")

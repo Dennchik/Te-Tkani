@@ -58,4 +58,16 @@
 			}
 		}
 	}
+
+	// .data-form__button
+	&__button {
+		width: 22rem;
+		height: 32px;
+		color: #fbf9f4;
+		font-size: 1.4rem;
+		padding: 0.9rem 3rem;
+		border-radius: 16px;
+		background: #004646;
+		margin-bottom: 1.5rem;
+	}
 }

@@ -149,10 +149,11 @@
 		@include _screen-690 {
 			border-top-right-radius: 10px;
 			border-bottom-right-radius: 10px;
-			box-shadow: 1px 0px 3px #0000008c;
+			box-shadow: 1px 0px 7px #0000008c;
 			width: 320px;
 			display: block;
 			padding: 0 10px 123px;
+			scrollbar-width: none;
 
 			&._opened-menu {
 				transform: translateX(0);
@@ -178,7 +179,7 @@
 			width: 320px;
 			display: block;
 			padding: 20px 10px 123px;
-			box-shadow: 1px 0px 3px #0000008c;
+			box-shadow: 1px 0px 7px #0000008c;
 
 			&._opened-menu {
 				transform: translateX(0);
@@ -213,6 +214,6 @@
 	//* --------------------------------------------------------------------------
 	// .page__personal-account
 	&__personal-account {
-		padding: 4.3rem 0 8.9rem;
+		padding: 0 0 8.9rem;
 	}
 }

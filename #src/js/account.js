@@ -25,7 +25,7 @@ function addClassOpen() {
 // -----------------------------------------------------------------------------
 import { select } from './modules/itsSelect.js';
 import { counterProducy } from "./layouts/counter.js";
-
+select();
 document.addEventListener('DOMContentLoaded', function () {
 	const content = document.querySelector('.personal-account__personal-data');
 
@@ -47,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
 				bindEvents(); // Повторно привязываем события после загрузки контента
 				if (page === 'user-order') {
 					restartScripts(); // Перезапускаем скрипты только при загрузке страницы user-order
+				} else if (page === 'feed-back') {
+					select();
 				}
 			})
 			.catch(error => {
@@ -66,6 +68,26 @@ document.addEventListener('DOMContentLoaded', function () {
 	bindEvents(); // Вызываем в начале, чтобы привязать события к уже существующим ссылкам
 });
 
+// -----------------------------------------------------------------------------
+const userBarList = document.querySelector('.user-bar__list');
+const userBarItems = document.querySelectorAll('.user-bar__item');
+
+userBarItems.forEach(userBarItem => {
+	userBarItem.addEventListener('click', () => {
+		const loaded_doc = userBarList.querySelector('._active');
+		_toggledDoc(userBarItem);
+		if (loaded_doc && loaded_doc !== userBarItem) {
+			_toggledDoc(loaded_doc);
+		}
+	});
+});
+const _toggledDoc = (userBarItem) => {
+	if (userBarItem.classList.contains('_active')) {
+		userBarItem.classList.remove('_active');
+	} else {
+		userBarItem.classList.add('_active');
+	}
+};
 
 
 

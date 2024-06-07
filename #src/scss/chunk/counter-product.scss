@@ -5,6 +5,9 @@
 		border-radius: 5px;
 		display: flex;
 		@include flex-align-center-justify-space-between;
+		[class*='icon-'] {
+			pointer-events: none;
+		}
 	}
 
 	// .counter-product__new-price
