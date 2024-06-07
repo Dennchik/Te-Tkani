@@ -1,24 +1,21 @@
 .feed-back
 	form(action="").data-form 
-		._title Сменить пароль
 		._body
+			._title Сменить пароль
 			._column
 				._line
 					label(for="user-data-phone")._lebel Задайте&nbsp;вопрос:
 					textarea.send-order__comments#form-massege(name="massege", placeholder="Enter your message...")
 				._line(data-select)
-					label(for="form-select")._lebel Способ доставки:
+					label(for="form-select")._lebel Выбрать способ ответа:
 					.select._input
 						._box-button
-							input._button.input(id="form-select", type="button", name="form-select", value="способ доставки") 
+							input._button.input(id="form-select", type="button", name="form-select", value="Выбрать способ ответа") 
 							i.icon-arow-right
 						ul._list._collapse
-							li._list-item._selected(value="CDK") СДЭК
-							li._list-item(value="RussianPost") Почта России
-							li._list-item(value="Boxberry") Boxberry
-							li._list-item(value="TransportCompany") Траспортная компания 
-							li._list-item(value="CourierToDoor")  Курьер до двери 
-							li._list-item(value="Pickup") Самовывоз
+							li._list-item._selected(value="CDK") Телефон
+							li._list-item(value="RussianPost") Эл.почта
+							li._list-item(value="TransportCompany") Ватсап
 
 				._line
 					label(for="user-data-phone")._lebel Телефон:
