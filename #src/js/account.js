@@ -17,8 +17,8 @@ function placeOrder() {
 const toggleWrap = document.querySelector('.toggle-wrap');
 const sidebarMenu = document.querySelector('.personal-account__column');
 toggleWrap.addEventListener('click', addClassOpen);
+const menuPageSide = document.querySelector('.toggle-menu');
 function addClassOpen() {
-	const menuPageSide = document.querySelector('.toggle-menu');
 	menuPageSide.classList.toggle('_open');
 	sidebarMenu.classList.toggle('_opened-menu');;
 }
@@ -69,6 +69,8 @@ userBarItems.forEach(userBarItem => {
 const _toggledDoc = (userBarItem) => {
 	if (userBarItem.classList.contains('_active')) {
 		userBarItem.classList.remove('_active');
+		menuPageSide.classList.remove('_open');
+		sidebarMenu.classList.remove('_opened-menu');
 	} else {
 		userBarItem.classList.add('_active');
 	}
