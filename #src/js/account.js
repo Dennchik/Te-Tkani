@@ -119,6 +119,34 @@ document.addEventListener('DOMContentLoaded', function () {
 	bindEvents(); // Вызываем в начале, чтобы привязать события к уже существующим ссылкам
 });
 
+function sleectData() {
+	document.addEventListener('DOMContentLoaded', function () {
+		const startDateInput = document.getElementById('start-date');
+		const endDateInput = document.getElementById('end-date');
+
+		startDateInput.addEventListener('change', function () {
+			console.log('Start date selected:', startDateInput.value);
+			validateDates();
+		});
+
+		endDateInput.addEventListener('change', function () {
+			console.log('End date selected:', endDateInput.value);
+			validateDates();
+		});
+
+		function validateDates() {
+			const startDate = new Date(startDateInput.value);
+			const endDate = new Date(endDateInput.value);
+
+			if (startDate > endDate) {
+				alert('Дата "до" не может быть раньше даты "от".');
+			} else {
+				console.log(`Выбранный диапазон дат: От ${startDate.toLocaleDateString()} до ${endDate.toLocaleDateString()}`);
+			}
+		}
+	});
+}
+// sleectData();
 
 
 

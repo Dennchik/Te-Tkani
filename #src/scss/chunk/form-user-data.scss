@@ -10,14 +10,6 @@
 		}
 	}
 
-	// .data-form__input {
-	// 	@include _min-490 {
-	// 		input {
-	// 			min-width: 290px;
-	// 		}
-	// 	}
-	// }
-
 	.data-form__lebel {
 		min-width: 150px;
 		@include _490 {
@@ -38,10 +30,11 @@
 		width: auto;
 		grid-template-columns: min-content min-content;
 		justify-content: center;
-		gap: 2em;
+
+		column-gap: 2rem;
+		row-gap: 3.8rem;
 		margin-bottom: 2rem;
 		@include _690 {
-			gap: 2rem;
 			grid-template-columns: min-content;
 		}
 		@include _375 {
@@ -57,7 +50,6 @@
 	// .data-form__title
 	&__title {
 		text-align: left;
-		margin-bottom: 3.8rem;
 		font-size: 15px;
 		font-weight: 700;
 		@include _min-690 {
@@ -106,9 +98,15 @@
 			line-height: 228.571429%; /* 32px/14 */
 			font-size: 13px;
 		}
+
+		@include _min-1024 {
+			input {
+				min-width: 22.1rem;
+			}
+		}
 		@include _min-375 {
 			input {
-				min-width: 225px;
+				min-width: 27rem;
 			}
 		}
 		@include _375 {

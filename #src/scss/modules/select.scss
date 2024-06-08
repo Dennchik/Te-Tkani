@@ -10,9 +10,8 @@
 	&__box-button {
 		display: flex;
 		input {
-			display: flex;
+			display: inline-flex;
 			align-items: start;
-			display: inline;
 			text-align: left;
 		}
 		.icon-arow-right {

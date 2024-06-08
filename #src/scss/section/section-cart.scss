@@ -390,11 +390,12 @@
 				grid-column: 1 / 4;
 			}
 		}
-		&:nth-child(2) {
-		}
+
 		&:nth-child(3) {
-			justify-self: center;
-			align-self: end;
+			@include _690 {
+				justify-self: center;
+				align-self: end;
+			}
 		}
 
 		&:nth-child(4) {

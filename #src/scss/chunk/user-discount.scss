@@ -6,6 +6,9 @@
 		border-radius: 5px;
 		font-weight: 700;
 		margin-bottom: 20px;
+		@include _375 {
+			padding: 10px;
+		}
 	}
 
 	// .user-discount__info
@@ -14,6 +17,9 @@
 		border-radius: 5px;
 		padding: 27px 13px;
 		margin-bottom: 35px;
+		@include _375 {
+			padding: 27px 10px;
+		}
 	}
 
 	// .user-discount__item
@@ -33,6 +39,10 @@
 	// .user-discount__text-content
 	&__text-content {
 		padding: 0 13px;
+		@include _375 {
+			padding: 0 10px;
+		}
+
 		h2 {
 			color: $color;
 			font-size: 2.4rem !important;
