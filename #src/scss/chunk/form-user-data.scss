@@ -1,8 +1,4 @@
 .feed-back {
-	// .data-form__lebel {
-	// 	min-width: 118px;
-	// }
-
 	.data-form__line {
 		@include _490 {
 			display: flex;
@@ -18,6 +14,21 @@
 			white-space: normal;
 			margin-bottom: 1rem;
 			text-align: left;
+			width: 100%;
+		}
+	}
+
+	.data-form__input {
+		@include _min-690 {
+			input {
+				min-width: 30rem;
+			}
+		}
+
+		@include _375 {
+			input {
+				min-width: 100%;
+			}
 			width: 100%;
 		}
 	}
@@ -99,14 +110,14 @@
 			font-size: 13px;
 		}
 
-		@include _min-1024 {
+		@include _min-690 {
 			input {
-				min-width: 22.1rem;
+				min-width: 22rem;
 			}
 		}
-		@include _min-375 {
+		@include _screen-690 {
 			input {
-				min-width: 27rem;
+				min-width: 30rem;
 			}
 		}
 		@include _375 {

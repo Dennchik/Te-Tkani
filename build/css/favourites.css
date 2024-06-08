@@ -212,17 +212,17 @@ h6 {
 }
 
 @font-face {
-  font-family: "Arial";
+  font-family: "icon-set";
   font-display: swap;
-  src: url("../fonts/Arial.eot") format("eot"), url("../fonts/Arial.woff") format("woff"), url("../fonts/Arial.woff2") format("woff2"), url("../fonts/Arial.ttf") format("truetype");
+  src: url("../fonts/icon-set.eot") format("eot"), url("../fonts/icon-set.woff") format("woff"), url("../fonts/icon-set.woff2") format("woff2"), url("../fonts/icon-set.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "icon-set";
+  font-family: "Arial";
   font-display: swap;
-  src: url("../fonts/icon-set.eot") format("eot"), url("../fonts/icon-set.woff") format("woff"), url("../fonts/icon-set.woff2") format("woff2"), url("../fonts/icon-set.ttf") format("truetype");
+  src: url("../fonts/Arial.eot") format("eot"), url("../fonts/Arial.woff") format("woff"), url("../fonts/Arial.woff2") format("woff2"), url("../fonts/Arial.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -2924,8 +2924,8 @@ h6 {
 }
 
 .slide-container__image img {
-  width: 100%;
   max-width: 100%;
+  width: 100%;
 }
 
 .slide-container__inner {
@@ -2995,6 +2995,7 @@ h6 {
   font-weight: 700;
   line-height: 120%;
   letter-spacing: 0%;
+  white-space: nowrap;
 }
 
 .slide-container__old-price {
@@ -3006,6 +3007,7 @@ h6 {
   -webkit-text-decoration-line: line-through;
   -moz-text-decoration-line: line-through;
   text-decoration-line: line-through;
+  white-space: nowrap;
 }
 
 .slide-container__favourit {
@@ -3459,8 +3461,13 @@ h6 {
   row-gap: 4rem;
 }
 
-.favourites-product__column img {
-  max-width: 100%;
+.personal-account__personal-data .favourites-product__body {
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.personal-account__personal-data .slide-container__image img {
+  width: 100%;
 }
 
 @media (min-width: 490.99px) {
@@ -3577,6 +3584,11 @@ h6 {
   .checkbox__label .icon {
     margin-left: -3.6rem;
   }
+
+  .personal-account__personal-data .favourites-product__body {
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -3653,6 +3665,11 @@ h6 {
 
   .product-card__body {
     padding: 2.5rem 2.5rem;
+  }
+
+  .favourites-product__body {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -3926,6 +3943,11 @@ h6 {
     -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .personal-account__personal-data .favourites-product__body {
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media (max-width: 490px) {
@@ -4015,6 +4037,11 @@ h6 {
   }
 
   .favourites-product__body {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .personal-account__personal-data .favourites-product__body {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }

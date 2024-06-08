@@ -2,7 +2,7 @@
 	// .history-order__period-date
 	&__period-date {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: min-content min-content min-content;
 		align-items: center;
 		margin-bottom: 3rem;
 		@include _425 {
@@ -77,10 +77,10 @@
 		gap: 1rem;
 		border: 1px solid $color;
 		border-radius: 5px;
+		font-weight: 700;
 	}
 
 	// .history-period__item
-
 	&__item {
 		font-size: 13px;
 		flex: 23%;
