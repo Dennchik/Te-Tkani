@@ -40,9 +40,9 @@
 
 		border: 1px solid $color;
 		border-radius: 5px;
-		@include _320 {
-			max-width: 181px;
-		}
+		// @include _320 {
+		// 	max-width: 181px;
+		// }
 
 		&._show {
 			box-shadow: 0 0 0 2px #00464677;
@@ -50,11 +50,11 @@
 	}
 
 	// .select__list-item
-
 	&__list-item {
 		cursor: pointer;
 		padding: 0.5rem;
 		border-radius: 2px;
+		text-align: left;
 
 		&._selected {
 			color: $bg-color;
