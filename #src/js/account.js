@@ -1,18 +1,7 @@
-import ItcCollapse from "./assets/collapse.js";
-function placeOrder() {
-	let orderCollapse = document.querySelector('.send-order');
-	const collapse = new ItcCollapse(orderCollapse.querySelector('._collapse'));
-	const elcheckboxLabelement = document.querySelector('.order-place__checkbox');
+import { select } from './modules/itsSelect.js';
+import { counterProducy } from "./layouts/counter.js";
+import { placeOrder } from './layouts/layouts.js';
 
-	document.querySelector('.order-place__form-button').addEventListener('click', function () {
-		let sendButton = document.querySelector('.order-place__send-button');
-		let formButton = document.querySelector('.order-place__form-button');
-		collapse.toggle();
-		sendButton.style.display = 'block';
-		formButton.style.display = 'none';
-		elcheckboxLabelement.style.display = 'block';
-	});
-}
 // -----------------------------------------------------------------------------
 const toggleWrap = document.querySelector('.toggle-wrap');
 const sidebarMenu = document.querySelector('.personal-account__column');
@@ -76,8 +65,7 @@ const _toggledDoc = (userBarItem) => {
 	}
 };
 // -----------------------------------------------------------------------------
-import { select } from './modules/itsSelect.js';
-import { counterProducy } from "./layouts/counter.js";
+
 document.addEventListener('DOMContentLoaded', function () {
 	const content = document.querySelector('.personal-account__personal-data');
 
@@ -97,15 +85,20 @@ document.addEventListener('DOMContentLoaded', function () {
 			.then(data => {
 				content.innerHTML = data;
 				bindEvents(); // Повторно привязываем события после загрузки контента
-				if (page === 'user-order-cart') {
-					restartScripts(); // Перезапускаем скрипты только при загрузке страницы user-order
+				if (page === 'order-cart') {
+					select();
+					counterProducy();
+					placeOrder();
+				} else if (page === 'making-order') {
+					select();
+					counterProducy();
 				} else if (page === 'feed-back') {
 					console.log('yes');
 					select();
-				}
-				if (page === 'history-order') {
+				} else if (page === 'history-order') {
 					sleectData();
 				}
+
 			})
 			.catch(error => {
 				// console.error('Error loading page:', error);
@@ -146,7 +139,7 @@ function sleectData() {
 		} else {
 			console.log(`Выбранный диапазон дат: От ${startDate.toLocaleDateString()} до ${endDate.toLocaleDateString()}`);
 		}
-	} 
+	}
 }
 
 

@@ -215,5 +215,8 @@
 	// .page__personal-account
 	&__personal-account {
 		padding: 0 0 8.9rem;
+		.order-place__send-button {
+			display: block;
+		}
 	}
 }

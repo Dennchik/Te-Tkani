@@ -82,9 +82,10 @@
 
 	// .history-period__item
 	&__item {
-		font-size: 13px;
+		display: flex;
+		align-items: center;
 		flex: 23%;
-		@include _375 {
+		@include _425 {
 			font-size: 10px;
 		}
 	}

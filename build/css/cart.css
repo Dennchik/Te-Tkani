@@ -212,17 +212,17 @@ h6 {
 }
 
 @font-face {
-  font-family: "icon-set";
+  font-family: "Arial";
   font-display: swap;
-  src: url("../fonts/icon-set.eot") format("eot"), url("../fonts/icon-set.woff") format("woff"), url("../fonts/icon-set.woff2") format("woff2"), url("../fonts/icon-set.ttf") format("truetype");
+  src: url("../fonts/Arial.eot") format("eot"), url("../fonts/Arial.woff") format("woff"), url("../fonts/Arial.woff2") format("woff2"), url("../fonts/Arial.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Arial";
+  font-family: "icon-set";
   font-display: swap;
-  src: url("../fonts/Arial.eot") format("eot"), url("../fonts/Arial.woff") format("woff"), url("../fonts/Arial.woff2") format("woff2"), url("../fonts/Arial.ttf") format("truetype");
+  src: url("../fonts/icon-set.eot") format("eot"), url("../fonts/icon-set.woff") format("woff"), url("../fonts/icon-set.woff2") format("woff2"), url("../fonts/icon-set.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -1335,6 +1335,10 @@ h6 {
   padding: 0 0 8.9rem;
 }
 
+.page__personal-account .order-place__send-button {
+  display: block;
+}
+
 .search-container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1602,7 +1606,7 @@ h6 {
 }
 
 .menu-side-bar__link {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.9176470588);
 }
@@ -1693,7 +1697,6 @@ h6 {
   -ms-user-select: none;
   user-select: none;
   color: #004646;
-  font-size: 15px;
   font-weight: 700;
   line-height: 110%;
   border-bottom: 1px solid #004646;
@@ -3038,10 +3041,10 @@ h6 {
 .greed-laout,
 .shopping-cart__row,
 .cart-page__table-head {
-  -ms-grid-columns: 1fr minmax(25rem, -webkit-min-content) minmax(20rem, -webkit-min-content) minmax(7rem, -webkit-min-content) 50px;
-  -ms-grid-columns: 1fr minmax(25rem, min-content) minmax(20rem, min-content) minmax(7rem, min-content) 50px;
-  grid-template-columns: 1fr minmax(25rem, -webkit-min-content) minmax(20rem, -webkit-min-content) minmax(7rem, -webkit-min-content) 50px;
-  grid-template-columns: 1fr minmax(25rem, min-content) minmax(20rem, min-content) minmax(7rem, min-content) 50px;
+  -ms-grid-columns: 1fr minmax(25rem, -webkit-min-content) minmax(18rem, -webkit-min-content) minmax(9rem, -webkit-min-content) 50px;
+  -ms-grid-columns: 1fr minmax(25rem, min-content) minmax(18rem, min-content) minmax(9rem, min-content) 50px;
+  grid-template-columns: 1fr minmax(25rem, -webkit-min-content) minmax(18rem, -webkit-min-content) minmax(9rem, -webkit-min-content) 50px;
+  grid-template-columns: 1fr minmax(25rem, min-content) minmax(18rem, min-content) minmax(9rem, min-content) 50px;
 }
 
 .cart-page__title {
@@ -3088,9 +3091,9 @@ h6 {
 
 .cart-page__user-order {
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .cart-page__button {
@@ -3240,7 +3243,7 @@ h6 {
 
 .order-place__info p {
   line-height: 170%;
-  font-size: 13px;
+  font-size: 1.3rem;
 }
 
 .order-place__form-button {
@@ -3408,7 +3411,7 @@ h6 {
   margin-right: 0.5rem;
   white-space: nowrap;
   font-size: 1.5rem;
-  width: 155px;
+  min-width: 14rem;
 }
 
 .send-order__lebel span {
@@ -3582,10 +3585,10 @@ h6 {
   .greed-laout,
   .shopping-cart__row,
   .cart-page__table-head {
-    -ms-grid-columns: 1fr minmax(20rem, -webkit-min-content) minmax(11rem, -webkit-min-content) minmax(10rem, -webkit-min-content) 50px;
-    -ms-grid-columns: 1fr minmax(20rem, min-content) minmax(11rem, min-content) minmax(10rem, min-content) 50px;
-    grid-template-columns: 1fr minmax(20rem, -webkit-min-content) minmax(11rem, -webkit-min-content) minmax(10rem, -webkit-min-content) 50px;
-    grid-template-columns: 1fr minmax(20rem, min-content) minmax(11rem, min-content) minmax(10rem, min-content) 50px;
+    -ms-grid-columns: 1fr minmax(18rem, -webkit-min-content) minmax(11rem, -webkit-min-content) minmax(9rem, -webkit-min-content) 50px;
+    -ms-grid-columns: 1fr minmax(18rem, min-content) minmax(11rem, min-content) minmax(9rem, min-content) 50px;
+    grid-template-columns: 1fr minmax(18rem, -webkit-min-content) minmax(11rem, -webkit-min-content) minmax(9rem, -webkit-min-content) 50px;
+    grid-template-columns: 1fr minmax(18rem, min-content) minmax(11rem, min-content) minmax(9rem, min-content) 50px;
   }
 }
 
@@ -3670,6 +3673,23 @@ h6 {
   .registrations-modal {
     right: 0;
   }
+
+  .greed-laout,
+  .shopping-cart__row,
+  .cart-page__table-head {
+    -ms-grid-columns: 1fr minmax(25rem, -webkit-min-content) minmax(13rem, -webkit-min-content) minmax(9rem, -webkit-min-content) 30px;
+    -ms-grid-columns: 1fr minmax(25rem, min-content) minmax(13rem, min-content) minmax(9rem, min-content) 30px;
+    grid-template-columns: 1fr minmax(25rem, -webkit-min-content) minmax(13rem, -webkit-min-content) minmax(9rem, -webkit-min-content) 30px;
+    grid-template-columns: 1fr minmax(25rem, min-content) minmax(13rem, min-content) minmax(9rem, min-content) 30px;
+  }
+
+  .cart-page__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 920px) {
@@ -3683,14 +3703,6 @@ h6 {
 }
 
 @media (max-width: 920px) {
-  .cart-page__body {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
   .help-order {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3923,10 +3935,10 @@ h6 {
   .greed-laout,
   .shopping-cart__row,
   .cart-page__table-head {
-    -ms-grid-columns: minmax(20rem, -webkit-min-content) minmax(13rem, -webkit-min-content) minmax(5rem, -webkit-min-content) 30px;
-    -ms-grid-columns: minmax(20rem, min-content) minmax(13rem, min-content) minmax(5rem, min-content) 30px;
-    grid-template-columns: minmax(20rem, -webkit-min-content) minmax(13rem, -webkit-min-content) minmax(5rem, -webkit-min-content) 30px;
-    grid-template-columns: minmax(20rem, min-content) minmax(13rem, min-content) minmax(5rem, min-content) 30px;
+    -ms-grid-columns: minmax(20rem, -webkit-min-content) minmax(13rem, -webkit-min-content) minmax(9rem, -webkit-min-content) 30px;
+    -ms-grid-columns: minmax(20rem, min-content) minmax(13rem, min-content) minmax(9rem, min-content) 30px;
+    grid-template-columns: minmax(20rem, -webkit-min-content) minmax(13rem, -webkit-min-content) minmax(9rem, -webkit-min-content) 30px;
+    grid-template-columns: minmax(20rem, min-content) minmax(13rem, min-content) minmax(9rem, min-content) 30px;
   }
 
   .cart-page__table-head {

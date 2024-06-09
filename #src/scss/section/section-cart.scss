@@ -2,23 +2,31 @@
 	grid-template-columns:
 		1fr
 		minmax(25rem, min-content)
-		minmax(20rem, min-content)
-		minmax(7rem, min-content)
+		minmax(18rem, min-content)
+		minmax(9rem, min-content)
 		50px;
 
 	@include _1440 {
 		grid-template-columns:
 			1fr
-			minmax(20rem, min-content)
+			minmax(18rem, min-content)
 			minmax(11rem, min-content)
-			minmax(10rem, min-content)
+			minmax(9rem, min-content)
 			50px;
+	}
+	@include _screen-960 {
+		grid-template-columns:
+			1fr
+			minmax(25rem, min-content)
+			minmax(13rem, min-content)
+			minmax(9rem, min-content)
+			30px;
 	}
 	@include _690 {
 		grid-template-columns:
 			minmax(20rem, min-content)
 			minmax(13rem, min-content)
-			minmax(5rem, min-content)
+			minmax(9rem, min-content)
 			30px;
 	}
 	@include _490 {
@@ -48,7 +56,7 @@
 		gap: 2.5rem;
 		display: flex;
 
-		@include _920 {
+		@include _screen-960 {
 			flex-direction: column;
 		}
 	}
@@ -91,7 +99,7 @@
 
 	// .cart-page__user-order
 	&__user-order {
-		flex: 1 1 100%;
+		flex: 1 1 auto;
 	}
 
 	// .cart-page__button
@@ -311,7 +319,7 @@
 	&__info {
 		p {
 			line-height: 170%;
-			font-size: 13px;
+			font-size: 1.3rem;
 		}
 		@include _min-690 {
 			max-width: 60rem;

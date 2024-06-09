@@ -81,13 +81,9 @@
 		cursor: pointer;
 		user-select: none;
 		color: $color;
-		font-size: 15px;
 		font-weight: 700;
 		line-height: 110%;
 		border-bottom: 1px solid $color;
-		&:not(:last-child) {
-			//
-		}
 
 		@include flex-align-center-justify-space-between;
 		.icon-arow-right {
