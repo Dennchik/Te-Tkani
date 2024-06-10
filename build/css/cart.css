@@ -1339,6 +1339,10 @@ h6 {
   display: block;
 }
 
+.page__personal-account .slide-container__favourit {
+  color: red;
+}
+
 .search-container {
   display: -webkit-box;
   display: -webkit-flex;

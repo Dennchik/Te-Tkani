@@ -1339,6 +1339,10 @@ h6 {
   display: block;
 }
 
+.page__personal-account .slide-container__favourit {
+  color: red;
+}
+
 .login-modal {
   padding: 3.2rem 4.5rem;
   position: absolute;
