@@ -105,14 +105,18 @@
 		font-weight: 500;
 
 		span {
-			display: block;
+			// display: block;
 			width: 100%;
 			font-size: 1.5rem;
-			margin-right: 1.5rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 		}
 		.icon-arow-right {
+			margin-left: 1.5rem;
 			font-size: 12px;
 			color: $color;
+			pointer-events: none;
 		}
 		&._active {
 			color: $color;

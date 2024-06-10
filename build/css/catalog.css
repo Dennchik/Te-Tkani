@@ -2049,10 +2049,6 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   padding: 0 0 8.9rem;
 }
 
-.page__personal-account .order-place__send-button {
-  display: block;
-}
-
 .page__personal-account .slide-container__favourit {
   color: red;
 }

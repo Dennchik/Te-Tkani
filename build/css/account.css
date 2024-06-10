@@ -1335,10 +1335,6 @@ h6 {
   padding: 0 0 8.9rem;
 }
 
-.page__personal-account .order-place__send-button {
-  display: block;
-}
-
 .page__personal-account .slide-container__favourit {
   color: red;
 }
@@ -2473,6 +2469,11 @@ h6 {
   font-size: 13px;
 }
 
+.data-form__input input:focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(0, 70, 70, 0.4666666667);
+  box-shadow: 0 0 0 2px rgba(0, 70, 70, 0.4666666667);
+}
+
 .data-form__button {
   width: 22rem;
   height: 32px;
@@ -3134,7 +3135,7 @@ h6 {
   position: relative;
 }
 
-.select._active-collapse .icon-arow-right {
+.select._active-collapse i {
   scale: -1;
 }
 
@@ -3157,7 +3158,7 @@ h6 {
   text-align: left;
 }
 
-.select__box-button .icon-arow-right {
+.select__box-button i {
   -webkit-transition: scale 0.4s ease 0s;
   -o-transition: scale 0.4s ease 0s;
   transition: scale 0.4s ease 0s;
@@ -3169,6 +3170,7 @@ h6 {
   right: 7px;
   color: #004646;
   font-size: 14px;
+  pointer-events: none;
 }
 
 .select__button {
@@ -3178,7 +3180,7 @@ h6 {
 
 .select__list {
   position: absolute;
-  background: #fff;
+  background: #fbf9f4;
   width: 100%;
   margin-top: 1px;
   border: 1px solid #004646;
@@ -3302,15 +3304,27 @@ h6 {
 }
 
 .user-bar__item span {
-  display: block;
   width: 100%;
   font-size: 1.5rem;
-  margin-right: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .user-bar__item .icon-arow-right {
+  margin-left: 1.5rem;
   font-size: 12px;
   color: #004646;
+  pointer-events: none;
 }
 
 .user-bar__item._active {
@@ -3617,6 +3631,10 @@ h6 {
   justify-self: end;
 }
 
+.order-place__send-button--maiking-order {
+  display: block;
+}
+
 .shopping-cart__item {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3703,6 +3721,10 @@ h6 {
 
 .product-cart__button:hover {
   color: #004646;
+}
+
+.product-cart__button i {
+  pointer-events: none;
 }
 
 .select > ._collapse:not(._show) {

@@ -2,7 +2,7 @@
 	position: relative;
 	// .select__box-button
 	&._active-collapse {
-		.icon-arow-right {
+		i {
 			scale: -1;
 		}
 	}
@@ -14,13 +14,15 @@
 			align-items: start;
 			text-align: left;
 		}
-		.icon-arow-right {
+
+		i {
 			transition: scale 0.4s ease 0s;
 			transform: rotate(90deg);
 			position: absolute;
 			right: 7px;
 			color: $color;
 			font-size: 14px;
+			pointer-events: none;
 		}
 	}
 
@@ -34,15 +36,12 @@
 
 	&__list {
 		position: absolute;
-		background: #fff;
+		background: $bg-color;
 		width: 100%;
 		margin-top: 1px;
 
 		border: 1px solid $color;
 		border-radius: 5px;
-		// @include _320 {
-		// 	max-width: 181px;
-		// }
 
 		&._show {
 			box-shadow: 0 0 0 2px #00464677;

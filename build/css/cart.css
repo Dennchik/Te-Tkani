@@ -1335,10 +1335,6 @@ h6 {
   padding: 0 0 8.9rem;
 }
 
-.page__personal-account .order-place__send-button {
-  display: block;
-}
-
 .page__personal-account .slide-container__favourit {
   color: red;
 }
@@ -2970,7 +2966,7 @@ h6 {
   position: relative;
 }
 
-.select._active-collapse .icon-arow-right {
+.select._active-collapse i {
   scale: -1;
 }
 
@@ -2993,7 +2989,7 @@ h6 {
   text-align: left;
 }
 
-.select__box-button .icon-arow-right {
+.select__box-button i {
   -webkit-transition: scale 0.4s ease 0s;
   -o-transition: scale 0.4s ease 0s;
   transition: scale 0.4s ease 0s;
@@ -3005,6 +3001,7 @@ h6 {
   right: 7px;
   color: #004646;
   font-size: 14px;
+  pointer-events: none;
 }
 
 .select__button {
@@ -3014,7 +3011,7 @@ h6 {
 
 .select__list {
   position: absolute;
-  background: #fff;
+  background: #fbf9f4;
   width: 100%;
   margin-top: 1px;
   border: 1px solid #004646;
@@ -3275,6 +3272,10 @@ h6 {
   justify-self: end;
 }
 
+.order-place__send-button--maiking-order {
+  display: block;
+}
+
 .shopping-cart__item {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3361,6 +3362,10 @@ h6 {
 
 .product-cart__button:hover {
   color: #004646;
+}
+
+.product-cart__button i {
+  pointer-events: none;
 }
 
 .select > ._collapse:not(._show) {

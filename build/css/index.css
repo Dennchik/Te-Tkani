@@ -1718,10 +1718,6 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   padding: 0 0 8.9rem;
 }
 
-.page__personal-account .order-place__send-button {
-  display: block;
-}
-
 .page__personal-account .slide-container__favourit {
   color: red;
 }
@@ -3799,7 +3795,6 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 
 .about-content__text {
   font-size: 1.5rem;
-  font-weight: 500;
   line-height: 120%;
 }
 
