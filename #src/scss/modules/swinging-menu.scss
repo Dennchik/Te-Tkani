@@ -5,14 +5,19 @@
 		clear: both;
 	}
 
-	a {
-		padding: 1.4rem;
+	&__link {
+		cursor: pointer;
 		white-space: nowrap;
 		transition: 0.3s linear;
-		font-size: 12px;
-		padding-left: 1rem;
+		font-size: 1.54rem;
+		padding: 1.4rem 1rem;
 		height: 100%;
 		width: 100%;
+
+		color: $font-color-other;
+		padding: 10px 1rem;
+		font-size: 1.54rem;
+		text-transform: none;
 		@include flex-align-center;
 	}
 
@@ -115,16 +120,11 @@
 
 		@include flex-align-center-justify-space-between;
 		li {
-			// float: left;
-
-			&:first-child {
-				// border-left: 0;
-			}
-
 			li {
 				position: relative;
 			}
 		}
+
 		> li {
 			.menu-bottom__sub-menu li {
 				position: relative;
@@ -137,12 +137,7 @@
 		li {
 			position: relative;
 			width: 100%;
-			a {
-				color: $font-color-other;
-				padding: 10px 20px;
-				font-size: 13px;
-				text-transform: none;
-			}
+
 			&:not(:last-child) {
 				border-bottom: 1px solid #e1b59e77;
 				box-shadow:

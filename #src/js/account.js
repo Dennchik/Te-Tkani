@@ -89,9 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
 					select();
 					counterProducy();
 					placeOrder();
-				} else if (page === 'making-order') {
-					select();
-					counterProducy();
 				} else if (page === 'feed-back') {
 					console.log('yes');
 					select();
@@ -104,13 +101,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				// console.error('Error loading page:', error);
 				content.innerHTML = 'Error loading content';
 			});
-	}
-
-	function restartScripts() {
-		// Ваш код для перезапуска скриптов только при загрузке страницы user-order
-		select();
-		counterProducy();
-		placeOrder();
 	}
 
 	bindEvents(); // Вызываем в начале, чтобы привязать события к уже существующим ссылкам

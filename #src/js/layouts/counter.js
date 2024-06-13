@@ -14,15 +14,15 @@ export function counterProducy() {
 
 					let value = parseFloat(input.value) || 0;
 					if (target.classList.contains('quantity-add')) {
-						value += 1;
+						value += 0.1;
 					} else if (target.classList.contains('quantity-remove')) {
-						value -= 1;
+						value -= 0.1;
 					}
 
-					value = Math.max(0.1, parseFloat(value.toFixed(2)));
+					value = Math.max(0.3, parseFloat(value.toFixed(2)));
 					input.value = value.toFixed(2);
 
-					if (value <= 0.1) {
+					if (value <= 0.3) {
 						_opacityAdd(input);
 					} else {
 						_opacityRemove(input);

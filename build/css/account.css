@@ -2709,6 +2709,11 @@ h6 {
   font-weight: 700;
 }
 
+.history-period__link:hover {
+  text-decoration: underline;
+  color: #004646;
+}
+
 .history-period__item {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2947,16 +2952,20 @@ h6 {
   clear: both;
 }
 
-.menu-bottom a {
-  padding: 1.4rem;
+.menu-bottom__link {
+  cursor: pointer;
   white-space: nowrap;
   -webkit-transition: 0.3s linear;
   -o-transition: 0.3s linear;
   transition: 0.3s linear;
-  font-size: 12px;
-  padding-left: 1rem;
+  font-size: 1.54rem;
+  padding: 1.4rem 1rem;
   height: 100%;
   width: 100%;
+  color: #e1b69e;
+  padding: 10px 1rem;
+  font-size: 1.54rem;
+  text-transform: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3077,13 +3086,6 @@ h6 {
 .menu-bottom__sub-menu li {
   position: relative;
   width: 100%;
-}
-
-.menu-bottom__sub-menu li a {
-  color: #e1b69e;
-  padding: 10px 20px;
-  font-size: 13px;
-  text-transform: none;
 }
 
 .menu-bottom__sub-menu li:not(:last-child) {
@@ -4432,7 +4434,7 @@ h6 {
 
 @media screen and (max-width: 920px) {
   .main-menu__body li {
-    margin-left: 2.5rem;
+    margin-left: 2.2rem;
   }
 
   .main-menu__body li:first-child {

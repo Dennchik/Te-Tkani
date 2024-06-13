@@ -263,7 +263,6 @@
 
 .assortment {
 	// .assortment__title
-
 	&__title {
 		font-weight: 700;
 		margin-bottom: 1rem;
@@ -276,6 +275,19 @@
 		gap: 8px;
 		margin-bottom: 6.6rem;
 		max-width: 217px;
+	}
+
+	// .assortment__link
+	&__link {
+		img {
+			transition: box-shadow 0.4s ease-in-out;
+		}
+
+		:hover {
+			img {
+				box-shadow: 1px 1px 5px #000;
+			}
+		}
 	}
 }
 

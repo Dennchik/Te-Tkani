@@ -11,7 +11,6 @@
 	}
 
 	// .history-order__period-history
-
 	&__period-history {
 		display: flex;
 		flex-direction: column;
@@ -78,6 +77,14 @@
 		border: 1px solid $color;
 		border-radius: 5px;
 		font-weight: 700;
+	}
+
+	// .history-period__link
+	&__link {
+		&:hover {
+			text-decoration: underline;
+			color: $color;
+		}
 	}
 
 	// .history-period__item
