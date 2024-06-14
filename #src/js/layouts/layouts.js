@@ -168,7 +168,7 @@ export function placeOrder() {
 		// let sendOrder = document.querySelector('.order-place__send-order');
 		let sendButton = document.querySelector('.order-place__send-button');
 		let formButton = document.querySelector('.order-place__form-button');
-		// titleDocument.innerHTML = 'оформление заказа';
+		titleDocument.innerHTML = 'оформление заказа';
 		collapse.toggle();
 		sendButton.style.display = 'block';
 		formButton.style.display = 'none';

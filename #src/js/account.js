@@ -1,6 +1,6 @@
 import { select } from './modules/itsSelect.js';
 import { counterProducy } from "./layouts/counter.js";
-import { placeOrder } from './layouts/layouts.js';
+import ItcCollapse from "./assets/collapse.js";
 
 // -----------------------------------------------------------------------------
 const toggleWrap = document.querySelector('.toggle-wrap');
@@ -131,7 +131,18 @@ function sleectData() {
 		}
 	}
 }
+// ---------------------Оформить заказ--------------------------------
+function placeOrder() {
+	let orderCollapse = document.querySelector('.send-order');
+	const collapse = new ItcCollapse(orderCollapse.querySelector('._collapse'));
+	const elcheckboxLabelement = document.querySelector('.order-place__checkbox');
 
-
-
-
+	document.querySelector('.order-place__form-button').addEventListener('click', function () {
+		let sendButton = document.querySelector('.order-place__send-button');
+		let formButton = document.querySelector('.order-place__form-button');
+		collapse.toggle();
+		sendButton.style.display = 'block';
+		formButton.style.display = 'none';
+		elcheckboxLabelement.style.display = 'block';
+	});
+}
