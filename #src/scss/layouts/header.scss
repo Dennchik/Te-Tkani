@@ -18,8 +18,11 @@
 		@include _690 {
 			grid-template-columns: min-content 1fr min-content;
 			justify-items: center;
-			padding: 8px 0 6px;
+			padding: 8px 0 8px;
 			border: none;
+			span {
+				font-weight: 700;
+			}
 		}
 
 		.header__column {
@@ -115,12 +118,23 @@
 
 	// .header__button-sidebarcatalog
 	&__button-sidebarcatalog {
-		width: 32px;
-		height: 32px;
-		border-radius: 50%;
-		border: 1px solid $color;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		span {
+			position: absolute;
+			bottom: 0;
+		}
+
 		._icon {
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			border: 1px solid $color;
 			color: $color;
+			font-size: 22px;
 		}
 		@include _min-690 {
 			display: none;

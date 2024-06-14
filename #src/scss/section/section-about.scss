@@ -4,6 +4,10 @@
 		margin: 0 0 6.2rem 0;
 		justify-content: center;
 		@include flex-align-center;
+
+		@include _490 {
+			margin-bottom: 3rem;
+		}
 	}
 }
 

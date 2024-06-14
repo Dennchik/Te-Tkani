@@ -13,7 +13,7 @@
 		display: flex;
 		.icon-cancel-circle {
 			margin: 18px 0;
-			font-size: 3.4rem;
+			font-size: 3rem;
 			color: $color;
 		}
 	}
@@ -136,7 +136,7 @@
 	// .submenu-parent__link
 	&__link {
 		padding: 8px 0;
-		font-size: 15px;
+		font-size: 1.5rem;
 		font-weight: 500;
 		line-height: 130%;
 		border-bottom: 1px solid $color;
@@ -178,7 +178,7 @@
 
 	// .menu-parrent__link
 	&__link {
-		font-size: 15px;
+		font-size: 1.5rem;
 		line-height: 200%; /* 38px/15 */
 		font-weight: 500;
 	}

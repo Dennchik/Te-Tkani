@@ -1,4 +1,4 @@
-@import './core/swiper-vars.scss';
+@import '../core/swiper-vars';
 @at-root {
 	@font-face {
 		font-family: 'swiper-icons';
@@ -238,10 +238,6 @@ swiper-container:not(.swiper-watch-progress),
 	100% {
 		transform: rotate(360deg);
 	}
-}
-.swiper-pagination-bullet-active {
-	opacity: var(--swiper-pagination-bullet-opacity, 1);
-	background: var(--swiper-pagination-color, var(--swiper-theme-color));
 }
 
 .swiper-pagination-bullet:only-child {

@@ -27,6 +27,21 @@
   //* Better Font Rendering
 }
 
+.icon-catalog {
+  &:before {
+    content: $icon-catalog;
+  }
+}
+.icon-Group-388 {
+  &:before {
+    content: $icon-Group-388;
+  }
+}
+.icon-search-doc {
+  &:before {
+    content: $icon-search-doc;
+  }
+}
 .icon-star {
   &:before {
     content: $icon-star;
@@ -130,10 +145,5 @@
 .icon-user-check {
   &:before {
     content: $icon-user-check;
-  }
-}
-.icon-search-doc {
-  &:before {
-    content: $icon-search-doc;
   }
 }

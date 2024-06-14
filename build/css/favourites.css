@@ -252,6 +252,18 @@ h6 {
   font-variant-ligatures: discretionary-ligatures;
 }
 
+.icon-catalog:before {
+  content: "\e90a";
+}
+
+.icon-Group-388:before {
+  content: "\e90b";
+}
+
+.icon-search-doc:before {
+  content: "\e907";
+}
+
 .icon-star:before {
   content: "\f005";
 }
@@ -334,10 +346,6 @@ h6 {
 
 .icon-user-check:before {
   content: "\e975";
-}
-
-.icon-search-doc:before {
-  content: "\e907";
 }
 
 .wrapper {
@@ -487,6 +495,20 @@ h6 {
   letter-spacing: -0.4px;
 }
 
+[class*=" _img"] img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .swiper-wrapper {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
@@ -494,8 +516,7 @@ h6 {
   align-items: flex-start;
 }
 
-.title-text__text {
-  position: relative;
+.title-text__body {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -504,37 +525,30 @@ h6 {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.title-text__brand {
+  width: 30px;
+  height: 30px;
+}
+
+.title-text__brand img {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.title-text__text {
+  width: 100%;
+  display: inline;
+  margin: 0 1.5rem;
   color: rgb(0, 70, 70);
   font-size: 3rem;
   font-weight: 500;
   text-transform: uppercase;
   line-height: 100%;
   text-align: center;
-}
-
-.title-text__text::before,
-.title-text__text::after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background: url("../img/icons/brand.png") center/contain no-repeat;
-}
-
-.title-text__text::before {
-  left: -13px;
-  -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.title-text__text::after {
-  right: -13px;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  -o-transform: translateX(100%);
-  transform: translateX(100%);
 }
 
 ._ibg {
@@ -789,14 +803,34 @@ h6 {
 }
 
 .header__button-sidebarcatalog {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header__button-sidebarcatalog span {
+  position: absolute;
+  bottom: 0;
+}
+
+.header__button-sidebarcatalog ._icon {
   width: 32px;
   height: 32px;
   border-radius: 50%;
   border: 1px solid #004646;
-}
-
-.header__button-sidebarcatalog ._icon {
   color: #004646;
+  font-size: 22px;
 }
 
 .main-menu__body {
@@ -1205,19 +1239,6 @@ h6 {
 .page__content {
   padding-top: 1.8rem;
   position: relative;
-}
-
-.page__textile {
-  margin-bottom: 8.9rem;
-}
-
-.page__textile img {
-  width: 100%;
-  max-width: 100%;
-}
-
-.page__image img {
-  max-width: 100%;
 }
 
 .page__new-products {
@@ -1989,7 +2010,7 @@ h6 {
 
 .sidebar-search__top .icon-cancel-circle {
   margin: 18px 0;
-  font-size: 3.4rem;
+  font-size: 3rem;
   color: #004646;
 }
 
@@ -2117,7 +2138,7 @@ h6 {
 
 .submenu-parent__link {
   padding: 8px 0;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 500;
   line-height: 130%;
   border-bottom: 1px solid #004646;
@@ -2191,7 +2212,7 @@ h6 {
 }
 
 .menu-parrent__link {
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: 200%;
   font-weight: 500;
 }
@@ -2979,7 +3000,6 @@ h6 {
 }
 
 .slide-container__price {
-  padding: 0 7px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3878,8 +3898,12 @@ h6 {
     grid-template-columns: -webkit-min-content 1fr -webkit-min-content;
     grid-template-columns: min-content 1fr min-content;
     justify-items: center;
-    padding: 8px 0 6px;
+    padding: 8px 0 8px;
     border: none;
+  }
+
+  .header__top-menu span {
+    font-weight: 700;
   }
 
   .header__column:nth-child(3) {
@@ -3908,10 +3932,6 @@ h6 {
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-  }
-
-  .page__textile {
-    margin-top: 0;
   }
 
   .page__categories {
@@ -3964,9 +3984,44 @@ h6 {
 }
 
 @media (max-width: 490px) {
-  .title-text__text::before,
-  .title-text__text::after {
-    display: none;
+  .page__new-products {
+    padding: 0rem 0 4rem;
+  }
+
+  .page__portiere-fabrics {
+    padding: 0rem 0 4rem;
+  }
+
+  .page__furniture-fabrics {
+    padding: 0rem 0 4rem;
+  }
+
+  .page__costume-fabrics {
+    padding: 0rem 0 4rem;
+  }
+
+  .page__sale-products {
+    padding: 0rem 0 4rem;
+  }
+
+  .page__delivery {
+    padding: 0rem 0 4rem;
+  }
+
+  .page__about {
+    padding: 0rem 0 4rem;
+  }
+
+  .page__reviews {
+    padding: 0rem 0 4rem;
+  }
+
+  .new-products__title {
+    margin-bottom: 3rem;
+  }
+
+  .sale-products__title {
+    margin-bottom: 3rem;
   }
 
   .product-card__content {
@@ -4062,7 +4117,7 @@ h6 {
 
 @media (max-width: 425px) {
   .title-text__text {
-    font-size: 2.3rem;
+    font-size: 1.9rem;
   }
 
   .footer__column ul {
@@ -4160,7 +4215,6 @@ h6 {
   }
 }
 @supports (-webkit-appearance:none){
-.title-text__text::before,.title-text__text::after{background:url("../img/icons/brand.webp") center/contain no-repeat}
 .page__footer{background:url("../img/bg-footer.webp") center/cover no-repeat}
 .new-products__text::before,.new-products__text::after{background:url("../img/icons/brand.webp") center/contain no-repeat}
 }
