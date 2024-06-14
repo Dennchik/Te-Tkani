@@ -4425,10 +4425,6 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
     justify-content: flex-end;
   }
 
-  .page__categories {
-    padding: 0;
-  }
-
   .search-container__form {
     width: 100%;
   }
@@ -4569,6 +4565,10 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   }
 
   .page__reviews {
+    padding: 0rem 0 4rem;
+  }
+
+  .page__categories {
     padding: 0rem 0 4rem;
   }
 

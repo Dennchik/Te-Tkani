@@ -3739,11 +3739,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   color: #fff;
 }
 
-.main-content {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 100%;
-  -ms-flex: 0 1 100%;
-  flex: 0 1 100%;
+.catalog-products {
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -3752,14 +3748,14 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   gap: 3rem;
 }
 
-.main-content__column {
+.catalog-products__column {
   -webkit-box-flex: 33.333%;
   -webkit-flex: 33.333%;
   -ms-flex: 33.333%;
   flex: 33.333%;
 }
 
-.main-content__label {
+.catalog-products__label {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
@@ -3767,16 +3763,16 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   overflow: hidden;
 }
 
-.main-content__image {
+.catalog-products__image {
   position: relative;
 }
 
-.main-content__image img {
+.catalog-products__image img {
   width: 100%;
   max-width: 100%;
 }
 
-.main-content__link {
+.catalog-products__link {
   font-weight: 500;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3788,7 +3784,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   align-items: center;
 }
 
-.main-content__link span {
+.catalog-products__link span {
   padding: 0.5rem 2rem;
   background: #fff;
 }
@@ -4268,8 +4264,9 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
     right: 0;
   }
 
-  .main-content {
-    -ms-grid-columns: 1fr 1fr;
+  .catalog-products {
+    gap: 1rem;
+    -ms-grid-columns: 1fr 1rem 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -4342,11 +4339,6 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3/4;
-  }
-
-  .main-content {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
   }
 }
 
@@ -4459,10 +4451,6 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
     justify-content: flex-end;
   }
 
-  .page__categories {
-    padding: 0;
-  }
-
   .search-container__form {
     width: 100%;
   }
@@ -4492,10 +4480,6 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   }
 
   .catalog__sidebar-menu {
-    display: none;
-  }
-
-  .catalog__main-content {
     display: none;
   }
 
@@ -4543,6 +4527,14 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 
   .page__reviews {
     padding: 0rem 0 4rem;
+  }
+
+  .page__categories {
+    padding: 0rem 0 4rem;
+  }
+
+  .catalog-products__link span {
+    padding: 0.5rem;
   }
 
   .new-products__title {

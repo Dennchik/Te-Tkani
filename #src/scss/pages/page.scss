@@ -130,8 +130,8 @@
 	// .page__categories
 	&__categories {
 		padding: 0 0 8.9rem;
-		@include _690 {
-			padding: 0;
+		@include _490 {
+			padding: 0rem 0 4rem;
 		}
 	}
 	//* --------------------------------------------------------------------------

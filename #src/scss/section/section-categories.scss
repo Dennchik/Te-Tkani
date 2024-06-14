@@ -84,9 +84,6 @@
 	// .catalog__main-content
 	&__main-content {
 		flex: 0 1 100%;
-		@include _690 {
-			display: none;
-		}
 	}
 }
 
@@ -202,22 +199,16 @@
 	}
 }
 
-.main-content {
-	flex: 0 1 100%;
+.catalog-products {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	// align-items: center;
 	gap: 3rem;
 	@include _screen-960 {
+		gap: 1rem;
 		grid-template-columns: 1fr 1fr;
 	}
-	@include _768 {
-		grid-template-columns: 1fr;
-	}
-	@include _690 {
-		// display: none;
-	}
+
 	// .main-content__column
 	&__column {
 		flex: 33.333%;
@@ -248,6 +239,9 @@
 		span {
 			padding: 0.5rem 2rem;
 			background: #fff;
+			@include _490 {
+				padding: 0.5rem;
+			}
 		}
 	}
 }
