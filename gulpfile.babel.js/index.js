@@ -41,7 +41,6 @@ function reload(done) {
 	done();
 }
 const watcher = () => {
-
 	$.gulp.watch(path.js.watch, $.gulp.series(js, reload));
 	// $.gulp.watch(path.reactSass.watch, $.gulp.series(js, reload));
 	// $.gulp.watch(path.react.watch, $.gulp.series(react, reload));

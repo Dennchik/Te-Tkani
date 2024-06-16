@@ -6,32 +6,13 @@ prepend script
 	block title
 	- var text='Как-купить - Те Ткани "Обнинск"'
 
-block page-content
-	.page#page
-		._container
-			include ../../chunk/modal-regisrations-fiz
-			include ../../chunk/modal-regisrations-ure
-			nav._sidebar-catalog 
-				.sidebar-search.bp-4
-					._top.bp-2
-						button(type="button")._icon-cancel.catalog-cansel
-							+iconfont('cancel-circle', 'icon')
-				include ../../chunk/sidebar-catalog 
-			include ../../chunk/sidebar-menu
-			section._header
-				include ../../layouts/header
-			._content
-				section._bread-crumbs
-					nav.bread-crumbs
-						ul._list
-							li
-								a._link(href="@@webRoot/index.html" title="/ Главная") Главная /
-							li 
-								span._item Как купить
-				._main-content
-					include ../../components/section-info-work
-			section._footer
-				include ../../layouts/footer 
-			nav._buttom-menu
-				include ../../layouts/float-menu
-					
+block main-content 
+	section.page__bread-crumbs
+		nav.bread-crumbs
+			ul._list
+				li
+					a._link(href="@@webRoot/index.html" title="/ Главная") Главная /
+				li 
+					span._item Как купить
+	.page__info-work
+		include ../../components/section-info-work

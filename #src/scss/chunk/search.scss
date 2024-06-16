@@ -23,17 +23,24 @@
 		}
 		@include flex-align-center;
 	}
+
+	&__input {
+	}
 }
 .search-form {
 	// .search-form__input
 	&__input {
+		@include _690 {
+			width: 100%;
+		}
 		input {
 			line-height: 120%;
 			padding: 0.7rem 0;
-			width: 20rem;
 			transition: all 0.3s ease-in-out;
+			width: 100%;
 
 			@include _min-690 {
+				width: 20rem;
 				&:focus {
 					width: 28rem;
 				}

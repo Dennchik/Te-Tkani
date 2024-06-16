@@ -85,6 +85,78 @@
 	&__main-content {
 		flex: 0 1 100%;
 	}
+
+	// .catalog__pagination
+	&__pagination {
+		margin-top: 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include _425 {
+			justify-content: space-between;
+		}
+	}
+}
+
+.pagination {
+	// .pagination__items
+	&__items {
+		display: flex;
+		gap: 3px;
+		justify-content: center;
+	}
+
+	// .pagination__item
+	&__item {
+		cursor: pointer;
+		border-radius: 5px;
+		width: 4.2rem;
+		height: 4.2rem;
+		line-height: 4.2rem;
+		font-size: 16px;
+		font-weight: 700;
+		color: #000;
+		border: 1px solid #dddddd;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	// .pagination__button
+	&__button {
+		cursor: pointer;
+		border-radius: 5px;
+		width: 4.2rem;
+		height: 4.2rem;
+		color: #000;
+		border: 1px solid #dddddd;
+		text-align: center;
+		vertical-align: middle;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		._icon {
+			color: $color;
+			font-size: 20px;
+		}
+	}
+
+	// .pagination__button-prew
+	&__button--prew {
+		margin-right: 1rem;
+	}
+
+	// .pagination__button-next
+	&__button--next {
+		margin-left: 1rem;
+	}
+
+	&__item--active {
+		color: #fff;
+		border-color: $color;
+		background: $color;
+	}
 }
 
 .filter {

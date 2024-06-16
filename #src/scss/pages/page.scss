@@ -25,19 +25,22 @@
 	&__content {
 		padding-top: 1.8rem;
 		position: relative;
+
 		@include _screen-690 {
 			margin-top: 48px;
 			left: 0;
 			z-index: 1;
 		}
+
 		@include _min-690 {
-			margin-top: 14.2rem;
+			margin-top: 13.5rem;
 		}
 	}
 
 	// .page__new-products
 	&__new-products {
 		padding: 4.3rem 0 8.9rem;
+
 		@include _490 {
 			padding: 0rem 0 4rem;
 		}
@@ -46,6 +49,7 @@
 	// .page__portiere-fabrics
 	&__portiere-fabrics {
 		padding: 4.3rem 0 8.9rem;
+
 		@include _490 {
 			padding: 0rem 0 4rem;
 		}
@@ -54,6 +58,7 @@
 	// .page__furniture-fabrics
 	&__furniture-fabrics {
 		padding: 4.3rem 0 8.9rem;
+
 		@include _490 {
 			padding: 0rem 0 4rem;
 		}
@@ -62,6 +67,7 @@
 	// .page__costume-fabrics
 	&__costume-fabrics {
 		padding: 4.3rem 0 8.9rem;
+
 		@include _490 {
 			padding: 0rem 0 4rem;
 		}
@@ -70,6 +76,7 @@
 	// .page__sale-products
 	&__sale-products {
 		padding: 4.3rem 0 8.9rem;
+
 		@include _490 {
 			padding: 0rem 0 4rem;
 		}
@@ -78,6 +85,7 @@
 	// .page__delivery
 	&__delivery {
 		padding: 4.3rem 0 8.9rem;
+
 		@include _490 {
 			padding: 0rem 0 4rem;
 		}
@@ -86,6 +94,7 @@
 	// .page__about
 	&__about {
 		padding: 4.3rem 0 8.9rem;
+
 		@include _490 {
 			padding: 0rem 0 4rem;
 		}
@@ -94,6 +103,7 @@
 	// .page__reviews
 	&__reviews {
 		padding: 4.3rem 0 8.9rem;
+
 		@include _490 {
 			padding: 0rem 0 4rem;
 		}
@@ -130,6 +140,7 @@
 	// .page__categories
 	&__categories {
 		padding: 0 0 8.9rem;
+
 		@include _490 {
 			padding: 0rem 0 4rem;
 		}
@@ -137,6 +148,7 @@
 	//* --------------------------------------------------------------------------
 	// .page__sidebar-catalog
 	&__sidebar-catalog {
+		margin-top: 1px;
 		display: none;
 		overflow-x: hidden;
 		position: fixed;
@@ -161,10 +173,15 @@
 				transform: translateX(0);
 			}
 		}
+
+		@include _320 {
+			border-radius: 0;
+		}
 	}
 
 	// .page__sidebar-menu
 	&__sidebar-menu {
+		margin-top: 1px;
 		display: none;
 		overflow-x: hidden;
 		position: fixed;
@@ -174,13 +191,14 @@
 		transition: all 0.5s ease-in-out;
 		transform: translateX(100%);
 		background: $bg-color;
+		scrollbar-width: none;
 
 		@include _screen-690 {
 			border-top-left-radius: 10px;
 			border-bottom-left-radius: 10px;
 			width: 320px;
 			display: block;
-			padding: 20px 10px 123px;
+			padding: 15px 10px 123px;
 			box-shadow: 1px 0px 7px #0000008c;
 
 			&._opened-menu {
@@ -212,14 +230,15 @@
 	// .page__favourites
 	&__favourites {
 		padding: 4.3rem 0 8.9rem;
+		.slide-container__favourit {
+			color: red;
+		}
 	}
 	//* --------------------------------------------------------------------------
 	// .page__personal-account
 	&__personal-account {
 		padding: 0 0 8.9rem;
-		.order-place__send-button {
-			// display: block;
-		}
+
 		.slide-container__favourit {
 			color: red;
 		}

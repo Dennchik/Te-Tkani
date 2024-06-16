@@ -12,7 +12,7 @@ export function newProductsSlide(
 		new Swiper(mainslide, {
 			speed: 800,
 			spaceBetween: 50,
-			loop: true,
+			// loop: true,
 			grabCursor: true,
 			// autoHeight: true,
 			// mousewheel: true,

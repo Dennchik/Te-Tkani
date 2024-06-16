@@ -4,6 +4,7 @@
 	left: 0;
 	transform: translateX(var(--mob-hidden-width));
 
+	// .button-menu__items
 	&__items {
 		overflow: hidden;
 		height: 4rem;
@@ -11,6 +12,8 @@
 		border-radius: 50%;
 		border: 1px solid $color;
 		cursor: pointer;
+
+		transition: box-shadow 0.4s ease-in-out;
 
 		svg {
 			width: 4rem;
@@ -46,6 +49,9 @@
 		}
 	}
 	&._active {
+		.button-menu__items {
+			box-shadow: 0 0 7px #000;
+		}
 		svg {
 			stroke: $color;
 			path {

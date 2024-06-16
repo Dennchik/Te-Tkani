@@ -26,22 +26,19 @@ export function addFafouritItems() {
 	});
 }
 //! --------------------------------- Main.js ----------------------------------
-//todo закрываем "Menu-Catalog" 
-export function cancelButton() {
-	$.cancelButtonsCatalog.addEventListener('click', () => {
-		$.sidebarCatalog.classList.remove('_opened-menu');
-		document.body.classList.remove('no-scroll');
-	});
-
-}
-
 //todo запрещаем скроллинг страницы при открытии "Menu-Catalog"
 export function openMenuCatalog() {
 	$.bttnSearch.addEventListener('click', () => {
-		$.sidebarCatalog.classList.add('_opened-menu');
+		$.sidebarCatalog.classList.toggle('_opened-menu');
 		$.sidebarMenu.classList.remove('_opened-menu');
+		$.bttnSearch.classList.toggle('_active');
 		$.burgerButton.classList.remove('_active');
-		document.body.classList.add('no-scroll');
+		if ($.sidebarCatalog.classList.contains('_opened-menu')) {
+			document.body.classList.add('no-scroll');
+		} else {
+			document.body.classList.remove('no-scroll');
+		}
+
 	});
 }
 //todo запрещаем скроллинг страницы при открытии "Main-Menu"
@@ -50,6 +47,7 @@ export function openMainMenu() {
 		$.sidebarMenu.classList.toggle('_opened-menu');
 		$.sidebarCatalog.classList.remove('_opened-menu');
 		$.burgerButton.classList.toggle('_active');
+		$.bttnSearch.classList.remove('_active');
 		if ($.sidebarMenu.classList.contains('_opened-menu')) {
 			document.body.classList.add('no-scroll');
 		} else {

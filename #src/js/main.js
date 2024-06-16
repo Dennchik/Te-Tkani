@@ -4,11 +4,10 @@ loaded('.preloader');
 import { dinamicAdaptive } from './assets/move-elements.js';
 dinamicAdaptive();
 //* ----------------------------------------------------------------------------
-import { cancelButton, openMenuCatalog, openMainMenu, showSubMenuCollapse, collapseElement, userMenu, addFafouritItems } from "./layouts/layouts.js";
+import { openMenuCatalog, openMainMenu, showSubMenuCollapse, collapseElement, userMenu, addFafouritItems } from "./layouts/layouts.js";
 
 openMenuCatalog();
 openMainMenu();
-cancelButton();
 showSubMenuCollapse();
 collapseElement();
 userMenu();

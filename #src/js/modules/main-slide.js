@@ -28,9 +28,7 @@ export function mainSlide(
 			pagination: {
 				el: ".mainslide__dots",
 				clickable: true,
-
 			},
-
 		});
 	}
 }

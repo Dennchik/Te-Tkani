@@ -212,17 +212,17 @@ h6 {
 }
 
 @font-face {
-  font-family: "Arial";
+  font-family: "icon-set";
   font-display: swap;
-  src: url("../fonts/Arial.eot") format("eot"), url("../fonts/Arial.woff") format("woff"), url("../fonts/Arial.woff2") format("woff2"), url("../fonts/Arial.ttf") format("truetype");
+  src: url("../fonts/icon-set.eot") format("eot"), url("../fonts/icon-set.woff") format("woff"), url("../fonts/icon-set.woff2") format("woff2"), url("../fonts/icon-set.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "icon-set";
+  font-family: "Arial";
   font-display: swap;
-  src: url("../fonts/icon-set.eot") format("eot"), url("../fonts/icon-set.woff") format("woff"), url("../fonts/icon-set.woff2") format("woff2"), url("../fonts/icon-set.ttf") format("truetype");
+  src: url("../fonts/Arial.eot") format("eot"), url("../fonts/Arial.woff") format("woff"), url("../fonts/Arial.woff2") format("woff2"), url("../fonts/Arial.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -831,6 +831,16 @@ h6 {
   border: 1px solid #004646;
   color: #004646;
   font-size: 22px;
+  -webkit-transition: -webkit-box-shadow 0.4s ease-in-out;
+  transition: -webkit-box-shadow 0.4s ease-in-out;
+  -o-transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
+}
+
+.header__button-sidebarcatalog._active ._icon {
+  -webkit-box-shadow: 0 0 7px #000;
+  box-shadow: 0 0 7px #000;
 }
 
 .main-menu__body {
@@ -1301,6 +1311,7 @@ h6 {
 }
 
 .page__sidebar-catalog {
+  margin-top: 1px;
   display: none;
   overflow-x: hidden;
   position: fixed;
@@ -1319,6 +1330,7 @@ h6 {
 }
 
 .page__sidebar-menu {
+  margin-top: 1px;
   display: none;
   overflow-x: hidden;
   position: fixed;
@@ -1333,6 +1345,7 @@ h6 {
   -o-transform: translateX(100%);
   transform: translateX(100%);
   background: #fbf9f4;
+  scrollbar-width: none;
 }
 
 .page__cart-page {
@@ -1350,6 +1363,10 @@ h6 {
 
 .page__favourites {
   padding: 4.3rem 0 8.9rem;
+}
+
+.page__favourites .slide-container__favourit {
+  color: red;
 }
 
 .page__personal-account {
@@ -1750,10 +1767,10 @@ h6 {
 .search-form__input input {
   line-height: 120%;
   padding: 0.7rem 0;
-  width: 20rem;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  width: 100%;
 }
 
 .search-form__button {
@@ -1779,6 +1796,11 @@ h6 {
   border-radius: 50%;
   border: 1px solid #004646;
   cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.4s ease-in-out;
+  transition: -webkit-box-shadow 0.4s ease-in-out;
+  -o-transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
 }
 
 .button-menu__items svg {
@@ -1815,6 +1837,11 @@ h6 {
   --array-2: 107px;
 }
 
+.button-menu._active .button-menu__items {
+  -webkit-box-shadow: 0 0 7px #000;
+  box-shadow: 0 0 7px #000;
+}
+
 .button-menu._active svg {
   stroke: #004646;
 }
@@ -1841,7 +1868,7 @@ h6 {
 
 .sidebar-menu__login {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border: 1px solid #004646;
   border-radius: 10px;
   padding: 2rem 1rem;
@@ -2002,10 +2029,6 @@ h6 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.sidebar-search__top .search-container {
-  margin-right: 2.5rem;
 }
 
 .sidebar-search__top .icon-cancel-circle {
@@ -4204,7 +4227,7 @@ h6 {
   }
 
   .page__content {
-    margin-top: 14.2rem;
+    margin-top: 13.5rem;
   }
 
   .page__buttom-menu {
@@ -4217,6 +4240,10 @@ h6 {
 
   .search-container__form {
     margin: 0.7rem 0 0.7rem 0.5rem;
+  }
+
+  .search-form__input input {
+    width: 20rem;
   }
 
   .search-form__input input:focus {
@@ -4619,7 +4646,7 @@ h6 {
     border-bottom-left-radius: 10px;
     width: 320px;
     display: block;
-    padding: 20px 10px 123px;
+    padding: 15px 10px 123px;
     -webkit-box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5490196078);
     box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5490196078);
   }
@@ -4694,6 +4721,10 @@ h6 {
   }
 
   .search-container__form {
+    width: 100%;
+  }
+
+  .search-form__input {
     width: 100%;
   }
 
@@ -5130,6 +5161,10 @@ h6 {
 }
 
 @media (max-width: 320px) {
+  .page__sidebar-catalog {
+    border-radius: 0;
+  }
+
   .page__sidebar-menu {
     border-radius: 0;
   }
