@@ -18,7 +18,7 @@ export function mainSlide(
 			spaceBetween: 10,
 			loop: true,
 			grabCursor: true,
-			autoHeight: true,
+			// autoHeight: true,
 			// mousewheel: true, 
 			slidesPerView: 1,
 			navigation: {
