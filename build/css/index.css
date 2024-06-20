@@ -4586,39 +4586,43 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 
 @media (max-width: 490px) {
   .page__new-products {
-    padding: 0rem 0 4rem;
+    padding: 4rem 0 6rem;
   }
 
   .page__portiere-fabrics {
-    padding: 0rem 0 4rem;
+    padding: 0rem 0 6rem;
   }
 
   .page__furniture-fabrics {
-    padding: 0rem 0 4rem;
+    padding: 0 0 6rem;
   }
 
   .page__costume-fabrics {
-    padding: 0rem 0 4rem;
+    padding: 0 0 6rem;
   }
 
   .page__sale-products {
-    padding: 0rem 0 4rem;
+    padding: 0 0 6rem;
   }
 
   .page__delivery {
-    padding: 0rem 0 4rem;
+    padding: 0rem 0 6rem;
   }
 
   .page__about {
-    padding: 0rem 0 4rem;
+    padding: 0rem 0 6rem;
   }
 
   .page__reviews {
-    padding: 0rem 0 4rem;
+    padding: 0rem 0 6rem;
   }
 
   .page__categories {
     padding: 0rem 0 4rem;
+  }
+
+  .page__favourites {
+    padding: 2rem 0 6rem;
   }
 
   .new-products__title {

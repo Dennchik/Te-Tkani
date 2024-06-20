@@ -4859,39 +4859,43 @@ h6 {
 
 @media (max-width: 490px) {
   .page__new-products {
-    padding: 0rem 0 4rem;
+    padding: 4rem 0 6rem;
   }
 
   .page__portiere-fabrics {
-    padding: 0rem 0 4rem;
+    padding: 0rem 0 6rem;
   }
 
   .page__furniture-fabrics {
-    padding: 0rem 0 4rem;
+    padding: 0 0 6rem;
   }
 
   .page__costume-fabrics {
-    padding: 0rem 0 4rem;
+    padding: 0 0 6rem;
   }
 
   .page__sale-products {
-    padding: 0rem 0 4rem;
+    padding: 0 0 6rem;
   }
 
   .page__delivery {
-    padding: 0rem 0 4rem;
+    padding: 0rem 0 6rem;
   }
 
   .page__about {
-    padding: 0rem 0 4rem;
+    padding: 0rem 0 6rem;
   }
 
   .page__reviews {
-    padding: 0rem 0 4rem;
+    padding: 0rem 0 6rem;
   }
 
   .page__categories {
     padding: 0rem 0 4rem;
+  }
+
+  .page__favourites {
+    padding: 2rem 0 6rem;
   }
 
   .feed-back .data-form__line {
@@ -5093,6 +5097,7 @@ h6 {
 
   .favourites-product__title {
     font-size: 2.2rem;
+    margin-bottom: 2.9rem;
   }
 }
 

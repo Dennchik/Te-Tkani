@@ -42,7 +42,7 @@
 		padding: 4.3rem 0 8.9rem;
 
 		@include _490 {
-			padding: 0rem 0 4rem;
+			padding: 4rem 0 6rem;
 		}
 	}
 
@@ -51,7 +51,7 @@
 		padding: 4.3rem 0 8.9rem;
 
 		@include _490 {
-			padding: 0rem 0 4rem;
+			padding: 0rem 0 6rem;
 		}
 	}
 
@@ -60,7 +60,7 @@
 		padding: 4.3rem 0 8.9rem;
 
 		@include _490 {
-			padding: 0rem 0 4rem;
+			padding: 0 0 6rem;
 		}
 	}
 
@@ -69,7 +69,7 @@
 		padding: 4.3rem 0 8.9rem;
 
 		@include _490 {
-			padding: 0rem 0 4rem;
+			padding: 0 0 6rem;
 		}
 	}
 
@@ -78,7 +78,7 @@
 		padding: 4.3rem 0 8.9rem;
 
 		@include _490 {
-			padding: 0rem 0 4rem;
+			padding: 0 0 6rem;
 		}
 	}
 
@@ -87,7 +87,7 @@
 		padding: 4.3rem 0 8.9rem;
 
 		@include _490 {
-			padding: 0rem 0 4rem;
+			padding: 0rem 0 6rem;
 		}
 	}
 
@@ -96,7 +96,7 @@
 		padding: 4.3rem 0 8.9rem;
 
 		@include _490 {
-			padding: 0rem 0 4rem;
+			padding: 0rem 0 6rem;
 		}
 	}
 
@@ -105,7 +105,7 @@
 		padding: 4.3rem 0 8.9rem;
 
 		@include _490 {
-			padding: 0rem 0 4rem;
+			padding: 0rem 0 6rem;
 		}
 	}
 
@@ -230,6 +230,10 @@
 	// .page__favourites
 	&__favourites {
 		padding: 4.3rem 0 8.9rem;
+
+		@include _490 {
+			padding: 2rem 0 6rem;
+		}
 		.slide-container__favourit {
 			color: red;
 		}
