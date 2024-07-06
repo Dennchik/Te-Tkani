@@ -6,7 +6,6 @@
 @import 'core/mixins';
 @import 'core/extend';
 @import 'core/reset';
-// @import 'core/ui';
 //todo ------------------------- Default fonts ---------------------------------
 // &display=swap&subset=cyrillic-ext
 @import url('https://fonts.googleapis.com/css?family=Inter:1300,regular,500,600,700,800,900&display=swap&subset=cyrillic-ext');
@@ -15,8 +14,6 @@
 @import 'core/fonts';
 //todo  ------------------------ Icon Fonts ------------------------------------
 @import 'core/iconfonts';
-// todo -------------------------- Plugins -------------------------------------
-// @import 'assets/swiper';
 // todo -------------------------- Classes -------------------------------------
 // #region
 .wrapper {
