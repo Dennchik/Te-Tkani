@@ -83,7 +83,9 @@
 		margin-top: -10rem;
 		gap: 4rem;
 		overflow-x: auto;
+		scrollbar-width: thin;
 		@include flex-align-center-justify-space-between;
+
 		@include _min-690 {
 			margin-left: 3.4rem;
 		}
