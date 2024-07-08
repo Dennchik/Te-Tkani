@@ -2738,6 +2738,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+  overflow-x: hidden;
 }
 
 .modal-registrations-fiz._show,
