@@ -79,6 +79,10 @@ body {
   font-weight: 400;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -2739,6 +2743,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   overflow-x: hidden;
+  height: 100vh;
 }
 
 .modal-registrations-fiz._show,
@@ -2762,7 +2767,6 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100vh;
   width: 100%;
 }
 
@@ -4198,58 +4202,6 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   }
 }
 
-@media screen and (max-width: 690px) {
-  body.no-scroll {
-    overflow: hidden;
-  }
-
-  .page__header {
-    -webkit-box-shadow: 0 0 5px #000;
-    box-shadow: 0 0 5px #000;
-  }
-
-  .page__content {
-    margin-top: 48px;
-    left: 0;
-    z-index: 1;
-  }
-
-  .page__sidebar-catalog {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    -webkit-box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5490196078);
-    box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5490196078);
-    width: 320px;
-    display: block;
-    padding: 0 10px 123px;
-    scrollbar-width: none;
-  }
-
-  .page__sidebar-catalog._opened-menu {
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-  }
-
-  .page__sidebar-menu {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    width: 320px;
-    display: block;
-    padding: 15px 10px 123px;
-    -webkit-box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5490196078);
-    box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5490196078);
-  }
-
-  .page__sidebar-menu._opened-menu {
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
 @media (max-width: 690px) {
   .catalog__categories > ._collapse:not(._show) {
     display: none;
@@ -4322,10 +4274,10 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 
   .modal-registrations-fiz__body,
   .modal-registrations-ure__body {
-    -webkit-transform: translate(0, 15%);
-    -ms-transform: translate(0, 15%);
-    -o-transform: translate(0, 15%);
-    transform: translate(0, 15%);
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
     padding: 3rem 2rem;
   }
 
@@ -4343,6 +4295,54 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .page__header {
+    -webkit-box-shadow: 0 0 5px #000;
+    box-shadow: 0 0 5px #000;
+  }
+
+  .page__content {
+    margin-top: 48px;
+    left: 0;
+    z-index: 1;
+  }
+
+  .page__sidebar-catalog {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -webkit-box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5490196078);
+    box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5490196078);
+    width: 320px;
+    display: block;
+    padding: 0 10px 123px;
+    scrollbar-width: none;
+  }
+
+  .page__sidebar-catalog._opened-menu {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  .page__sidebar-menu {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 320px;
+    display: block;
+    padding: 15px 10px 123px;
+    -webkit-box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5490196078);
+    box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5490196078);
+  }
+
+  .page__sidebar-menu._opened-menu {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -4660,7 +4660,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 
 }
 
- @media screen and (max-width: 690px){
+ @media (max-width: 690px){
 
 @supports (-webkit-appearance:none){
 
@@ -4668,7 +4668,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 
 }
 
- @media (max-width: 690px){
+ @media screen and (max-width: 690px){
 
 @supports (-webkit-appearance:none){
 

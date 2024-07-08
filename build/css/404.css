@@ -52,6 +52,10 @@ body {
   font-weight: 400;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -360,25 +364,11 @@ p {
     font-size: 50%;
   }
 }
-
-@media screen and (max-width: 690px) {
-  body.no-scroll {
-    overflow: hidden;
-  }
-}
 @supports (-webkit-appearance:none){
 .page__wrapper{background:url("../img/bg-404.webp") center/cover no-repeat}
 }
 
  @media (max-width: 1024px){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
- @media screen and (max-width: 690px){
 
 @supports (-webkit-appearance:none){
 
