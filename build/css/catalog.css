@@ -3208,18 +3208,14 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 .modal-registrations-fiz__body,
 .modal-registrations-ure__body {
   background: #fefefe;
+  position: relative;
   display: inline-block;
-  margin: 0 auto;
-  margin: 0 auto;
+  margin: 10% auto;
   padding: 3rem 4rem;
   border: 1px solid #888;
-  border-radius: 10px;
+  border-radius: 5px;
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  -webkit-transform: translate(0, 60%);
-  -ms-transform: translate(0, 60%);
-  -o-transform: translate(0, 60%);
-  transform: translate(0, 60%);
 }
 
 .modal-registrations-fiz__info,
@@ -4541,6 +4537,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
     -o-transform: translate(0, 0);
     transform: translate(0, 0);
     padding: 3rem 2rem;
+    margin: 48px auto 57px;
   }
 
   .registration-form {

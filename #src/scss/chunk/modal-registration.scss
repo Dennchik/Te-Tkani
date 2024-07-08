@@ -46,19 +46,19 @@
 
 	// .modal-registrations-fiz__body
 	&__body {
+		position: relative;
 		display: inline-block;
-		margin: 0 auto;
 		background-color: #fefefe;
-		margin: 0 auto;
+		margin: 10% auto;
 		padding: 3rem 4rem;
 		border: 1px solid #888;
-		border-radius: 10px;
+		border-radius: 5px;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-		transform: translate(0, 60%);
 
 		@include _690 {
 			transform: translate(0, 0);
 			padding: 3rem 2rem;
+			margin: 48px auto 57px;
 		}
 		@include _375 {
 			padding: 3rem 1rem;
