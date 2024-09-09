@@ -98,12 +98,20 @@
 // -----------------------------------------------------------------------------
 .contacts-form {
 	margin-bottom: 2rem;
+
 	.select__box-button {
 		position: relative;
 		width: 75%;
 		min-width: 205px;
 		@include _690 {
 			width: 100%;
+		}
+	}
+	.select__list {
+		max-width: 75%;
+		min-width: 205px;
+		@include _screen-690 {
+			max-width: 100%;
 		}
 	}
 
@@ -160,7 +168,6 @@
 		font-size: 15px;
 		min-width: 195px;
 		@include _375 {
-			font-size: 12px;
 			margin-right: 1.5rem;
 			white-space: normal;
 		}
