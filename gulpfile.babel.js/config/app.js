@@ -109,6 +109,7 @@ export default {
 			},
 		},
 		entry: {
+			contacts: './#src/js/contacts.js',
 			account: './#src/js/account.js',
 			favourites: './#src/js/favourites.js',
 			'info-work': './#src/js/info-work.js',

@@ -1,4 +1,13 @@
 .page {
+	// .page__contacts
+	&__contacts {
+		padding: 0 0 8.9rem;
+
+		@include _490 {
+			padding: 0 0 6rem;
+		}
+	}
+
 	// .page__container
 	&__container {
 		background: #fbf9f4;

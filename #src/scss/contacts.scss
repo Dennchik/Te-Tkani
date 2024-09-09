@@ -1,0 +1,61 @@
+// todo -------------------------- Variables -----------------------------------
+@import 'core/variables';
+@import 'core/variables-icon';
+@import 'core/swiper-vars';
+//todo ----------------------------- Core --------------------------------------
+@import 'core/mixins';
+@import 'core/extend';
+@import 'core/reset';
+//todo ------------------------- Default fonts ---------------------------------
+// &display=swap&subset=cyrillic-ext
+@import url('https://fonts.googleapis.com/css?family=Inter:1300,regular,500,600,700,800,900&display=swap&subset=cyrillic-ext');
+// todo --------------------------- Fonts --------------------------------------
+@import 'core/fonts';
+//todo  ------------------------ Icon Fonts ------------------------------------
+@import 'core/iconfonts';
+// todo -------------------------- Plugins -------------------------------------
+@import 'assets/swiper';
+// todo -------------------------- Classes -------------------------------------
+// #region
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	margin: 0 auto;
+}
+
+[class*='_container'] {
+	max-width: $maxWidthContainer;
+	box-sizing: content-box;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+[class*='icon-'] {
+	cursor: pointer;
+	height: 100%;
+	@include flex-align-center-justify-center;
+}
+// todo --------------------------- Assets -------------------------------------
+@import 'assets/noui-slider';
+// todo --------------------------- layout -------------------------------------
+@import 'layouts/bem-block';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/float-menu';
+// todo --------------------------- Pages --------------------------------------
+@import 'pages/page.scss';
+// todo --------------------------- Chunk --------------------------------------
+@import 'chunk/login-modal';
+@import 'chunk/search';
+@import 'chunk/burger-button';
+@import 'chunk/sidebar-menu';
+@import 'chunk/sidebar-catalog';
+@import 'chunk/bread-crumbs';
+@import 'chunk/modal-registration';
+// todo -------------------------- Modules -------------------------------------
+@import 'modules/preloader';
+@import 'modules/swinging-menu';
+@import 'modules/select';
+// todo -------------------------- Sections ------------------------------------
+@import 'section/section-contacts';

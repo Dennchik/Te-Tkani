@@ -216,17 +216,17 @@ h6 {
 }
 
 @font-face {
-  font-family: "icon-set";
+  font-family: "Arial";
   font-display: swap;
-  src: url("../fonts/icon-set.eot") format("eot"), url("../fonts/icon-set.woff") format("woff"), url("../fonts/icon-set.woff2") format("woff2"), url("../fonts/icon-set.ttf") format("truetype");
+  src: url("../fonts/Arial.eot") format("eot"), url("../fonts/Arial.woff") format("woff"), url("../fonts/Arial.woff2") format("woff2"), url("../fonts/Arial.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Arial";
+  font-family: "icon-set";
   font-display: swap;
-  src: url("../fonts/Arial.eot") format("eot"), url("../fonts/Arial.woff") format("woff"), url("../fonts/Arial.woff2") format("woff2"), url("../fonts/Arial.ttf") format("truetype");
+  src: url("../fonts/icon-set.eot") format("eot"), url("../fonts/icon-set.woff") format("woff"), url("../fonts/icon-set.woff2") format("woff2"), url("../fonts/icon-set.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -1241,6 +1241,10 @@ h6 {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.page__contacts {
+  padding: 0 0 8.9rem;
 }
 
 .page__container {
@@ -4856,6 +4860,10 @@ h6 {
 }
 
 @media (max-width: 490px) {
+  .page__contacts {
+    padding: 0 0 6rem;
+  }
+
   .page__new-products {
     padding: 4rem 0 6rem;
   }

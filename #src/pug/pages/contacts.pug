@@ -1,0 +1,18 @@
+extends ../layouts/app_layout
+append link 
+	link(rel="stylesheet" type="text/css" href="@@webRoot/css/contacts.min.css")
+prepend script 
+	script(defer="defer" type="text/javascript" src="@@webRoot/js/contacts.min.js")
+block title
+	- var text='Контакты - "Те Ткани -Обнинск"' 
+
+block main-content 
+	section.page__bread-crumbs
+		nav.bread-crumbs
+			ul._list
+				li
+					a._link(href="@@webRoot/index.html" title="/ Главная") Главная /
+				li
+					span._item Контаткты
+	section.page__contacts  
+		include ../components/section-contacts

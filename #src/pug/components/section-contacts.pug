@@ -1,0 +1,71 @@
+.contacts
+	._body 
+		._title контакты
+		.contacts-items._column 
+			._content
+				._column 
+					._item._address
+						p Адрес магазина:
+						ul 
+							li 249038, Калужская область 
+							li г. Обнинск ул. Курчатова д.6А 
+							li ТД "Малыш"
+					._item._operating-mode
+						p Режим работы:
+						ul
+							li Пн-пт 10:00 — 19:00
+							li Сб 10:00 — 18:00
+							li Вс 10:00 — 17:00  
+					._item._phone
+						p Телефон:
+						ul 
+							li ИП Теплякова О.Ю.
+							li ИНН 402500115082
+							li ОГРН 304 402 514 700 031
+					._item._mail 
+						p Электронная почта:
+						span tepliakova73@gmail.com
+					._item._requisites
+						ul 
+							li 
+								a(href="tel:88000000000") 8-800-000-00-00
+							li
+								a(href="tel:74950000000") 7-495-000-00-00
+					._item._messengers
+						p Мессенджеры:
+						._icons
+							a(href="")._icon
+								+iconfont('whatsapp', 'icon')
+							a(href="")._icon
+								+iconfont('telegram-fly', 'icon')
+				._column 
+					form(action="").contacts-form._form 				
+						._column
+							._line 
+								label(for="form-massege")._lebel Задайте вопрос:
+								._input
+									textarea._input-text(id='form-massege', name="massege", placeholder="Enter your message...")
+							._line(data-select="data-select")
+								label(for="form-select")._lebel Выбрать способ ответа
+								.select._input
+									._box-button
+										input._button.input(id="form-select", type="button", name="form-select", value="Выбрать способ ответа") 
+										i.icon-arow-right
+									ul._list._collapse
+										li._list-item._selected(value="Телефон") Телефон
+										li._list-item(value="Эл.почта") Эл.почта
+										li._list-item(value="Ватсап") Ватсап
+							._line
+								label(for="phone")._lebel Телефон:
+								._input
+									input.input(id='phone', autocomplete=" ", type="text",value="+7 999 (999) 99-99", name="phone")
+							._line
+								label(for="contact-mail")._lebel Эл.почта:
+								._input
+									input.input(id="contact-mail", autocomplete=" ", type="text", value="fjjopk@mail.ru", name="email") 
+							._line
+								label(for="whatsapp")._lebel Ватсап
+								._input
+									input.input(id="whatsapp", autocomplete=" ", type="text",value="fjjopk@mail.ru" name="whatsapp") 
+
+	.interactive-map._column 
