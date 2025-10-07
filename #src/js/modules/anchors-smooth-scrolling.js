@@ -1,33 +1,97 @@
+
 export function anchorsSmoothScrolling() {
+	// Функция плавного скролла к якорю по ID
+	function scrollToAnchor(targetId) {
+		// Получаем целевой элемент по ID
+		const targetElement = document.getElementById(targetId);
+		// Если элемент не найден — выходим
+		if (!targetElement) return;
+
+		// Получаем текущую ширину окна
+		const screenWidth = window.innerWidth;
+
+		//* Устанавливаем отступ в зависимости от ширины экрана
+		// Базовое значение отступа (например, высота фиксированной шапки)
+		let offset = 88; // Отступ
+		if (screenWidth <= 768) {
+			offset = 60;
+		} else if (screenWidth <= 1440) {
+			offset = 71;
+		}
+
+		// Вычисляем положение элемента относительно всего документа
+		const targetPosition =
+			targetElement.getBoundingClientRect().top + window.scrollY;
+
+		// Итоговая позиция прокрутки с учётом отступа
+		const offsetPosition = targetPosition - offset;
+		// Выполняем плавную прокрутку к элементу
+		window.scrollTo({
+			top: offsetPosition,
+			behavior: 'smooth',
+		});
+	}
+
+	// Обработка кликов по якорным ссылкам
 	document.addEventListener('DOMContentLoaded', function () {
-		const sideBarInfo = document.querySelector('.side-info__info');
-		// Добавляем плавную прокрутку с учетом отступа 150px сверху
+		// Находим все ссылки с классом .anchor-link
 		const anchorLinks = document.querySelectorAll('.anchor-link');
-		anchorLinks.forEach(link => {
+
+		anchorLinks.forEach((link) => {
 			link.addEventListener('click', function (e) {
+				// Получаем значение href
+				const href = this.getAttribute('href');
+				// Создаём полноценный URL-объект
+				const url = new URL(href, window.location.href);
+
+				// Если якорь ведёт на другую страницу — ни хрена не делаем,
+				// Иначе даем браузеру свободу
+				if (url.pathname !== window.location.pathname) {
+					return;
+				}
+				// Отменяем стандартное поведение браузера (прыжок по якорю)
 				e.preventDefault();
-				const targetId = this.getAttribute('href').substring(1);
-				const targetElement = document.getElementById(targetId);
-				const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-				const offsetPosition = targetPosition - 150; // 150px отступ сверху
-				if (link.classList.contains('side-info__link')) {
-					sideBarInfo.classList.remove('_open');
-				}
 
-				if (link.classList.contains('menu-side-bar__link')) {
-					const sidebarMenu = document.querySelector('.page__sidebar-menu');
-					const burgerButton = document.querySelector('.burger-button');
-					console.log(sidebarMenu);
-					sidebarMenu.classList.remove('_opened-menu');
-					burgerButton.classList.remove('_active');
+				// Извлекаем ID якоря из hash  (#about → about)
+				const targetId = url.hash.substring(1);
+
+				// Проверяем, есть ли открытое боковое меню
+				const sidebarMenu = e.target.closest('.sidebar-menu');
+				if (sidebarMenu && sidebarMenu.classList.contains('_open-menu')) {
+					// Кнопка открытия меню
+					const buttonItems = document.querySelector('.burger-button');
+
+					// Убираем класс открытия с кнопки
+					buttonItems?.classList.remove('_open-menu');
+
+					// Разрешаем прокрутку страницы
 					document.body.classList.remove('no-scroll');
+
+					// Закрываем меню, если функция доступна
+					if (typeof toggleSidebarMenu === 'function') {
+						toggleSidebarMenu(sidebarMenu);
+					}
 				}
 
-				window.scrollTo({
-					top: offsetPosition,
-					behavior: 'smooth'
-				});
+				// Выполняем прокрутку к нужному якорю
+				scrollToAnchor(targetId);
 			});
 		});
+
+		// Внутри DOMContentLoaded
+		// setTimeout(() => {
+		//   if (window.location.hash) {
+		//     const targetId = window.location.hash.substring(1);
+		//     const targetElement = document.getElementById(targetId);
+		//     if (targetElement) {
+		//       // Прокручиваем вверх на чуть-чуть, чтобы скрыть «резкий прыжок»
+		//       window.scrollTo(0, 0);
+		//       // Затем — плавный скролл к нужному месту
+		//       setTimeout(() => {
+		//         scrollToAnchor(targetId);
+		//       }, 50);
+		//     }
+		//   }
+		// }, 0);
 	});
 }

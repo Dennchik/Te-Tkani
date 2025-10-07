@@ -1,18 +1,18 @@
 extends ../../layouts/app_layout
 append link 
-	link(rel="stylesheet" type="text/css" href="@@webRoot/css/info-work.min.css")
+    link(rel="stylesheet" type="text/css" href="@@webRoot/css/info-work.min.css")
 prepend script
-	script(defer="defer" type="text/javascript" src="@@webRoot/js/info-work.min.js") 
-	block title
-	- var text='Как-купить - Те Ткани "Обнинск"'
+    script(defer="defer" type="text/javascript" src="@@webRoot/js/info-work.min.js")
+    block title
+    - var text='Как-купить - Те Ткани "Обнинск"'
 
 block main-content 
-	section.page__bread-crumbs
-		nav.bread-crumbs
-			ul._list
-				li
-					a._link(href="@@webRoot/index.html" title="/ Главная") Главная /
-				li 
-					span._item Как купить
-	.page__info-work
-		include ../../components/section-info-work
+    section.page__bread-crumbs
+        nav.bread-crumbs
+            ul._list
+                li
+                    a._link(href="@@webRoot/index.html" title="/ Главная") Главная /
+                li
+                    span._item Как купить
+    .page__info-work
+        include ../../components/section-info-work

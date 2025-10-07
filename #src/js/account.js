@@ -84,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			.then(response => response.text())
 			.then(data => {
 				content.innerHTML = data;
-				bindEvents(); // Повторно привязываем события после загрузки контента
 				if (page === 'order-cart') {
 					select();
 					counterProducy();

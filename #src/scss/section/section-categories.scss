@@ -274,19 +274,36 @@
 .catalog-products {
 	width: 100%;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
 	gap: 3rem;
+
 	@include _screen-960 {
 		gap: 1rem;
-		grid-template-columns: 1fr 1fr;
 	}
 
-	// .main-content__column
+	// Kategoriyalar uchun 2 ustunli grid
+	&.category {
+		grid-template-columns: 1fr 1fr 1fr;
+
+		@include _screen-960 {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	// Mahsulotlar uchun 3 ustunli grid
+	&.product {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+		@include _screen-960 {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+
+	// .catalog-products__column
 	&__column {
-		flex: 33.333%;
+		// Flex o'rniga grid ishlatilgani uchun bu qismni o'chirish mumkin
 	}
 
-	// .main-content__label
+	// .catalog-products__label
 	&__label {
 		position: absolute;
 		bottom: 1rem;
@@ -295,7 +312,7 @@
 		overflow: hidden;
 	}
 
-	// .main-content__image
+	// .catalog-products__image
 	&__image {
 		position: relative;
 		img {
@@ -304,7 +321,7 @@
 		}
 	}
 
-	// .main-content__link
+	// .catalog-products__link
 	&__link {
 		font-weight: 500;
 		@include flex-align-center;

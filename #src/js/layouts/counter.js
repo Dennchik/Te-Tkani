@@ -60,10 +60,10 @@ export function counterProducy() {
 				}
 			});
 
-			const unitLabel = document.createElement('span');
-			unitLabel.textContent = ' м';
-			unitLabel.style.marginLeft = '-5px';
-			input.parentNode.appendChild(unitLabel);
+			// const unitLabel = document.createElement('span');
+			// unitLabel.textContent = ' м';
+			// unitLabel.style.marginLeft = '-5px';
+			// input.parentNode.appendChild(unitLabel);
 		});
 	}
 

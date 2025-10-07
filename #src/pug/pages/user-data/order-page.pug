@@ -1,0 +1,68 @@
+//- Создаем константу с 5 позициями товара
+-
+	const positions = [
+		{
+			name: 'Хлопок ткань 120см',
+			qty: '2 м',
+			price: '240 ₽/м',
+			sum: '480 ₽'
+		},
+		{
+			name: 'Хлопок ткань 120см',
+			qty: '2 м',
+			price: '240 ₽/м',
+			sum: '480 ₽'
+		},
+		{
+			name: 'Хлопок ткань 120см',
+			qty: '2 м',
+			price: '240 ₽/м',
+			sum: '480 ₽'
+		},
+		{
+			name: 'Хлопок ткань 120см',
+			qty: '2 м',
+			price: '240 ₽/м',
+			sum: '480 ₽'
+		},
+		{
+			name: 'Хлопок ткань 120см',
+			qty: '2 м',
+			price: '240 ₽/м',
+			sum: '480 ₽'
+		}
+	]
+
+.history-order
+	.history-period.history-order__period-history
+		// 📌 Buyurtma sarlavhasi: raqam va status
+		.history-period__thead
+			.history-period__item Заказ #385
+			.history-period__item Статус заказа: Отправлен
+			.history-period__item(style="justify-content: end;")
+				button.registration-form__button(
+					type="button",
+					onclick="order_to_cart(385)",
+					style="width: unset; margin: unset; padding: 0.9rem 1.5rem;"
+				) Повторить
+
+		// 📌 Tovarlar sarlavhasi
+		.history-period__thead
+			.history-period__item Товар
+			.history-period__item Количество
+			.history-period__item Цена
+			.history-period__item Сумма
+		each pos, idx in positions
+			.history-period__row(key=idx)
+				.history-period__item
+					// Русский комментарий: ссылка на товар
+					a.history-period__link.link= pos.name
+				.history-period__item
+					// Русский комментарий: количество
+					= pos.qty
+				.history-period__item
+					// Русский комментарий: цена за метр
+					= pos.price
+				.history-period__item
+					// Русский комментарий: итоговая сумма
+					= pos.sum
