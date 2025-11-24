@@ -6,7 +6,7 @@
 		align-items: center;
 		margin-bottom: 4.3rem;
 		padding: 0 1.5rem;
-		height: 50px;
+		min-height: 50px;
 		border: 1px solid $color;
 		border-radius: 5px;
 		align-items: center;
@@ -33,6 +33,17 @@
 			align-items: flex-end;
 			line-height: 120%;
 			margin-left: 0.5rem;
+		}
+	}
+
+	&__button {
+		border: 1px solid $color;
+		border-radius: 24px;
+		padding: 8px 27px;
+		background: $bg-color;
+		&:active {
+			background: $color;
+			color: $bg-color;
 		}
 	}
 }

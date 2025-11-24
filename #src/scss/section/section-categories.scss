@@ -301,6 +301,7 @@
 	// .catalog-products__column
 	&__column {
 		// Flex o'rniga grid ishlatilgani uchun bu qismni o'chirish mumkin
+		min-width: 0;
 	}
 
 	// .catalog-products__label
