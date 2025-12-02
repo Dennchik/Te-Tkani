@@ -16,7 +16,7 @@
   &__content {
     display: grid;
     column-gap: 13rem;
-    grid-template-columns: 1fr minmax(5rem, min-content);
+    grid-template-columns: 1fr 1fr 1fr;
 
     @include _960-1920 {
       column-gap: calc(20px + (130 - 20) * ((100vw - 960px) / (1920 - 960)));
@@ -87,6 +87,22 @@
       }
     }
     &:nth-child(2) {
+       @include _screen-960 {
+         grid-column: 2/ 3;
+         grid-row: 2 / 3;
+       }
+
+       @include _768 {
+         grid-column: 2 / 3;
+         grid-row: 2 / 3;
+       }
+
+       @include _490 {
+         grid-row: 3 / 4;
+         grid-column: 1 / 2;
+       }
+     }
+    &:nth-child(3) {
       @include _screen-960 {
         grid-row: 2 / 3;
         grid-column: 1 / 2;
@@ -98,32 +114,16 @@
         // margin-bottom: 3rem;
       }
     }
-    &:nth-child(3) {
-      @include _screen-960 {
-        grid-column: 2/ 3;
-        grid-row: 2 / 3;
-      }
 
-      @include _768 {
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
-      }
-
-      @include _490 {
-        grid-row: 3 / 4;
-        grid-column: 1 / 2;
-      }
-    }
   }
 
   // .product-card__description
   &__description {
-    margin-top: 3rem;
-    display: grid;
-    column-gap: 13rem;
+    //display: grid;
+    column-gap: 7rem;
     grid-template-columns: 1fr 30rem;
 
-    column-gap: calc(20px + (130 - 20) * ((100vw - 768px) / (1470 - 768)));
+    //column-gap: calc(20px + (130 - 20) * ((100vw - 768px) / (1470 - 768)));
     margin-bottom: 3rem;
     @include _screen-960 {
       grid-template-columns: 1fr;
@@ -133,6 +133,7 @@
 
   // .product-card__services
   &__services {
+    margin-top: 14px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 7.1rem;
@@ -147,9 +148,9 @@
   &__main-content {
     display: flex;
     gap: 1rem;
-
+    flex-direction: column;
     @include _690 {
-      flex-direction: column;
+
     }
     @include _490 {
       gap: 3rem;
@@ -160,11 +161,11 @@
 .product-slide {
   // .product-slide__slide
   &__slide {
-    max-width: 30.5rem;
+    max-width: 38.5rem;
     overflow: hidden;
     @include _490 {
       // max-width: 40rem;
-      height: 41rem;
+      height: 58rem;
     }
     img {
       width: 100%;
@@ -214,12 +215,16 @@
 .description-product {
   //.description-product__column
   &__column {
+    &:nth-child(2) {
+      margin-top: 1.5rem
+      //grid-row: 1 / 2;
+    }
     @include _768 {
       &:nth-child(1) {
-        grid-row: 2 / 3;
+        //grid-row: 2 / 3;
       }
       &:nth-child(2) {
-        grid-row: 1 / 2;
+        //grid-row: 1 / 2;
       }
     }
   }
@@ -231,6 +236,12 @@
 
   //.description-product__text
   &__text {
+    position: relative;                 /* Tugma joylashishi uchun */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 15;             /* Maksimal 15 qator */
+    overflow: hidden;
+    transition: all 0.3s ease;
     p {
       line-height: 150%;
       margin-bottom: 0.5rem;
@@ -295,7 +306,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 8px;
-    margin-bottom: 6.6rem;
     max-width: 217px;
   }
 
@@ -348,6 +358,7 @@
 }
 
 .content-product {
+
   // .content-product__video
   &__video {
     width: 100%;
@@ -355,6 +366,9 @@
   }
   // .content-product__item
   &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &:nth-child(1) {
       flex: 0 1 30%;
     }
@@ -363,9 +377,7 @@
       flex: 0 1 70%;
     }
     @include _690 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+
     }
   }
 
@@ -380,9 +392,9 @@
     display: flex;
     gap: 2rem;
     margin-bottom: 14px;
-
+    justify-content: center;
     @include _690 {
-      justify-content: center;
+
     }
   }
 
@@ -485,6 +497,7 @@
 }
 // -----------------------------------------------------------------------------
 .specifications {
+
   // .specifications__list
   &__list {
     &:not(:last-child) {
@@ -507,6 +520,9 @@
 
   // .specifications__counter
   &__counter {
+    border: 1px solid #004646;
+    border-radius: 10px;
+    padding: 10px;
     margin-bottom: 15px;
     text-align-last: left;
   }

@@ -50,7 +50,12 @@
 			font-size: 2.3rem;
 		}
 	}
-
+	& span {
+		//display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 4;
+		overflow: hidden;
+	}
 	// .cart-page__body
 	&__body {
 		gap: 2.5rem;
