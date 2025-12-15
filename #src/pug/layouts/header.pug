@@ -3,7 +3,7 @@ header.header
 		._top-menu-fixed
 			._top-menu
 				._column 
-					button._button-sidebarcatalog
+					button._button-sidebarcatalog(data-modal-id="catalog-menu" data-modal-open)
 						+iconfont('catalog', '_icon')
 					.main-menu
 						ul._body
@@ -58,9 +58,9 @@ header.header
 								._list
 									._link
 										a(href="@@webRoot/account.html") Личный кабинет
-									._link.login Войти 
+									._link.login(data-modal-id="login-modal" data-modal-open) Войти
 									span /
-									._link.registrations Регистриция 
+									._link.registrations(data-modal-id="register-modal" data-modal-open) Регистриция
 								include ../chunk/login-form
 							._phone
 								a(href="tel:88000000000") 8-800-000-00-00 

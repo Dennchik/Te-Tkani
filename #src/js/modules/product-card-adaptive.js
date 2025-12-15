@@ -7,7 +7,14 @@ export function adaptiveProductCard() {
         return;
     }
 
-    // Добавляем кнопку, если её нет
+    // Длина текста без лишних пробелов
+    const textLength = textBlock.textContent.trim().length;
+
+    // Если текста меньше 200 символов — кнопка не нужна
+    if (textLength < 200) {
+        return;
+    }
+    // Добавляем кнопку
     let showBtn = desc.querySelector('.show-more-btn');
     if (!showBtn) {
         showBtn = document.createElement('a');

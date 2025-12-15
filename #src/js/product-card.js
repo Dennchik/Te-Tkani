@@ -5,9 +5,6 @@ import { saleProductsSlide } from "./modules/sale-products-slide.js"; saleProduc
 import { thumbCardSlide } from "./modules/slide-card-thumb.js";
 thumbCardSlide();
 
-import { counterProducy } from "./layouts/counter.js";
-counterProducy();
-
 import { adaptiveProductCard } from "./modules/product-card-adaptive.js";
 
 document.addEventListener('DOMContentLoaded', () => {

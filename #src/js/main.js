@@ -5,14 +5,9 @@ loaded('.preloader');
 import { dinamicAdaptive } from './assets/move-elements.js';
 dinamicAdaptive();
 //* ----------------------------------------------------------------------------
-import { openMenuCatalog, openMainMenu, showSubMenuCollapse, collapseElement, userMenu, addFafouritItems } from "./layouts/layouts.js";
-
-openMenuCatalog();
-openMainMenu();
-showSubMenuCollapse();
-collapseElement();
-userMenu();
-addFafouritItems();
+import ModalManager from "./layouts/layouts.js";
+const modalManager = new ModalManager();
+modalManager.init();
 //* ----------------------------------------------------------------------------
 import { showPopUpenuBottom, showPopUpMenuTop } from "./assets/pop-up-menu.js";
 showPopUpenuBottom('.page__buttom-menu');

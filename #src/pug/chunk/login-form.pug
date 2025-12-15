@@ -1,6 +1,6 @@
-.login-modal
+.login-modal#login-modal(data-modal)
 	._modal-content
-		span._close
+		span._close(data-modal-close)
 			+iconfont('cross-middle', 'icon')
 		form._form(action="")
 			._input 
@@ -10,19 +10,21 @@
 				label._label(for="password") Пароль:
 				input#password(type="password", name="password", autocomplete="off", required)
 			button(type="submit")._button-login Войти
-		button(type="button")._recovery Забыли пароль?
-.recovery-modal
+		button(type="button" data-modal-id="reset-pass-modal" data-modal-open)._recovery Забыли пароль?
+
+.recovery-modal#reset-pass-modal(data-modal)
 	._modal-content
 		p._text Введите почту по которой регестрировались ранее, пароль отправим на нее
-		span._close
+		span._close(data-modal-close)
 			+iconfont('cross-middle', 'icon')
 		form._form(action="")
 			._input 
 				label._label(for="email") Эл.почта:
 				input#email(type="email", name="email", autocomplete="off", required)
 			button(type="submit")._button-recovery Отправить
-.registrations-modal
+
+.registrations-modal#register-modal(data-modal)
 	._modal-content
-		button(type="submit")._button-private-person Физическое лицо
-		button(type="submit")._button-corporate-person Юридическое лицо
+		button(type="submit" data-modal-id="register-fiz-user-modal" data-modal-open)._button-private-person Физическое лицо
+		button(type="submit" data-modal-id="register-yur-user-modal" data-modal-open)._button-corporate-person Юридическое лицо
 
